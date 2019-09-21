@@ -148,46 +148,7 @@ function layerdef(type){
 				defaultSolidLine("cyan"),
 				false),
 			
-/*			  
-			// kenmerken met cycleway
-			  
-			make_layer(QURL + "?data=(way[cycleway=cyclestreet](bbox);node(w);way[bicycle_road=yes](bbox);node(w);way[cyclestreet=yes](bbox);node(w););out+skel;","#ff65d5",name="#l#cyclestreet", 8, false),
-			
-			make_layer(QURL + "?data=(way[cycleway~'track'][highway!=cycleway](bbox);node(w);way['cycleway:right'~'track'](bbox);node(w);way['cycleway:left'~'track'](bbox);node(w););out+skel;", "#ff6541",name="#l#cycleway=track", 6, false,"@0.9"),
-			
-         	make_layer(QURL + "?data=(way[cycleway=lane](bbox);node(w);way[cycleway=opposite_lane](bbox);node(w);way['cycleway:right'=opposite_lane](bbox);node(w);way['cycleway:left'=opposite_lane](bbox);node(w);way['cycleway:left'=lane](bbox);node(w););out+skel;","#ff6541",name="#dl#cycleway=lane", 6, false,"6 10@0.9"),
 
-			make_layer(QURL + "?data=(way[cycleway='shared_lane'](bbox);node(w);way[cycleway=share_busway](bbox);node(w);way[cycleway=opposite_share_busway](bbox);node(w);way['cycleway:left'='shared_lane'](bbox);node(w);way['cycleway:right'='shared_lane'](bbox);node(w););out+skel;","red",name="#d#cycleway=shared_lane", 2, false,"6 10"),
-          	
-		
-			//kenmerken met oneway
-			make_layer(QURL + "?data=(way[highway~'^unclas|^living|^resid|road|cycleway'][oneway~'yes|true|1|-1'][cycleway!~'.'][bicycle!=no]['bicycle:oneway'!=no]['oneway:bicycle'!=no](bbox);node(w);way['bicycle:oneway'~'yes|true|1|-1'](bbox);node(w);way['oneway:bicycle'~'yes|true|1|-1'](bbox);node(w););out+skel;", "blue",name="#dl#oneway street", 3, false,"6 10"),
-			
-			
-            make_layer(QURL + "?data=(way['oneway:bicycle'=no](bbox);node(w);way[cycleway~'opposite'](bbox);node(w);way['bicycle:oneway'= no](bbox);node(w););out+skel;", "green",name="#dl#cycleway=opposite or<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsponeway:bicyle=no", 3, false,"6 10"),
-
-
-			  
-			make_layer(QURL + "?data=(way[bicycle~'^designated$|^yes$'][highway~'^footway$|^pedestrian$|^path$|^track$|^steps$'](bbox);node(w);way['ramp:bicycle'=yes](bbox);node(w);node[bicycle=yes][barrier!=bollard](bbox););out+skel;", "#39ff20",name="#l#bicycle=yes & footway,<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppath, track, steps", 5, false),
-
-			//pois
-			make_a_layer(QURL + "?data=(node[shop=bicycle](bbox);node[amenity=bicycle_repair_station](bbox);way[shop=bicycle](bbox);node(w););out;", "#0000a0", name="#c#shop=bicycle/repair station", 0.7, false),
-			make_layer(QURL + "?data=node[amenity~'bicycle'][amenity!=bicycle_repair_station](bbox);out+skel;(way[amenity~'bicycle'](bbox);node(w););out+skel;", "#39ffd5",name="#c#&nbspbicycle_parking/rental", 4, false),
-			make_layer(QURL + "?data=node[barrier=bollard](bbox);out+skel;", "red", name="#c#&nbspbollard", 3, false),			  
-			make_layer(QURL + "?data=node[barrier][barrier!=bollard](bbox);out+skel;", "#bd9541", name="#c#&nbspother barrier<hr>", 3, false),
-			
-
-			
-
-			// non cyclable ways
-			make_layer(QURL + "?data=(way[bicycle=dismount](bbox);node(w);node[bicycle=dismount](bbox);node(w););out+skel;","yellow",name="#dl#bicycle=dismount", 4, false,"6 10"),
-			
-			make_layer(QURL + "?data=(way[bicycle~'no|use_sidepath'](bbox);node(w);way[highway][access~'^no|^priv'][vehicle!~'yes'][bicycle!~'^no|^yes|^desig|^offic|^destin|^permis'][mtb!~'^yes|^desig|^offic|^destin|^permis']['mtb:scale'!~'^'](bbox);node(w);way[highway~'^foot|^path|^pedes|^platform|^steps|^bridleway|^prop|^constr'][access! ~'^no|^priv'][bicycle!~'^no|^yes|^desig|^offic|^destin|^permis'][mtb!~'^yes|^desig|^offic|^destin|^permis']['ramp:bicycle'!~'yes'](bbox);node(w);way[highway=track][horse=designated][access! ~'^no|^priv'][bicycle!~'^no|^yes|^desig|^offic|^destin|^permis'][mtb!~'^yes|^desig|^offic|^destin|^permis']['mtb:scale'!~'^'][route!=mtb](bbox);node(w););out+skel;", "#393020",name="<img style='vertical-align: middle;background-color:#393020;' src='img/line.gif'> 'non cycleable' ways", 7, false,"@0.5"),
-
-            make_layer(QURL + "?data=(way[bicycle=use_sidepath](bbox);node(w););out+skel;","#bd65d5",name="#dl#bicycle=use_sidepath", 4, false,"6 10"),
-			
-			make_layer(QURL + "?data=(way[bicycle=no](bbox);node(w););out+skel;","black",name="#dl#bicycle=no", 4, false,"6 10")
-*/
 		]);
 	}
 
@@ -284,6 +245,15 @@ function layerdef(type){
 		});
 	}
 	
+		function defaultExtPoint2(url){
+		return (
+		{
+			externalGraphic:url,
+			graphicHeight:20,
+			rotation:0
+		});
+	}
+	
 		function tsforward(url){
 		return (
 		{
@@ -308,334 +278,6 @@ function layerdef(type){
 		});
 	}
 	
-		if (type == "botigues"){ //MODIFICAR 
-		
-		map.addLayers([
-		
-			make_layer(
-				QURL + "?data=(node[wheelchair=yes][shop](bbox);node[wheelchair=yes][amenity](bbox);node[wheelchair=yes][office](bbox););out+skel;",
-				name="#c#&nbspwheelchair=yes",
-				defaultPoint("lime"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=(node[wheelchair=limited][shop](bbox);node[wheelchair=limited][amenity](bbox);node[wheelchair=limited][office](bbox););out+skel;",
-				name="#c#&nbspwheelchair=limited",
-				defaultPoint("yellow"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=(node[wheelchair=no][shop](bbox);node[wheelchair=no][amenity](bbox);node[wheelchair=no][office](bbox););out+skel;",
-				name="#c#&nbspwheelchair=no<hr>",
-				defaultPoint("red"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=(node[!wheelchair][shop](bbox);node[!wheelchair][amenity](bbox);node[!wheelchair][office](bbox););out+skel;",
-				name="#c#&nbspFalta wheelchair",
-				defaultPoint("black"),
-				false
-			),
-			 
-			]);
-	}
-	
-			if (type == "vies"){ //MODIFICAR 
-		
-		map.addLayers([
-
-					//highway=cycleway
-			make_layer(
-				QURL + "?data=(way[highway](bbox);node(w););out+skel;",
-				name="#l#TOT/TODO/ALL<hr><hr>VORERES/ACERAS/SIDEWALKS<hr>",
-				defaultSolidLine("white"),
-				false,
-			),
-
-			make_layer(
-				QURL + "?data=(way[wheelchair=yes][footway=sidewalk](bbox);node(w););out+skel;",
-				name="#l#wheelchair=yes",
-				defaultSolidLine("lime"),
-				false,
-			),
-
-			make_layer(
-				QURL + "?data=(way[wheelchair=limited][footway=sidewalk](bbox);node(w););out+skel;",
-				name="#l#wheelchair=limited",
-				defaultSolidLine("yellow"),
-				false,
-			),
-
-			make_layer(
-				QURL + "?data=(way[wheelchair=no][footway=sidewalk](bbox);node(w););out+skel;",
-				name="#l#wheelchair=no",
-				defaultSolidLine("red"),
-				false,
-			),
-
-			make_layer(
-				QURL + "?data=(way[!wheelchair][highway=footway](bbox);node(w););out+skel;",
-				name="#l#Falta wheelchair missing<hr><hr>ENCREUAMENTS/CRUCES/CROSSINGS<hr>",
-				defaultSolidLine("black"),
-				false,
-			),
-
-			make_layer(
-				QURL + "?data=(way[wheelchair=yes][footway=crossing](bbox);node(w););out+skel;",
-				name="#l#wheelchair=yes",
-				defaultSolidLine("lime"),
-				false,
-			),
-
-			make_layer(
-				QURL + "?data=(way[wheelchair=limited][footway=crossing](bbox);node(w););out+skel;",
-				name="#l#wheelchair=limited",
-				defaultSolidLine("yellow"),
-				false,
-			),
-
-			make_layer(
-				QURL + "?data=(way[wheelchair=no][footway=crossing](bbox);node(w););out+skel;",
-				name="#l#wheelchair=no",
-				defaultSolidLine("red"),
-				false,
-			),
-
-			make_layer(
-				QURL + "?data=(way[!wheelchair][footway=crossing](bbox);node(w););out+skel;",
-				name="#l#Falta wheelchair missing (vies)",
-				defaultSolidLine("black"),
-				false,
-			),
-
-			make_layer(
-				QURL + "?data=(node[!wheelchair][highway=crossing](bbox);node(w););out+skel;",
-				name="#c#&nbspFalta wheelchair missing (nodes)<hr><hr>TOT/TODO/ALL<hr>",
-				defaultPoint("black"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=(way[wheelchair=yes][highway](bbox);node(w););out+skel;",
-				name="#l#wheelchair=yes",
-				defaultSolidLine("lime"),
-				false,
-			),
-
-			make_layer(
-				QURL + "?data=(way[wheelchair=limited][highway](bbox);node(w););out+skel;",
-				name="#l#wheelchair=limited",
-				defaultSolidLine("yellow"),
-				false,
-			),
-
-			make_layer(
-				QURL + "?data=(way[wheelchair=no][highway](bbox);node(w););out+skel;",
-				name="#l#wheelchair=no",
-				defaultSolidLine("red"),
-				false,
-			),
-
-			make_layer(
-				QURL + "?data=(way[!wheelchair][highway](bbox);node(w););out+skel;",
-				name="#l#Falta wheelchair missing <hr><hr>ÀREES/ÁREAS/AREAS<hr>",
-				defaultSolidLine("black"),
-				false,
-			),
-
-								//highway=cycleway
-			make_layer(
-				QURL + "?data=(way[wheelchair=yes][highway=pedestrian][area=yes](bbox);node(w););out+skel;",
-				name="#d#wheelchair=yes (àrea)",
-				defaultDashedLine("lime"),
-				false,
-			),
-
-			make_layer(
-				QURL + "?data=(way[wheelchair=limited][highway=pedestrian][area=yes](bbox);node(w););out+skel;",
-				name="#d#wheelchair=limited (àrea)",
-				defaultDashedLine("yellow"),
-				false,
-			),
-
-			make_layer(
-				QURL + "?data=(way[wheelchair=no][highway=pedestrian][area=yes](bbox);node(w););out+skel;",
-				name="#d#wheelchair=no (àrea)",
-				defaultDashedLine("red"),
-				false,
-			),
-
-			make_layer(
-				QURL + "?data=(way[!wheelchair][highway=pedestrian][area=yes](bbox);node(w););out+skel;",
-				name="#d#Falta wheelchair (àrea)<hr><hr>ALTRES/OTROS/OTHERS<hr>",
-				defaultDashedLine("black"),
-				false,
-			),
-			
-			make_layer(
-				QURL + "?data=(way[highway=steps](bbox);node(w););out+skel;",
-				name="#l#ESCALES/ESCALERAS/STEPS",
-				defaultSolidLine("red"),
-				false,
-			),
-			 
-			]);
-	}
-	
-			if (type == "transports"){ //MODIFICAR 
-		
-		map.addLayers([
-
-			make_layer(
-				QURL + "?data=node[wheelchair=yes][shop](bbox);out+skel;",
-				name="#ex#&nbspAdaptat=sí",
-				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/wheelchair_yes_shop.png"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node[wheelchair=no][shop](bbox);out+skel;",
-				name="#ex#&nbspAdaptat=no",
-				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/wheelchair_no_shop.png"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node['capacity:disabled'='1'](bbox);out+skel;",
-				name="#ex#&nbspPlaça aparcament",
-			defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/capacity_disabled.png"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node[wheelchair=limited][shop](bbox);out+skel;",
-				name="#ex#&nbspMobilitat limitada",
-				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/wheelchair_limited_shop.png"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node['obstacle:wheelchair'=yes](bbox);out+skel;",
-				name="#ex#&nbspObstacle per a la mobilitat",
-				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/obstacle_wheelchair_yes.png"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node[crossing=traffic_signals](bbox);out+skel;",
-				name="#ex#&nbspPas de vianant amb semàfor",
-				defaultExtPoint("https://raw.githubusercontent.com/yopaseopor/accessibilitat/master/icons/crossing_traffic_signals.png"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node[crossing=no](bbox);out+skel;",
-				name="#ex#&nbspProhibit passar",
-				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/crossing_no.png"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node[crossing=uncontrolled](bbox);out+skel;",
-				name="#ex#&nbspPas de vianants",
-				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/crossing_uncontrolled.png"),
-				false
-),
-		make_layer(
-				QURL + "?data=node[crossing=unmarked](bbox);out+skel;",
-				name="#ex#&nbspPassos no senyalitzats",
-				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/crossing_unmarked.png"),
-				false
-			),
-					//highway=cycleway
-			make_layer(
-				QURL + "?data=(way[wheelchair=no][highway=footway](bbox);node(w););out+skel;",
-				name="#l#Voreres amb problemes",
-				defaultSolidLine("red"),
-				false,
-			),
-			 
-			]);
-	}
-	
-			if (type == "interior"){ //MODIFICAR 
-		
-		map.addLayers([
-
-			make_layer(
-				QURL + "?data=node[wheelchair=yes][shop](bbox);out+skel;",
-				name="#ex#&nbspAdaptat=sí",
-				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/wheelchair_yes_shop.png"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node[wheelchair=no][shop](bbox);out+skel;",
-				name="#ex#&nbspAdaptat=no",
-				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/wheelchair_no_shop.png"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node['capacity:disabled'='1'](bbox);out+skel;",
-				name="#ex#&nbspPlaça aparcament",
-			defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/capacity_disabled.png"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node[wheelchair=limited][shop](bbox);out+skel;",
-				name="#ex#&nbspMobilitat limitada",
-				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/wheelchair_limited_shop.png"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node['obstacle:wheelchair'=yes](bbox);out+skel;",
-				name="#ex#&nbspObstacle per a la mobilitat",
-				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/obstacle_wheelchair_yes.png"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node[crossing=traffic_signals](bbox);out+skel;",
-				name="#ex#&nbspPas de vianant amb semàfor",
-				defaultExtPoint("https://raw.githubusercontent.com/yopaseopor/accessibilitat/master/icons/crossing_traffic_signals.png"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node[crossing=no](bbox);out+skel;",
-				name="#ex#&nbspProhibit passar",
-				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/crossing_no.png"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node[crossing=uncontrolled](bbox);out+skel;",
-				name="#ex#&nbspPas de vianants",
-				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/crossing_uncontrolled.png"),
-				false
-),
-		make_layer(
-				QURL + "?data=node[crossing=unmarked](bbox);out+skel;",
-				name="#ex#&nbspPassos no senyalitzats",
-				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/crossing_unmarked.png"),
-				false
-			),
-					//highway=cycleway
-			make_layer(
-				QURL + "?data=(way[wheelchair=no][highway=footway](bbox);node(w););out+skel;",
-				name="#l#Voreres amb problemes",
-				defaultSolidLine("red"),
-				false,
-			),
-			 
-			]);
-	}
 	
 				if (type == "accessibilitat"){ //MODIFICAR 
 		
@@ -722,7 +364,7 @@ function layerdef(type){
 			make_layer(
 				QURL + "?data=(node[emergency=access_point](bbox););out+skel;",
 				name="#ex#&nbspCobertura 112",
-				defaultExtPoint("https://github.com/osm-catalan/osmcatmap/raw/master/img/pal_cobertura.png"),
+				defaultExtPoint2("https://github.com/osm-catalan/osmcatmap/raw/master/img/pal_cobertura.png"),
 				false
 			),
 
@@ -733,54 +375,20 @@ function layerdef(type){
 				false
 			),
 
-/*
-	  		//highways
-            make_layer(QURL + "?data=(way[highway=cycleway](bbox);node(w);way[highway=path][bicycle=designated](bbox);node(w););out+skel;", "red",name="#l#highway=cycleway", 5, false),
-			  
-			make_layer(QURL + "?data=(way[highway=footway](bbox);node(w););out+skel;","#bd958b",name="#l#highway=footway", 5, false,"@0.8"),
-			
-			make_layer(QURL + "?data=(way[highway=path][bicycle!~'^designated'](bbox);node(w););out+skel;","#7b9541",name="#l#highway=path", 5, false,"@0.8"),
-			
-			make_layer(QURL + "?data=(way[highway=pedestrian](bbox);node(w););out+skel;", "#ff6500",name="#l#highway=pedestrian",5, false),
-			  
-			// tracks & tracktype
-			make_layer(QURL + "?data=(way[highway=track](bbox);node(w););out+skel;","#bd9520",
-			name="#l#highway=track", 5, false,"@0.8"),
-			
-            make_layer(QURL + "?data=(way[tracktype=grade1](bbox);node(w););out+skel;","#330000",name="#l#tracktype=grade1", 2, false),
-			
-			make_layer(QURL + "?data=(way[tracktype=grade2](bbox);node(w););out+skel;","#330000",name="#dl#tracktype=grade2", 3, false,"4 8"),
-			
-			make_layer(QURL + "?data=(way[tracktype=grade3](bbox);node(w););out+skel;","#A52A2A",name="#dl#tracktype=grade3", 2, false,"4 8"),
-			
-			make_layer(QURL + "?data=(way[tracktype=grade4](bbox);node(w););out+skel;","#A52A2A",name="#d#tracktype=grade4", 2, false,"1 6"),
-			
-			make_layer(QURL + "?data=(way[tracktype=grade5](bbox);node(w););out+skel;","black",name="#d#tracktype=grade5", 1, false,"1 3"),
-			
-			make_layer(QURL + "?data=(way[highway=track][tracktype!~'^grade'](bbox);node(w););out+skel;","white",name="#dl#tracktype unknown", 2, false,"4 8"),
-			
-			make_layer(QURL + "?data=(way[highway=track][cycleway](bbox);node(w););out+skel;","#ff008b",name="#dl#highway=track &<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcycleway=*",5, false,"4 8"),
+make_layer(
+QURL + "?data=(rel['network'='exprés.cat (Barcelona)'](bbox);node(w););out+skel;",
+name="#ex#&nbspExprés.cat Barcelona",
+defaultExtPoint("https://github.com/yopaseopor/beta_style_josm/raw/master/traffic_signs_EUR/ES/ES_R1.png"),
+false
+),
 
-			// surface on paths & tracks
-			make_layer(QURL + "?data=(way[highway~'^cycle|^foot|^path|^pedestrian|^track'][surface~'^asphalt|^pav|^concrete'](bbox);node(w););out+skel;","#000080",name="#l#surface = paved", 2, false,"@0.8"),
+			make_layer(
+QURL + "?data=(rel['network'='exprés.cat (Barcelona)'](bbox);node(w););out+skel;",
+				name="#l#Exprés.cat Barcelona",
+				defaultSolidLine("turquoise"),
+				false,
+			),
 			 
-			make_layer(QURL + "?data=(way[surface~'^cob'](bbox);node(w););out+skel;","#000080",name="#dl#surface=cobblestone", 4, false,"4 8@0.8"),
-			
-			make_layer(QURL + "?data=(way[surface~'^fine_gravel|.shell.'](bbox);node(w););out+skel;","#3965d5",name="#dl#surface=fine_gravel/shells", 3, false,"4 8@0.8"),
-			
-			// semi paved
-			make_layer(QURL + "?data=(way[surface~'^gravel|^compact|^loam'](bbox);node(w););out+skel;","yellow",name="#dl#surface = semi-paved", 3, false,"4 8@0.8"),
-			
-			// unpaved
-			make_layer(QURL + "?data=(way[surface~'^grass|^ground|^unpaved|^dirt|^earth|^sand|^woodchips|^pebble'](bbox);node(w););out+skel;","yellow",name="#d#surface = unpaved", 2, false,"1 3@0.8"),
-
-			 // smoothness
-			 make_layer(QURL + "?data=(way[smoothness=bad](bbox);node(w););out+skel;","#00FFFF", 
-			 name="#dl#smoothness=bad", 3, false,"4 8"),
-			 
-			 make_layer(QURL + "?data=(way[smoothness~'^very_bad|^horrible|^very_horrible|^impassable'](bbox);node(w););out+skel;","#00FFFF", 
-			 name="#l#smoothness very bad", 4, false)
-*/			 
 			]);
 	}			
 		if (type == "mobilitat"){
