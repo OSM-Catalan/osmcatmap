@@ -86,63 +86,9 @@
 // VOCABULARI false or true default active option true enabled false unabled
 // VOCABULARI Also you can custom the option to show the legend
 //
-
 function layerdef(type){
-
-	/*
-	 * {
-	 * 	strokeColor: "red",
-	 * 	strokeOpacity: 0.9,
-	 * 	strokeWidth: 5,
-	 * 	strokeLinecap: "square",
-	 * 	strokeDashstyle: "1 0"
-	 */
-	function defaultSolidLine(color){
-		return(
-		{
-			strokeColor:color,
-			strokeOpacity:1,
-			strokeWidth:1,
-			strokeLinecap: "square",
-		});
-	}
-
-	function defaultDashedLine(color){
-		return(
-		{
-			strokeColor:color,
-			strokeOpacity:0.7,
-			strokeWidth:10,
-			strokeLinecap: "round",
-			strokeDashstyle: "1 10"
-		});
-	}
 	
-		function defaultDiscontinuousLine(color){
-		return(
-		{
-			strokeColor:color,
-			strokeOpacity:0.3,
-			strokeWidth:5,
-			strokeLinecap: "square",
-			strokeDashstyle: "6 10"
-		});
-	}
-
-
-
-	/*
-	 * base Point Parameters:
-	 * {
-	 * 	strokeColor:"#FFFFFF",
-	 * 	strokeOpacity:0.9,
-	 * 	strokeWidth:3,
-	 * 	pointRadius:3
-	 * 	fillColor: "white",
-	 * 	fillOpacity: 0.75,
-	 * }
-	 */
-	function defaultPoint(color){
+function defaultPoint(color){
 		return (
 		{
 			strokeColor:color,
@@ -150,7 +96,7 @@ function layerdef(type){
 			strokeWidth:3,
 			pointRadius:5,
 			fillColor:"white",
-			fillOpacity:1
+			fillOpacity:0.75
 		});
 	}
 	
@@ -158,11 +104,11 @@ function layerdef(type){
 		return (
 		{
 			strokeColor:color,
-			strokeOpacity:1,
-			strokeWidth:2,
-			pointRadius:8,
-			fillColor:"green",
-			fillOpacity:0
+			strokeOpacity:0.5,
+			strokeWidth:3,
+			pointRadius:5,
+			fillColor:"white",
+			fillOpacity:0.5
 		});
 	}
 	
@@ -170,16 +116,38 @@ function layerdef(type){
 		return (
 		{
 			strokeColor:color,
-			strokeOpacity:0.5,
-			strokeWidth:1,
-			pointRadius:3,
-			fillColor:"black",
-			fillOpacity:0.5
+			strokeOpacity:1,
+			strokeWidth:3,
+			pointRadius:5,
+			fillColor:"white",
+			fillOpacity:0
 		});
 	}
 	
-
+		function defaultPoint4(color){
+		return (
+		{
+			strokeColor:color,
+			strokeOpacity:0.9,
+			strokeWidth:3,
+			pointRadius:7,
+			fillColor:"white",
+			fillOpacity:0
+		});
+	}
 	
+			function defaultPoint5(color){
+		return (
+		{
+			strokeColor:color,
+			strokeOpacity:0.9,
+			strokeWidth:3,
+			pointRadius:9,
+			fillColor:"white",
+			fillOpacity:0
+		});
+	}
+
 	/*
 	 * external Point Parameters:
 	 * {
@@ -198,184 +166,115 @@ function layerdef(type){
 			externalGraphic:url,
 			graphicWidth:16,
 			graphicHeight:16,
-			rotation:0
+			rotation:125
 		});
 	}
 	
-		function defaultIcon(url){
+		function tsforward(url){
 		return (
 		{
 			externalGraphic:url,
-			graphicOpacity: 1,
 			graphicWidth:20,
 			graphicHeight:20,
-			graphicXOffset: 0,
+			graphicXOffset: 4,
 			graphicYOffset: 0,
 			rotation:0
 		});
 	}
 	
-		function rotatedIcon(url){
+		function tsbackward(url){
 		return (
 		{
 			externalGraphic:url,
-			graphicOpacity: 1,
 			graphicWidth:20,
 			graphicHeight:20,
-			graphicXOffset: 0,
+			graphicXOffset: -4,
 			graphicYOffset: 0,
-			rotation:45
-		});
-	}
-	
-		function opacityIcon(url){
-		return (
-		{
-			externalGraphic:url,
-			graphicOpacity: 0.35,
-			graphicWidth:20,
-			graphicHeight:20,
-			graphicXOffset: 0,
-			graphicYOffset: 0,
-			rotation:0
-		});
-	}
-	
-		function offsetIcon(url){
-		return (
-		{
-			externalGraphic:url,
-			graphicOpacity: 1,
-			graphicWidth:20,
-			graphicHeight:20,
-			graphicXOffset: 10,
-			graphicYOffset: 0,
-			rotation:0
+			rotation:180
 		});
 	}
 	
 	
-		if (type == "lines"){
-		//	dit maakt de layers voor de cycleway tags
-		map.addLayers([
-		//highway=cycleway
-			make_layer(
-				QURL + "?data=(way[highway=cycleway](bbox);node(w);way[highway~'path$|^footway$'][bicycle=designated](bbox);node(w););out+skel;",
-				name="#l#highway=cycleway",
-				defaultSolidLine("red"),
-				false,
-			),
-			  
-            make_layer(
-				QURL + "?data=(way[highway=cycleway][oneway=yes](bbox);node(w););out+skel;",
-				name="#d#cycleway, oneway=yes",
-				defaultDashedLine("green"),
-				false
-			),
-			
-            make_layer(
-				QURL + "?data=(way[highway=cycleway][segregated=yes](bbox);node(w););out+skel;", 
-				name="#dl#cycleway segregated=yes",
-				defaultDiscontinuousLine("cyan"),
-				false),
-			
-/*			  
-
-*/
-		]);
-	}
 	
-	
-	
-	if (type == "points"){
+				if (type == "basic"){ //MODIFICAR 
 		
 		map.addLayers([
 
-
-
 			make_layer(
-				QURL + "?data=node[wheelchair=no](bbox);out+skel;",
-				name="#c#&nbspwheelchair=no",
-				defaultPoint("red"),
+				QURL + "?data=node[wheelchair=yes][shop](bbox);out+skel;",
+				name="#ex#&nbspAdaptat=sí",
+				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/wheelchair_yes_shop.png"),
 				false
 			),
 
 			make_layer(
-				QURL + "?data=node[wheelchair=limited](bbox);out+skel;",
-				name="#c#&nbspwheelchair=limited",
-				defaultPoint2("blue"),
+				QURL + "?data=node[wheelchair=no][shop](bbox);out+skel;",
+				name="#ex#&nbspAdaptat=no",
+				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/wheelchair_no_shop.png"),
 				false
 			),
 
 			make_layer(
-				QURL + "?data=node[wheelchair=yes](bbox);out+skel;",
-				name="#to#&nbspwheelchair=yes<hr>",
-				defaultPoint3("black"),
+				QURL + "?data=node['capacity:disabled'='1'](bbox);out+skel;",
+				name="#ex#&nbspPlaça aparcament",
+			defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/capacity_disabled.png"),
 				false
 			),
-			
-			make_layer(
-				QURL + "?data=node[crossing=unmarked](bbox);out+skel;",
-				name="#c#&nbspcrossing=unmarked<hr>",
-				{
-					strokeColor:"grey",
-					strokeOpacity:0.9,
-					strokeWidth:2,
-					pointRadius:4,
-					fillColor:"blue",
-					fillOpacity:0.75
-				},
-				false
-			),
-			
-			
-		]);
-	}	
-	
-	if (type == "icons"){
 
-		map.addLayers([
-				
 			make_layer(
-				QURL + "?data=node[wheelchair=yes](bbox);out+skel;",
-				name="#ex#&nbspwheelchair=yes",
-				defaultExtPoint("https://image.flaticon.com/icons/png/512/9/9285.png"),
+				QURL + "?data=node[wheelchair=limited][shop](bbox);out+skel;",
+				name="#ex#&nbspMobilitat limitada",
+				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/wheelchair_limited_shop.png"),
+				false
+			),
+
+			make_layer(
+				QURL + "?data=node['obstacle:wheelchair'=yes](bbox);out+skel;",
+				name="#ex#&nbspObstacle per a la mobilitat",
+				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/obstacle_wheelchair_yes.png"),
 				false
 			),
 
 			make_layer(
 				QURL + "?data=node[crossing=traffic_signals](bbox);out+skel;",
-				name="#ex#&nbspcrossing=traffic_signals",
-				defaultIcon("http://icons.iconarchive.com/icons/google/noto-emoji-travel-places/1024/42571-vertical-traffic-light-icon.png"),
+				name="#ex#&nbspPas de vianant amb semàfor",
+				defaultExtPoint("https://raw.githubusercontent.com/yopaseopor/accessibilitat/master/icons/crossing_traffic_signals.png"),
+				false
+			),
+
+			make_layer(
+				QURL + "?data=node[crossing=no](bbox);out+skel;",
+				name="#ex#&nbspProhibit passar",
+				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/crossing_no.png"),
 				false
 			),
 
 			make_layer(
 				QURL + "?data=node[crossing=uncontrolled](bbox);out+skel;",
-				name="#ex#&nbspcrossing=uncontrolled",
-				rotatedIcon("https://d30y9cdsu7xlg0.cloudfront.net/png/35167-200.png"),
+				name="#ex#&nbspPas de vianants",
+				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/crossing_uncontrolled.png"),
+				false
+),
+		make_layer(
+				QURL + "?data=node[crossing=unmarked](bbox);out+skel;",
+				name="#ex#&nbspPassos no senyalitzats",
+				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/crossing_unmarked.png"),
 				false
 			),
-
+					//highway=cycleway
 			make_layer(
-				QURL + "?data=node['traffic_sign:backward'='ES:R1'](bbox);out+skel;",
-				name="#ex#&nbspES:R1 Backward ",
-				opacityIcon("https://github.com/yopaseopor/beta_style_josm/raw/master/traffic_signs_EUR/ES/ES_R1.png"),
-				true
+				QURL + "?data=(way[wheelchair=no][highway=footway](bbox);node(w););out+skel;",
+				name="#l#Voreres amb problemes",
+				defaultSolidLine("red"),
+				false,
 			),
-			
-			make_layer(
-				QURL + "?data=node['traffic_sign:forward'='ES:R2'](bbox);out+skel;",
-				name="#ex#&nbspES:R2 Forward ",
-				offsetIcon("https://github.com/yopaseopor/beta_style_josm/raw/master/traffic_signs_EUR/ES/ES_R2.png"),
-				true
-			),
-
-
-
+			 
 			]);
-	
-	}	
+	}
+
+
+
+		
 
 }
 	
