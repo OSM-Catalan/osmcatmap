@@ -272,7 +272,8 @@ function defaultPoint(color){
 			]);
 	}
 
-
+			]);
+	}
 
 		
 
