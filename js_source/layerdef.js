@@ -721,15 +721,15 @@ function layerdef(type){
 		
 			make_layer(
 				QURL + "?data=(node[emergency=access_point](bbox););out+skel;",
-				name="#ex#&nbspCobertura 112=yes",
+				name="#ex#&nbspCobertura 112",
 				defaultExtPoint("https://github.com/osm-catalan/osmcatmap/raw/master/img/pal_cobertura.png"),
 				false
 			),
 
 			make_layer(
 				QURL + "?data=(node[emergency=defibrillator](bbox););out+skel;",
-				name="#ex#&nbspCobertura 112=yes",
-				defaultExtPoint("https://github.com/osm-catalan/osmcatmap/raw/master/img/pal_cobertura.png"),
+				name="#ex#&nbspDesfibril·lador",
+				defaultExtPoint("https://github.com/osm-catalan/osmcatmap/raw/master/img/aed.png"),
 				false
 			),
 
