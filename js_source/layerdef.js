@@ -376,14 +376,14 @@ function layerdef(type){
 			),
 
 make_layer(
-QURL + "?data=(relation['network'='exprés.cat (Barcelona)'](bbox););out+skel;",
+QURL + "?data=relation['network'='exprés.cat (Barcelona)'](bbox);out+skel;",
 name="#ex#&nbspExprés.cat Barcelona",
 defaultExtPoint("https://github.com/yopaseopor/beta_style_josm/raw/master/traffic_signs_EUR/ES/ES_R1.png"),
 false
 ),
 
 			make_layer(
-QURL + "?data=(relation['ref'='e18'](bbox););out+skel;",
+QURL + "?data=relation['ref'='e18'](bbox);out+skel;",
 				name="#l#Exprés.cat Barcelona",
 				defaultSolidLine("red"),
 				false,
