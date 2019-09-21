@@ -54,7 +54,7 @@ var browser = "";
 	var map;
 	var tabtype = {
 	//MODIFICAR
-		name: "basic",
+		name: "accessibilitat",
 			clearall: function (){ //functie voor toekomstig gebruik
 				for (i = map.layers.length - 1; i > 1; i--) { 
 					if (map.layers[i].isBaseLayer == false) { // only to overlays
@@ -180,8 +180,8 @@ function init(){
       <td colspan="6" class="kaartnaam" align='center'>MAPES DE CATALUNYA AMB OSM <a href='https://wiki.openstreetmap.org/wiki/Bicycle_tags_map' target='_blank'><img src='img/help.gif'></a></td>
     </tr>
     <tr> 
-      <td id="basic" class="dorment" style="border-right:1px solid #000000;" onclick="switchtab(this.id,tabtype.name);">Accessibilitat</td>
-      <td id="points" class="dorment" style="border-right:1px solid #000000;" onclick="switchtab(this.id,tabtype.name);">points and cercles</td>
+      <td id="accessibilitat" class="dorment" style="border-right:1px solid #000000;" onclick="switchtab(this.id,tabtype.name);">Accessibilitat</td>
+      <td id="iniciatives" class="dorment" style="border-right:1px solid #000000;" onclick="switchtab(this.id,tabtype.name);">Iniciatives</td>
       <td id="icons" class="dorment" style="border-right:1px solid #000000;" onclick="switchtab(this.id,tabtype.name);">icons</td>
       <td id="clearall" class="action" style="border-right:1px solid #000000;" onclick="tabtype.clearall();">clear layers</td>	  
 <!-- tab voor gps positie, is leuk kan ook weg natuurlijk -->

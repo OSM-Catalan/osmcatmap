@@ -637,7 +637,7 @@ function layerdef(type){
 			]);
 	}
 	
-				if (type == "basic"){ //MODIFICAR 
+				if (type == "accessibilitat"){ //MODIFICAR 
 		
 		map.addLayers([
 
@@ -714,19 +714,15 @@ function layerdef(type){
 	}
 
 	
-	if (type == "test"){
+
+		if (type == "iniciatives"){ //MODIFICAR 
 		
 		map.addLayers([
-/*			
-			make_layer(QURL + "?data=node[kerb=lowered](bbox);out+skel;", "#66ff66", name="#c#&nbspkerb=lowered", 3, false),
-			make_layer(QURL + "?data=node[kerb=raised](bbox);out+skel;", "#ff3300", name="#c#&nbspkerb=raised", 3, false),
-			make_layer(QURL + "?data=node[kerb=flush](bbox);out+skel;", "#0066ff", name="#c#&nbspkerb=flush", 3, false),
-			make_layer(QURL + "?data=node[kerb=no](bbox);out+skel;", "#ffff00", name="#c#&nbspkerb=no<hr>", 3, false),
-*/
+		
 			make_layer(
-				QURL + "?data=node[wheelchair=yes](bbox);out+skel;",
-				name="#ex#&nbspwheelchair=yes",
-				defaultExtPoint("https://image.flaticon.com/icons/png/512/9/9285.png"),
+				QURL + "?data=(node[emergency=access_point](bbox););out+skel;",
+				name="#ex#&nbspCobertura 112=yes",
+				defaultExtPoint("https://github.com/yopaseopor/osmcatmap/raw/master/img/pal_cobertura.png"),
 				false
 			),
 
