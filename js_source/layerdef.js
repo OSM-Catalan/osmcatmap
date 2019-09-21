@@ -383,7 +383,7 @@ false
 ),
 
 			make_layer(
-QURL + "?data=(relation['network'='exprés.cat (Barcelona)'](bbox););out+skel;",
+QURL + "?data=(relation['ref'='e18'](bbox););out+skel;",
 				name="#l#Exprés.cat Barcelona",
 				defaultSolidLine("red"),
 				false,
