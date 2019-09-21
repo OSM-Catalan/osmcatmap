@@ -925,6 +925,9 @@ true
 				},
 				false
 			),
+			
+						]);
+	}
 
 
 	if (type == "reciclatge"){
