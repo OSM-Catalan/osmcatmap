@@ -722,17 +722,71 @@ function layerdef(type){
 			make_layer(
 				QURL + "?data=(node[emergency=access_point](bbox););out+skel;",
 				name="#ex#&nbspCobertura 112=yes",
-				defaultExtPoint("https://github.com/yopaseopor/osmcatmap/raw/master/img/pal_cobertura.png"),
+				defaultExtPoint("https://github.com/osm-catalan/osmcatmap/raw/master/img/pal_cobertura.png"),
 				false
 			),
 
 			make_layer(
-				QURL + "?data=node[wheelchair=no](bbox);out+skel;",
-				name="#c#&nbspwheelchair=no",
-				defaultPoint("red"),
+				QURL + "?data=(node[emergency=defibrillator](bbox););out+skel;",
+				name="#ex#&nbspCobertura 112=yes",
+				defaultExtPoint("https://github.com/osm-catalan/osmcatmap/raw/master/img/pal_cobertura.png"),
 				false
 			),
 
+/*
+	  		//highways
+            make_layer(QURL + "?data=(way[highway=cycleway](bbox);node(w);way[highway=path][bicycle=designated](bbox);node(w););out+skel;", "red",name="#l#highway=cycleway", 5, false),
+			  
+			make_layer(QURL + "?data=(way[highway=footway](bbox);node(w););out+skel;","#bd958b",name="#l#highway=footway", 5, false,"@0.8"),
+			
+			make_layer(QURL + "?data=(way[highway=path][bicycle!~'^designated'](bbox);node(w););out+skel;","#7b9541",name="#l#highway=path", 5, false,"@0.8"),
+			
+			make_layer(QURL + "?data=(way[highway=pedestrian](bbox);node(w););out+skel;", "#ff6500",name="#l#highway=pedestrian",5, false),
+			  
+			// tracks & tracktype
+			make_layer(QURL + "?data=(way[highway=track](bbox);node(w););out+skel;","#bd9520",
+			name="#l#highway=track", 5, false,"@0.8"),
+			
+            make_layer(QURL + "?data=(way[tracktype=grade1](bbox);node(w););out+skel;","#330000",name="#l#tracktype=grade1", 2, false),
+			
+			make_layer(QURL + "?data=(way[tracktype=grade2](bbox);node(w););out+skel;","#330000",name="#dl#tracktype=grade2", 3, false,"4 8"),
+			
+			make_layer(QURL + "?data=(way[tracktype=grade3](bbox);node(w););out+skel;","#A52A2A",name="#dl#tracktype=grade3", 2, false,"4 8"),
+			
+			make_layer(QURL + "?data=(way[tracktype=grade4](bbox);node(w););out+skel;","#A52A2A",name="#d#tracktype=grade4", 2, false,"1 6"),
+			
+			make_layer(QURL + "?data=(way[tracktype=grade5](bbox);node(w););out+skel;","black",name="#d#tracktype=grade5", 1, false,"1 3"),
+			
+			make_layer(QURL + "?data=(way[highway=track][tracktype!~'^grade'](bbox);node(w););out+skel;","white",name="#dl#tracktype unknown", 2, false,"4 8"),
+			
+			make_layer(QURL + "?data=(way[highway=track][cycleway](bbox);node(w););out+skel;","#ff008b",name="#dl#highway=track &<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcycleway=*",5, false,"4 8"),
+
+			// surface on paths & tracks
+			make_layer(QURL + "?data=(way[highway~'^cycle|^foot|^path|^pedestrian|^track'][surface~'^asphalt|^pav|^concrete'](bbox);node(w););out+skel;","#000080",name="#l#surface = paved", 2, false,"@0.8"),
+			 
+			make_layer(QURL + "?data=(way[surface~'^cob'](bbox);node(w););out+skel;","#000080",name="#dl#surface=cobblestone", 4, false,"4 8@0.8"),
+			
+			make_layer(QURL + "?data=(way[surface~'^fine_gravel|.shell.'](bbox);node(w););out+skel;","#3965d5",name="#dl#surface=fine_gravel/shells", 3, false,"4 8@0.8"),
+			
+			// semi paved
+			make_layer(QURL + "?data=(way[surface~'^gravel|^compact|^loam'](bbox);node(w););out+skel;","yellow",name="#dl#surface = semi-paved", 3, false,"4 8@0.8"),
+			
+			// unpaved
+			make_layer(QURL + "?data=(way[surface~'^grass|^ground|^unpaved|^dirt|^earth|^sand|^woodchips|^pebble'](bbox);node(w););out+skel;","yellow",name="#d#surface = unpaved", 2, false,"1 3@0.8"),
+
+			 // smoothness
+			 make_layer(QURL + "?data=(way[smoothness=bad](bbox);node(w););out+skel;","#00FFFF", 
+			 name="#dl#smoothness=bad", 3, false,"4 8"),
+			 
+			 make_layer(QURL + "?data=(way[smoothness~'^very_bad|^horrible|^very_horrible|^impassable'](bbox);node(w););out+skel;","#00FFFF", 
+			 name="#l#smoothness very bad", 4, false)
+*/			 
+			]);
+	}			
+		if (type == "mobilitat"){
+
+			map.addLayers([
+			
 			make_layer(
 				QURL + "?data=node[wheelchair=designated](bbox);out+skel;",
 				name="#c#&nbspwheelchair=designated",
@@ -871,155 +925,9 @@ true
 				},
 				false
 			),
-/*
-	  		//highways
-            make_layer(QURL + "?data=(way[highway=cycleway](bbox);node(w);way[highway=path][bicycle=designated](bbox);node(w););out+skel;", "red",name="#l#highway=cycleway", 5, false),
-			  
-			make_layer(QURL + "?data=(way[highway=footway](bbox);node(w););out+skel;","#bd958b",name="#l#highway=footway", 5, false,"@0.8"),
-			
-			make_layer(QURL + "?data=(way[highway=path][bicycle!~'^designated'](bbox);node(w););out+skel;","#7b9541",name="#l#highway=path", 5, false,"@0.8"),
-			
-			make_layer(QURL + "?data=(way[highway=pedestrian](bbox);node(w););out+skel;", "#ff6500",name="#l#highway=pedestrian",5, false),
-			  
-			// tracks & tracktype
-			make_layer(QURL + "?data=(way[highway=track](bbox);node(w););out+skel;","#bd9520",
-			name="#l#highway=track", 5, false,"@0.8"),
-			
-            make_layer(QURL + "?data=(way[tracktype=grade1](bbox);node(w););out+skel;","#330000",name="#l#tracktype=grade1", 2, false),
-			
-			make_layer(QURL + "?data=(way[tracktype=grade2](bbox);node(w););out+skel;","#330000",name="#dl#tracktype=grade2", 3, false,"4 8"),
-			
-			make_layer(QURL + "?data=(way[tracktype=grade3](bbox);node(w););out+skel;","#A52A2A",name="#dl#tracktype=grade3", 2, false,"4 8"),
-			
-			make_layer(QURL + "?data=(way[tracktype=grade4](bbox);node(w););out+skel;","#A52A2A",name="#d#tracktype=grade4", 2, false,"1 6"),
-			
-			make_layer(QURL + "?data=(way[tracktype=grade5](bbox);node(w););out+skel;","black",name="#d#tracktype=grade5", 1, false,"1 3"),
-			
-			make_layer(QURL + "?data=(way[highway=track][tracktype!~'^grade'](bbox);node(w););out+skel;","white",name="#dl#tracktype unknown", 2, false,"4 8"),
-			
-			make_layer(QURL + "?data=(way[highway=track][cycleway](bbox);node(w););out+skel;","#ff008b",name="#dl#highway=track &<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcycleway=*",5, false,"4 8"),
 
-			// surface on paths & tracks
-			make_layer(QURL + "?data=(way[highway~'^cycle|^foot|^path|^pedestrian|^track'][surface~'^asphalt|^pav|^concrete'](bbox);node(w););out+skel;","#000080",name="#l#surface = paved", 2, false,"@0.8"),
-			 
-			make_layer(QURL + "?data=(way[surface~'^cob'](bbox);node(w););out+skel;","#000080",name="#dl#surface=cobblestone", 4, false,"4 8@0.8"),
-			
-			make_layer(QURL + "?data=(way[surface~'^fine_gravel|.shell.'](bbox);node(w););out+skel;","#3965d5",name="#dl#surface=fine_gravel/shells", 3, false,"4 8@0.8"),
-			
-			// semi paved
-			make_layer(QURL + "?data=(way[surface~'^gravel|^compact|^loam'](bbox);node(w););out+skel;","yellow",name="#dl#surface = semi-paved", 3, false,"4 8@0.8"),
-			
-			// unpaved
-			make_layer(QURL + "?data=(way[surface~'^grass|^ground|^unpaved|^dirt|^earth|^sand|^woodchips|^pebble'](bbox);node(w););out+skel;","yellow",name="#d#surface = unpaved", 2, false,"1 3@0.8"),
 
-			 // smoothness
-			 make_layer(QURL + "?data=(way[smoothness=bad](bbox);node(w););out+skel;","#00FFFF", 
-			 name="#dl#smoothness=bad", 3, false,"4 8"),
-			 
-			 make_layer(QURL + "?data=(way[smoothness~'^very_bad|^horrible|^very_horrible|^impassable'](bbox);node(w););out+skel;","#00FFFF", 
-			 name="#l#smoothness very bad", 4, false)
-*/			 
-			]);
-	}			
-		if (type == "route"){
-
-			map.addLayers([
-			
-			//highway=cycleway
-			make_layer(
-				QURL + "?data=(way[highway=cycleway](bbox);node(w);way[highway=path][bicycle=designated](bbox);node(w););out+skel;",
-				name="#l#highway=cycleway<hr>Route relations:",
-				defaultSolidLine("red"),
-				false),
-/*
-			//LF-routes
-			make_layer(QURL + "?data=(relation[route=bicycle][network=ncn](bbox);way(r)(bbox);node(w););out+skel;", "blue",name="#l#NCN route <i>(LF route)</i>", 12, false,"@0.6"),
-
-			// knooppuntenroutes
-			make_a_layer(QURL + "?data=relation(bbox)[network=rcn];(way(r)(bbox);node(w););out+skel;node(bbox)[rcn_ref];out;", "#00FFFF",name="#l#RCN route <i>(knooppuntroute)</i>", 8, false),
-
-			make_layer(QURL + "?data=(relation[route=bicycle][network=lcn](bbox);way(r)(bbox);node(w););out+skel;", "#7CFC00",name="#dl#LCN route <i>(lokale route)</i>", 5, false,"4 8"),
-			
-			make_layer(QURL + "?data=(relation[network=icn](bbox);way(r)(bbox);node(w););out+skel;relation[network=icn];rel(r)(bbox);(way(r)(bbox);node(w););out skel;", "yellow",name="#dl#ICN route <i>(Int.route)</i>", 3, false,"4 8"),
-			
-			//route=mtb
-            make_layer(QURL + "?data=(relation[route=mtb](bbox);way(r)(bbox);node(w););out+skel;", "#bd008b",name="#dl#MTB route", 4, false,"4 8"),
-			
-			//route=hiking, horse
-            make_a_layer(QURL + "?data=(relation[route~'hik|foot|walk'](bbox);way(r)(bbox);node(w););out+skel;node[rwn_ref][rcn_ref!~'.'](bbox);out;", "#390000",name="#l#hiking route", 5, false),
-			
-			make_a_layer(QURL + "?data=(relation[route=horse](bbox);way(r)(bbox);node(w););out+skel;node(bbox)[rhn_ref];out;", "#7b9520",name="#l#horse route", 4, false),
-			
-			make_layer(QURL + "?data=(way[railway~'^abandoned|^disused|^dismantled'](bbox);node(w););out+skel;", "#7b3000",name="#dl#former railway lines", 4, false,"4 8"),
-			
-			make_a_layer(QURL + "?data=node[tourism=information](bbox);out;", "red", name="#co#info<hr>Cyclability (indicative):", 2, false),
-			
-			
-			
-			// non cyclable ways
-			make_layer(QURL + "?data=(way[bicycle~'no|use_sidepath'](bbox);node(w);way[highway][access~'^no|^priv'][vehicle!~'yes'][bicycle!~'^no|^yes|^desig|^offic|^destin|^permis'][mtb!~'^yes|^desig|^offic|^destin|^permis']['mtb:scale'!~'^'](bbox);node(w);way[highway~'^foot|^path|^pedes|^platform|^steps|^bridleway|^prop|^constr'][access! ~'^no|^priv'][bicycle!~'^no|^yes|^desig|^offic|^destin|^permis'][mtb!~'^yes|^desig|^offic|^destin|^permis']['ramp:bicycle'!~'yes'](bbox);node(w);way[highway=track][horse=designated][access! ~'^no|^priv'][bicycle!~'^no|^yes|^desig|^offic|^destin|^permis'][mtb!~'^yes|^desig|^offic|^destin|^permis']['mtb:scale'!~'^'][route!=mtb](bbox);node(w););out+skel;", "#393020",name="<img style='vertical-align: middle;background-color:#393020;' src='img/line.gif'> 'non cycleable' ways", 4, false,"@0.5"),
-						
- 			// cyclable ways
-			make_layer(QURL + "?data=(way[highway][highway!~'^motorway|^trunk|^foot|^path|^pedes|^platform|^steps|^bridleway|^prop|^constr'][access!~'^no|^priv'][bicycle!=no][horse!=designated][tracktype!~'grade4|grade5'](bbox);node(w);way[highway][access~'^no|^priv'][bicycle~'^yes|^desig|^offic|^destin|^permis'](bbox);node(w);way[highway~'^foot|^path|^pedes|^platform|^steps|^bridleway|^prop|^constr|^trunk|^motor'][bicycle~'^yes|^desig|^offic|^destin|^permis'](bbox);node(w);way[highway~'^foot|^path|^pedes|^platform|^steps|^bridleway|^prop|^constr'][mtb~'^yes|^desig|^offic|^destin|^permis'](bbox);node(w);way[highway=steps]['ramp:bicycle'=yes](bbox);node(w);way[route=ferry][bicycle!=no](bbox);node(w););out+skel;", "#39ff00",name="<img style='vertical-align: middle;background-color:#39ff00;' src='img/line.gif'> 'cycleable' ways<hr>", 4, false,"@0.6")
-			
-*/
-			]);
-	
-			// OfficiÃ«le LF routes van het Fietsplatform
-			var LFRoutes = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: green;' src='img/line.gif'>&nbspOfficial LF routes (routedatabank.nl)",
-
-                                       "https://www.routedatabank.nl/geoserver/wms",
-                                       {layers: "routedatabank:lf_routes",
-										transparent: true,
-										format: "image/gif"
-										},{
-										visibility: false
-										});
-			map.addLayer(LFRoutes);		
-			
-			var fietsnetwerk1 = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: green;' src='img/line.gif'>&nbspOfficial cycle node network (routedatabank.nl)",
-                                       "https://www.routedatabank.nl/geoserver/wms",
-                                       {layers: "routedatabank:fietsnetwerken_vrij",
-										transparent: true,
-										format: "image/gif"
-										},{
-										visibility: false
-										});
-			map.addLayer(fietsnetwerk1);	
-			
-			var fietsknoop1 = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: white;' src='img/tocircle.gif'>&nbspOfficial cycle nodes (routedatabank.nl)",
-                                       "https://www.routedatabank.nl/geoserver/wms",
-                                       {layers: "routedatabank:fietsknooppunten_vrij",
-										transparent: true,
-										format: "image/gif"
-										},{
-										visibility: false
-										});
-			map.addLayer(fietsknoop1);
-			
-			var fietsnetwerk = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: #39ff00;' src='img/line.gif'>&nbspOfficial cycle node network (pdok.nl)",
-                                       "http://geodata.nationaalgeoregister.nl/fietsknooppuntennetwerk/wms",
-                                       {layers: "netwerken",
-										transparent: true,
-										format: "image/gif"
-										},{
-										visibility: false
-										});
-			map.addLayer(fietsnetwerk);	
-			
-			var fietsknoop = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: white;' src='img/tocircle.gif'>&nbspOfficial cycle nodes (pdok.nl)",
-                                       "http://geodata.nationaalgeoregister.nl/fietsknooppuntennetwerk/wms",
-                                       {layers: "knooppunten",
-										transparent: true,
-										format: "image/gif"
-										},{
-										visibility: false
-										});
-			map.addLayer(fietsknoop);
-	
-	}	
-
-	if (type == "bugs"){
+	if (type == "reciclatge"){
 		//	dit maakt de layers voor de bugslaag
 			map.addLayers([
 			
