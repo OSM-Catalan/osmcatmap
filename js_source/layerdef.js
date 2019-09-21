@@ -70,7 +70,7 @@
 // VOCABULARI strokeWidth=Width of the line
 // VOCABULARI strokeLinecap=Form of the cap of the line
 // VOCABULARI strokeDashstyle=start/end of the line pixels in which start the line, if it is discontinuous
-// VOCABULARI pointRadius=number in pÌxels for the radius of the point
+// VOCABULARI pointRadius=number in p√≠xels for the radius of the point
 // VOCABULARI fillColor=color you want to fill the cercle
 // VOCABULARI fillOpacity=0-1 transparency of the filled cercle
 // VOCABULARI graphicOpacity=0-1 transparency of the icon
@@ -280,7 +280,7 @@ function layerdef(type){
 			externalGraphic:url,
 			graphicWidth:16,
 			graphicHeight:16,
-			rotation:125
+			rotation:0
 		});
 	}
 	
@@ -441,7 +441,7 @@ function layerdef(type){
 
 			make_layer(
 				QURL + "?data=(way[!wheelchair][highway](bbox);node(w););out+skel;",
-				name="#l#Falta wheelchair missing <hr><hr>¿REES/¡REAS/AREAS<hr>",
+				name="#l#Falta wheelchair missing <hr><hr>√ÄREES/√ÅREAS/AREAS<hr>",
 				defaultSolidLine("black"),
 				false,
 			),
@@ -449,28 +449,28 @@ function layerdef(type){
 								//highway=cycleway
 			make_layer(
 				QURL + "?data=(way[wheelchair=yes][highway=pedestrian][area=yes](bbox);node(w););out+skel;",
-				name="#d#wheelchair=yes (‡rea)",
+				name="#d#wheelchair=yes (√†rea)",
 				defaultDashedLine("lime"),
 				false,
 			),
 
 			make_layer(
 				QURL + "?data=(way[wheelchair=limited][highway=pedestrian][area=yes](bbox);node(w););out+skel;",
-				name="#d#wheelchair=limited (‡rea)",
+				name="#d#wheelchair=limited (√†rea)",
 				defaultDashedLine("yellow"),
 				false,
 			),
 
 			make_layer(
 				QURL + "?data=(way[wheelchair=no][highway=pedestrian][area=yes](bbox);node(w););out+skel;",
-				name="#d#wheelchair=no (‡rea)",
+				name="#d#wheelchair=no (√†rea)",
 				defaultDashedLine("red"),
 				false,
 			),
 
 			make_layer(
 				QURL + "?data=(way[!wheelchair][highway=pedestrian][area=yes](bbox);node(w););out+skel;",
-				name="#d#Falta wheelchair (‡rea)<hr><hr>ALTRES/OTROS/OTHERS<hr>",
+				name="#d#Falta wheelchair (√†rea)<hr><hr>ALTRES/OTROS/OTHERS<hr>",
 				defaultDashedLine("black"),
 				false,
 			),
@@ -491,7 +491,7 @@ function layerdef(type){
 
 			make_layer(
 				QURL + "?data=node[wheelchair=yes][shop](bbox);out+skel;",
-				name="#ex#&nbspAdaptat=sÌ",
+				name="#ex#&nbspAdaptat=s√≠",
 				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/wheelchair_yes_shop.png"),
 				false
 			),
@@ -505,7 +505,7 @@ function layerdef(type){
 
 			make_layer(
 				QURL + "?data=node['capacity:disabled'='1'](bbox);out+skel;",
-				name="#ex#&nbspPlaÁa aparcament",
+				name="#ex#&nbspPla√ßa aparcament",
 			defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/capacity_disabled.png"),
 				false
 			),
@@ -526,7 +526,7 @@ function layerdef(type){
 
 			make_layer(
 				QURL + "?data=node[crossing=traffic_signals](bbox);out+skel;",
-				name="#ex#&nbspPas de vianant amb sem‡for",
+				name="#ex#&nbspPas de vianant amb sem√†for",
 				defaultExtPoint("https://raw.githubusercontent.com/yopaseopor/accessibilitat/master/icons/crossing_traffic_signals.png"),
 				false
 			),
@@ -567,7 +567,7 @@ function layerdef(type){
 
 			make_layer(
 				QURL + "?data=node[wheelchair=yes][shop](bbox);out+skel;",
-				name="#ex#&nbspAdaptat=sÌ",
+				name="#ex#&nbspAdaptat=s√≠",
 				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/wheelchair_yes_shop.png"),
 				false
 			),
@@ -581,7 +581,7 @@ function layerdef(type){
 
 			make_layer(
 				QURL + "?data=node['capacity:disabled'='1'](bbox);out+skel;",
-				name="#ex#&nbspPlaÁa aparcament",
+				name="#ex#&nbspPla√ßa aparcament",
 			defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/capacity_disabled.png"),
 				false
 			),
@@ -602,7 +602,7 @@ function layerdef(type){
 
 			make_layer(
 				QURL + "?data=node[crossing=traffic_signals](bbox);out+skel;",
-				name="#ex#&nbspPas de vianant amb sem‡for",
+				name="#ex#&nbspPas de vianant amb sem√†for",
 				defaultExtPoint("https://raw.githubusercontent.com/yopaseopor/accessibilitat/master/icons/crossing_traffic_signals.png"),
 				false
 			),
@@ -643,7 +643,7 @@ function layerdef(type){
 
 			make_layer(
 				QURL + "?data=node[wheelchair=yes][shop](bbox);out+skel;",
-				name="#ex#&nbspAdaptat=sÌ",
+				name="#ex#&nbspAdaptat=s√≠",
 				defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/wheelchair_yes_shop.png"),
 				false
 			),
@@ -657,7 +657,7 @@ function layerdef(type){
 
 			make_layer(
 				QURL + "?data=node['capacity:disabled'='1'](bbox);out+skel;",
-				name="#ex#&nbspPlaÁa aparcament",
+				name="#ex#&nbspPla√ßa aparcament",
 			defaultExtPoint("https://github.com/yopaseopor/accessibilitat/raw/master/icons/capacity_disabled.png"),
 				false
 			),
@@ -678,7 +678,7 @@ function layerdef(type){
 
 			make_layer(
 				QURL + "?data=node[crossing=traffic_signals](bbox);out+skel;",
-				name="#ex#&nbspPas de vianant amb sem‡for",
+				name="#ex#&nbspPas de vianant amb sem√†for",
 				defaultExtPoint("https://raw.githubusercontent.com/yopaseopor/accessibilitat/master/icons/crossing_traffic_signals.png"),
 				false
 			),
@@ -969,7 +969,7 @@ true
 */
 			]);
 	
-			// Offici√´le LF routes van het Fietsplatform
+			// Offici√É¬´le LF routes van het Fietsplatform
 			var LFRoutes = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: green;' src='img/line.gif'>&nbspOfficial LF routes (routedatabank.nl)",
 
                                        "https://www.routedatabank.nl/geoserver/wms",
@@ -1106,9 +1106,9 @@ function popuplinks(lonlat){
 	  var thelink = "<div STYLE=\"margin:0px 0px 0px 0px;font-size: 8pt;\"><b>MAPA</b><br><a href=\"http://www.openstreetmap.org?lat=" + lonlat.lat + "&lon=" + lonlat.lon + "&zoom=17\" target=\"_blank\"><img src='img/osm.gif'>OSM</a>&nbsp&nbsp"
 	  //COPIAR You can configure all services give you longitud and latitude and specific zoom in URL
 	  //COPIAR thelink = thelink + "<a href=\"url" + lonlat.lat + "," + lonlat.lon + "zoomcode" target=\"_blank\"><img src='url icon'>Name of the service</a>&nbsp&nbsp";
-	  //COPIAR Puedes configurar todo aquel servicio que te dÈ longitud (lonlat.lon) y latitud (lonla.lat) y un zoom concreto en la URL
+	  //COPIAR Puedes configurar todo aquel servicio que te d√© longitud (lonlat.lon) y latitud (lonla.lat) y un zoom concreto en la URL
 	  //COPIAR thelink = thelink + "<a href=\"url" + lonlat.lat + "," + lonlat.lon + "codigozoom" target=\"_blank\"><img src='url icono'>Nombre del servicio</a>&nbsp&nbsp";
-	  //COPIAR Pots configurar tots aquells serveis que et donin longitud i latitud i un zoom concre a l'adreÁa URL
+	  //COPIAR Pots configurar tots aquells serveis que et donin longitud i latitud i un zoom concre a l'adre√ßa URL
 	  //COPIAR thelink = thelink + "<a href=\"url" + lonlat.lat + "," + lonlat.lon + "codizoom" target=\"_blank\"><img src='url icona'>Nom del servei</a>&nbsp&nbsp";
 	  thelink = thelink + "<a href=\"https://maps.google.es/maps?ll=" + lonlat.lat + "," + lonlat.lon + "&t=h&z=17\" target=\"_blank\"><img src='img/google.gif'>Google</a>&nbsp&nbsp";
 	  thelink = thelink + "<a href=\"http://www.bing.com/maps/?v=2&cp=" + lonlat.lat + "~" + lonlat.lon + "&lvl=17&dir=0&sty=h&form=LMLTCC\" target=\"_blank\"><img src='img/bing.gif'>Bing</a><p>";
