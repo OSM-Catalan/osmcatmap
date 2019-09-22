@@ -377,9 +377,9 @@ function layerdef(type){
 
 			make_layer(
 			
-QURL + "?data=(relation[ref=e16](bbox);way(r)(bbox);node(w););out+skel;",
+QURL + "?data=(relation['network'='exprés.cat (Barcelona)'](bbox);way(r)(bbox);node(w););out+skel;",
 				name="#l#Exprés.cat Barcelona",
-				defaultSolidLine("red"),
+				defaultSolidLine("turquoise"),
 				false,
 			),
 			 
