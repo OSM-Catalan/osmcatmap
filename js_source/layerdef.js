@@ -553,41 +553,35 @@ false
 				false
 			),
 			
-							make_layer(
-				QURL + "?data=node[shop](bbox);out+skel;",
-				name="#c#&nbspshop",
+						make_layer(
+				QURL + "?data=node['recycling:glass_bottles'='yes'](bbox);out+skel;",
+				name="#c#&nbspPaper",
+				defaultPoint2("green"),
+				false
+			),
+			
+						make_layer(
+				QURL + "?data=node['recycling:cans'='yes'](bbox);out+skel;",
+				name="#c#&nbspEnvasos",
 				defaultPoint2("yellow"),
 				false
 			),
 			
-								make_layer(
-				QURL + "?data=node[amenity](bbox);out+skel;",
-				name="#c#&nbspamenity",
-				defaultPoint2("yellow"),
+						make_layer(
+				QURL + "?data=node['recycling:organic'='yes'](bbox);out+skel;",
+				name="#c#&nbspOrgànic",
+				defaultPoint2("brown"),
 				false
 			),
 			
-							make_layer(
-				QURL + "?data=node[crossing](bbox);out+skel;",
-				name="#c#&nbspcrossing only",
-				defaultPoint3("red"),
-				false
-			),
-			
-								make_layer(
-				QURL + "?data=node[crossing=traffic_signals](bbox);out+skel;",
-				name="#c#&nbsptraffic_signals",
-				defaultPoint4("blue"),
+						make_layer(
+				QURL + "?data=node['recycling:waste'='yes'](bbox);out+skel;",
+				name="#c#&nbspRebuig",
+				defaultPoint2("grey"),
 				false
 			),	
 			
-									make_layer(
-				QURL + "?data=node[crossing_ref=zebra](bbox);out+skel;",
-				name="#c#&nbsptraffic_signals",
-				defaultPoint5("grey"),
-				false
-			),
-			
+
 			
 		/*	
 		
