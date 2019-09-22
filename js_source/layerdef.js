@@ -385,8 +385,8 @@ QURL + "?data=(relation['network'='exprés.cat (Barcelona)'](bbox);way(r)(bbox);
 			
 make_layer(
 QURL + "?data=(relation['network'='exprés.cat (Barcelona)']['public_transport'='stop_position'](bbox);way(r)(bbox);node(w););out+skel;",
-				name="#l#Parades Exprés.cat Barcelona",
-				defaultSolidLine("turquoise"),
+				name="#c#Parades Exprés.cat Barcelona",
+				defaultPoint2("turquoise"),
 				false,
 			),
 make_layer(			
