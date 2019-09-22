@@ -49,7 +49,7 @@ var browser = "";
 // MODIFICAR		
       var lat = 41.26;
       var lon = 1.74;
-      var zoom = 8;
+      var zoom = 9;
 	  
 	var map;
 	var tabtype = {
@@ -106,8 +106,8 @@ function init(){
 		
 		var OSMFr = new OpenLayers.Layer.OSM("OSMFr", ["https://a.tile.openstreetmap.fr/osmfr/${z}/${x}/${y}.png", "https://b.tile.openstreetmap.fr/osmfr/${z}/${x}/${y}.png", "https://c.tile.openstreetmap.fr/osmfr/${z}/${x}/${y}.png"], { displayOutsideMaxExtent: true,numZoomLevels: 20, attribution: '&copy; Openstreetmap France | © <a href="https://www.openstreetmap.org/copyright/en" target="_blank">OpenStreetMap</a> contributors<br>Overlay data licensed under ODbL  '}); map.addLayer(OSMFr);
 		
-		var OSMCh = new OpenLayers.Layer.XYZ("OSMCh","https://tile.osm.ch/switzerland/${z}/${x}/${y}.png",{'attribution': ' © <a href="https://www.openstreetmap.org/copyright/en" target="_blank">OpenStreetMap</a> contributors<br>Overlay data licensed under ODbL '}); 
-		map.addLayer(OSMCh);
+		//var OSMCh = new OpenLayers.Layer.XYZ("OSMCh","https://tile.osm.ch/switzerland/${z}/${x}/${y}.png",{'attribution': ' © <a href="https://www.openstreetmap.org/copyright/en" target="_blank">OpenStreetMap</a> contributors<br>Overlay data licensed under ODbL '}); 
+		//map.addLayer(OSMCh);
 		
 		var OMS = new OpenLayers.Layer.XYZ("OpenMapSurfer","https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/${z}/${x}/${y}.png",{'attribution': '<a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> <a href="https://www.openstreetmap.org/copyright/en" target="_blank">OpenStreetMap</a> contributors<br>Overlay data licensed under ODbL '}); 
 		map.addLayer(OMS);
@@ -177,7 +177,7 @@ function init(){
   <!-- MODIFICAR Home table | tabla de inicio | taula d'inici  IMPORTANT <td id "name" -->
     <table width="500" border="0" cellspacing="0" cellpadding="7" height="100%">
     <tr> 
-      <td colspan="7" class="kaartnaam" align='center'>MAPES DE CATALUNYA AMB OSM <a href='https://wiki.openstreetmap.org/wiki/Bicycle_tags_map' target='_blank'><img src='img/help.gif'></a></td>
+      <td colspan="7" class="kaartnaam" align='center'>MAPES DE CATALUNYA AMB OSM <a href='https://wiki.openstreetmap.org/wiki/Ca:Catalunya' target='_blank'><img src='img/help.gif'></a></td>
     </tr>
     <tr> 
       <td id="accessibilitat" class="dorment" style="border-right:1px solid #000000;" onclick="switchtab(this.id,tabtype.name);">Accessibilitat</td>
