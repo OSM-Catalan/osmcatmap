@@ -581,6 +581,20 @@ false
 				false
 			),	
 			
+									make_layer(
+				QURL + "?data=node['recycling:batteries'='yes'](bbox);out+skel;",
+				name="#c#&nbspPiles",
+				defaultPoint2("red"),
+				false
+			),	
+			
+												make_layer(
+				QURL + "?data=node['recycling:cooking_oil'='yes'](bbox);out+skel;",
+				name="#c#&nbspOli",
+				defaultPoint2("slateblue"),
+				false
+			),
+			
 
 			
 		/*	
