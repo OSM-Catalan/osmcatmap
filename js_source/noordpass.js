@@ -123,7 +123,7 @@
 	}
 
 	ZoomLimitedBBOXStrategy = OpenLayers.Class(OpenLayers.Strategy.BBOX, {
-	zoom_data_limit : 13,  initialize : function (zoom_data_limit) {
+	zoom_data_limit : 8,  initialize : function (zoom_data_limit) {
 		this.zoom_data_limit = zoom_data_limit;
 		//alert(zoom_data_limit);
 	}
@@ -132,7 +132,7 @@
 		if (this.layer && this.layer.map && this.layer.map.getZoom() < this.zoom_data_limit) {
 			if (this.layer.visibility == true) {
 				//MODIFICAR
-				setStatusText(" Ácercate más para ver los datos. ");
+				setStatusText(" Apropa't més per veure les dades. ");
 				zoom_valid = false;
 				this.bounds = null;
 			}
