@@ -383,12 +383,12 @@ QURL + "?data=(relation['network'='exprés.cat (Barcelona)'](bbox);way(r)(bbox);
 				false,
 			),
 			
-make_layer(
-QURL + "?data=(relation['network'='exprés.cat (Barcelona)']['public_transport'='stop_position'](bbox);way(r)(bbox);node(r);node._['public_transport'='stop_position'](bbox););out+skel;",
-				name="#c#Parades Exprés.cat Barcelona",
-				defaultPoint2("turquoise"),
-				false,
-			),
+//make_layer(
+//QURL + "?data=(relation['network'='exprés.cat (Barcelona)']['public_transport'='stop_position'](bbox);way(r)(bbox);node(r);node._['public_transport'='stop_position'](bbox););out+skel;",
+//				name="#c#Parades Exprés.cat Barcelona",
+//				defaultPoint2("turquoise"),
+//				false,
+//			),
 make_layer(			
 			QURL + "?data=(relation['network'='exprés.cat (Girona)'](bbox);way(r)(bbox);node(w););out+skel;",
 				name="#l#Exprés.cat Girona",
