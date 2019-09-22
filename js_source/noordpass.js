@@ -132,7 +132,7 @@
 		if (this.layer && this.layer.map && this.layer.map.getZoom() < this.zoom_data_limit) {
 			if (this.layer.visibility == true) {
 				//MODIFICAR
-				setStatusText(" Més aprop per veure les dades. ");
+				setStatusText(" Apropa't més per veure les dades. ");
 				zoom_valid = false;
 				this.bounds = null;
 			}
