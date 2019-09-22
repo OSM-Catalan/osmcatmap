@@ -555,7 +555,7 @@ false
 			
 						make_layer(
 				QURL + "?data=node['recycling:glass_bottles'='yes'](bbox);out+skel;",
-				name="#c#&nbspPaper",
+				name="#c#&nbspVidre",
 				defaultPoint2("green"),
 				false
 			),
