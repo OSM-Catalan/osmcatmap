@@ -415,23 +415,9 @@ make_layer(
 			map.addLayers([
 			
 			make_layer(
-				QURL + "?data=node[wheelchair=designated](bbox);out+skel;",
-				name="#c#&nbspwheelchair=designated",
+				QURL + "?data=node[highway=speed_camera](bbox);out+skel;",
+				name="#c#&nbspRadars<hr>",
 				defaultPoint("blue"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node[wheelchair=limited](bbox);out+skel;",
-				name="#c#&nbspwheelchair=limited<hr>",
-				defaultPoint("yellow"),
-				false
-			),
-
-			make_layer(
-				QURL + "?data=node['obstacle:wheelchair'=yes](bbox);out+skel;",
-				name="#c#&nbspobstacle:wheelchair=yes<hr>",
-				defaultPoint("black"),
 				false
 			),
 

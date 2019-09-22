@@ -38,7 +38,7 @@
 			var rel_tolerance = this.tolerance * map.getScale();
 			if (rel_tolerance > 0.00008)rel_tolerance = 0.00008;
 
-			if (map.getZoom() > 8) {
+			if (map.getZoom() > 13) {
 				var oRequest =  new XMLHttpRequest();
 				var oURL = this.genericUrl + "&bbox=" + (lonlat.lon - rel_tolerance) + "," + (lonlat.lat - rel_tolerance) + "," + (lonlat.lon + rel_tolerance) + "," + (lonlat.lat + rel_tolerance);
 				//alert(oURL);
@@ -123,7 +123,7 @@
 	}
 
 	ZoomLimitedBBOXStrategy = OpenLayers.Class(OpenLayers.Strategy.BBOX, {
-	zoom_data_limit : 8,  initialize : function (zoom_data_limit) {
+	zoom_data_limit : 13,  initialize : function (zoom_data_limit) {
 		this.zoom_data_limit = zoom_data_limit;
 		//alert(zoom_data_limit);
 	}
@@ -178,7 +178,7 @@
 	name = name.replace("#to#", "<img style='vertical-align: middle;background-color: " + styleParams.strokeColor + ";' src='img/tocircle.gif'>&nbsp");
 	name = name.replace("#c#", "<img style='vertical-align: middle;background-color: " + styleParams.strokeColor + ";' src='img/tcircle.gif'>&nbsp");
 	name = name.replace("#ex#", "<img style='width:20px;vertical-align: middle; ' src='"+encodeURI(styleParams.externalGraphic)+"'>&nbsp");
-	return make_large_layer(data_url, name, 8, styleParams, visible);
+	return make_large_layer(data_url, name, 13, styleParams, visible);
 	}
 	
 //--- dit blok is nieuw -----------------------------
@@ -265,7 +265,7 @@
 		);
 	}
 	var layer =  new OpenLayers.Layer.Vector(name, {
-		strategies : [new ZoomLimitedBBOXStrategy(8)], protocol :  new OpenLayers.Protocol.HTTP( {
+		strategies : [new ZoomLimitedBBOXStrategy(13)], protocol :  new OpenLayers.Protocol.HTTP( {
 			url : data_url, format :  new OpenLayers.Format.OSM( {
 				checkTags : true
 			}
