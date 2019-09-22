@@ -577,7 +577,7 @@ false
 						make_layer(
 				QURL + "?data=node['recycling:waste'='yes'](bbox);out+skel;",
 				name="#c#&nbspRebuig",
-				defaultPoint2("grey"),
+				defaultPoint2("black"),
 				false
 			),	
 			
