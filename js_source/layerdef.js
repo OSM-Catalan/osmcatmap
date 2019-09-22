@@ -382,6 +382,30 @@ QURL + "?data=(relation['network'='exprés.cat (Barcelona)'](bbox);way(r)(bbox);
 				defaultSolidLine("turquoise"),
 				false,
 			),
+			
+QURL + "?data=(relation['network'='exprés.cat (Barcelona)'][public_transport=stop_position](bbox);way(r)(bbox);node(w););out+skel;",
+				name="#l#Parades Exprés.cat Barcelona",
+				defaultSolidLine("turquoise"),
+				false,
+			),
+			
+			QURL + "?data=(relation['network'='exprés.cat (Girona)'](bbox);way(r)(bbox);node(w););out+skel;",
+				name="#l#Exprés.cat Girona",
+				defaultSolidLine("turquoise"),
+				false,
+			),
+			
+			QURL + "?data=(relation['network'='exprés.cat (Tarragona)'](bbox);way(r)(bbox);node(w););out+skel;",
+				name="#l#Exprés.cat Tarragona",
+				defaultSolidLine("turquoise"),
+				false,
+			),
+			
+			QURL + "?data=(relation['network'='exprés.cat (Lleida)'](bbox);way(r)(bbox);node(w););out+skel;",
+				name="#l#Exprés.cat Lleida",
+				defaultSolidLine("turquoise"),
+				false,
+			),
 			 
 			]);
 	}			
