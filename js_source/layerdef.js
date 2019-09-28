@@ -373,7 +373,14 @@ function layerdef(type){
 				name="#ex#&nbspDesfibril·lador",
 				defaultExtPoint("https://github.com/osm-catalan/osmcatmap/raw/master/img/aed.png"),
 				false
-			),
+						),
+
+			make_layer(
+				QURL + "?data=node[highway=crossing](bbox);out+skel;",
+				name="#ex#&nbspPassos de vianants #1crossing1tag",
+				defaultExtPoint("https://d30y9cdsu7xlg0.cloudfront.net/png/35167-200.png"),
+				false
+),
 
 			make_layer(
 			
