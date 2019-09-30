@@ -413,6 +413,13 @@ make_layer(
 				name="#l#Exprés.cat Lleida",
 				defaultSolidLine("turquoise"),
 				false,
+						),
+					//highway=cycleway
+			make_layer(
+				QURL + "?data=(way[highway=residential](bbox);node(w);way[highway=unclassified](bbox);node(w);way[highway=pedestrian](bbox);node(w);way[highway=living_street](bbox);node(w););out+skel;",
+				name="#l#Vies sense nom",
+				defaultSolidLine("red"),
+				false,
 			),
 			 
 			]);
