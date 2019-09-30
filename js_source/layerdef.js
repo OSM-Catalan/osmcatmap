@@ -377,10 +377,17 @@ function layerdef(type){
 
 			make_layer(
 				QURL + "?data=node[highway=crossing](bbox);out+skel;",
-				name="#ex#&nbspPassos de vianants #1crossing1tag",
+				name="#ex#&nbspPassos de vianants (#1crossing1tag)",
 				defaultExtPoint("https://d30y9cdsu7xlg0.cloudfront.net/png/35167-200.png"),
 				false
-),
+						),
+					//highway=cycleway
+			make_layer(
+				QURL + "?data=(way[highway=residential][noname!][junction!](bbox);node(w);way[highway=unclassified][noname!][junction!](bbox);node(w);way[highway=pedestrian][noname!][junction!](bbox);node(w);way[highway=living_street][noname!][junction!](bbox);node(w););out+skel;",
+				name="#l#Vies sense nom (#1carrer1nom)",
+				defaultSolidLine("red"),
+				false,
+			),
 
 			make_layer(
 			
@@ -414,13 +421,7 @@ make_layer(
 				defaultSolidLine("turquoise"),
 				false,
 						),
-					//highway=cycleway
-			make_layer(
-				QURL + "?data=(way[highway=residential][noname!][junction!](bbox);node(w);way[highway=unclassified][noname!][junction!](bbox);node(w);way[highway=pedestrian][noname!][junction!](bbox);node(w);way[highway=living_street][noname!][junction!](bbox);node(w););out+skel;",
-				name="#l#Vies sense nom",
-				defaultSolidLine("red"),
-				false,
-			),
+
 			 
 			]);
 	}			
