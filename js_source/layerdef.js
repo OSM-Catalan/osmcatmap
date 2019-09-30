@@ -416,7 +416,7 @@ make_layer(
 						),
 					//highway=cycleway
 			make_layer(
-				QURL + "?data=(way[highway=residential][noname!][junction](bbox);node(w);way[highway=unclassified][noname!][junction](bbox);node(w);way[highway=pedestrian][noname!][junction](bbox);node(w);way[highway=living_street][noname!][junction](bbox);node(w););out+skel;",
+				QURL + "?data=(way[highway=residential][noname!][junction!](bbox);node(w);way[highway=unclassified][noname!][junction!](bbox);node(w);way[highway=pedestrian][noname!][junction!](bbox);node(w);way[highway=living_street][noname!][junction!](bbox);node(w););out+skel;",
 				name="#l#Vies sense nom",
 				defaultSolidLine("red"),
 				false,
