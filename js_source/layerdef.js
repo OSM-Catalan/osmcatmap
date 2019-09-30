@@ -383,7 +383,7 @@ function layerdef(type){
 						),
 					//highway=cycleway
 			make_layer(
-				QURL + "?data=(way[highway=residential][!name][!noname][!junction](bbox);node(w);way[highway=unclassified][!name][!noname][!junction](bbox);node(w);way[highway=pedestrian][!name][!noname!][!junction](bbox);node(w);way[highway=living_street][!noname][!name][!junction](bbox);node(w););out+skel;",
+				QURL + "?data=(way[highway=residential][!name](bbox);node(w););out+skel;",
 				name="#l#Vies sense nom (#1carrer1nom)",
 				defaultSolidLine("red"),
 				false,
