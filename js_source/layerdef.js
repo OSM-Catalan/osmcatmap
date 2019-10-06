@@ -562,53 +562,60 @@ false
 			map.addLayers([
 			
 						make_layer(
-				QURL + "?data=node['recycling:paper'='yes'](bbox);out+skel;",
+				QURL + "?data=node['recycling:paper'='yes'][!access](bbox);out+skel;",
 				name="#c#&nbspPaper",
 				defaultPoint2("blue"),
 				false
 			),
 			
 						make_layer(
-				QURL + "?data=node['recycling:glass_bottles'='yes'](bbox);out+skel;",
+				QURL + "?data=node['recycling:glass_bottles'='yes'][!access](bbox);out+skel;",
 				name="#c#&nbspVidre",
 				defaultPoint2("green"),
 				false
 			),
 			
 						make_layer(
-				QURL + "?data=node['recycling:cans'='yes'](bbox);out+skel;",
+				QURL + "?data=node['recycling:cans'='yes'][!access](bbox);out+skel;",
 				name="#c#&nbspEnvasos",
 				defaultPoint2("yellow"),
 				false
 			),
 			
 						make_layer(
-				QURL + "?data=node['recycling:organic'='yes'](bbox);out+skel;",
+				QURL + "?data=node['recycling:organic'='yes'][!access](bbox);out+skel;",
 				name="#c#&nbspOrgànic",
 				defaultPoint2("brown"),
 				false
 			),
 			
 						make_layer(
-				QURL + "?data=node['recycling:waste'='yes'](bbox);out+skel;",
+				QURL + "?data=node['recycling:waste'='yes'][!access](bbox);out+skel;",
 				name="#c#&nbspRebuig",
 				defaultPoint2("black"),
 				false
 			),	
 			
 									make_layer(
-				QURL + "?data=node['recycling:batteries'='yes'](bbox);out+skel;",
+				QURL + "?data=node['recycling:batteries'='yes'][!access](bbox);out+skel;",
 				name="#c#&nbspPiles",
 				defaultPoint2("red"),
 				false
 			),	
 			
 												make_layer(
-				QURL + "?data=node['recycling:cooking_oil'='yes'](bbox);out+skel;",
+				QURL + "?data=node['recycling:cooking_oil'='yes'][!access](bbox);out+skel;",
 				name="#c#&nbspOli",
 				defaultPoint2("slateblue"),
 				false
 			),
+			
+									make_layer(
+				QURL + "?data=node['recycling_type'='container'][access=private](bbox);out+skel;",
+				name="#c#&nbspPrivats",
+				defaultPoint2("grey"),
+				false
+			),	
 			
 
 			
