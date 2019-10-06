@@ -611,7 +611,7 @@ false
 			),
 			
 									make_layer(
-				QURL + "?data=node['recycling_type'='container'][access=private](bbox);out+skel;",
+				QURL + "?data=node['recycling_type'='container']['access'='private'](bbox);out+skel;",
 				name="#c#&nbspPrivats",
 				defaultPoint2("grey"),
 				false
