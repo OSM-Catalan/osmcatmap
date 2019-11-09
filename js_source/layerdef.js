@@ -387,7 +387,14 @@ function layerdef(type){
 				name="#l#Vies sense nom (#1carrer1nom)",
 				defaultSolidLine("red"),
 				false,
-			),
+									),
+					//highway=cycleway
+			make_layer(
+				QURL + "?data=(node[man_made=monitoring_station](bbox);node(w);way[man_made=monitoring_station](bbox);node(w)relation[man_made=monitoring_station](bbox);node(w););out+skel;",
+				name="#c#&nbspEstacions monitoratge",
+				defaultPoint4("green"),
+				false,
+									),
 
 			make_layer(
 			
