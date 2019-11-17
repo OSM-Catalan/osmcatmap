@@ -390,9 +390,16 @@ function layerdef(type){
 									),
 					//highway=cycleway
 			make_layer(
-				QURL + "?data=(node[man_made=monitoring_station](bbox);node(w);way[man_made=monitoring_station](bbox);node(w)relation[man_made=monitoring_station](bbox);node(w););out+skel;",
+				QURL + "?data=(node[man_made=monitoring_station](bbox);node(w);way[man_made=monitoring_station](bbox);node(w);relation[man_made=monitoring_station](bbox);node(w););out+skel;",
 				name="#c#&nbspEstacions monitoratge",
 				defaultPoint4("green"),
+				false,
+									),
+
+						make_layer(
+				QURL + "?data=(node[amenity=drinking_water](bbox););out+skel;",
+				name="#c#&nbspEstacions monitoratge",
+				defaultPoint4("blue"),
 				false,
 									),
 
