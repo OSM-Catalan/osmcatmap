@@ -398,7 +398,7 @@ function layerdef(type){
 
 						make_layer(
 				QURL + "?data=(node[amenity=drinking_water](bbox););out+skel;",
-				name="#c#&nbspEstacions monitoratge",
+				name="#c#&nbspFonts d'aigua potable",
 				defaultPoint4("blue"),
 				false,
 									),
