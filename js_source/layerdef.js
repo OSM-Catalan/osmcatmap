@@ -670,7 +670,7 @@ false
 				QURL + "?data=(nwr[~'^abandoned(:.*)?$'~'.'](bbox);node(w););out+skel;",
 				name="#c#&nbspAbandoned",
 				defaultPoint4("black"),
-				false,
+				false ),
 			
 
 
