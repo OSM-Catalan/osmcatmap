@@ -666,12 +666,11 @@ false
 		
 		map.addLayers([
 		
-						make_layer(
-				QURL + "?data=nwr[~'^abandoned(:.*)?$'~'.'](bbox);node(w););out+skel;",
+			make_layer(
+				QURL + "?data=(nwr[~'^abandoned(:.*)?$'~'.'](bbox);node(w););out+skel;",
 				name="#c#&nbspAbandoned",
-				defaultPoint2("black"),
-				false
-			),
+				defaultPoint4("black"),
+				false,
 			
 
 
