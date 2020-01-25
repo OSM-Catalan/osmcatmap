@@ -661,6 +661,90 @@ false
 	
 
 
+
+		if (type == "historic"){ //MODIFICAR 
+		
+		map.addLayers([
+		
+			make_layer(
+				QURL + "?data=(node[emergency=access_point](bbox););out+skel;",
+				name="#ex#&nbspCobertura 112",
+				defaultExtPoint2("https://github.com/osm-catalan/osmcatmap/raw/master/img/pal_cobertura.png"),
+				false
+			),
+
+			make_layer(
+				QURL + "?data=(node[emergency=defibrillator](bbox););out+skel;",
+				name="#ex#&nbspDesfibril·lador",
+				defaultExtPoint("https://github.com/osm-catalan/osmcatmap/raw/master/img/aed.png"),
+				false
+						),
+
+			make_layer(
+				QURL + "?data=node[highway=crossing](bbox);out+skel;",
+				name="#ex#&nbspPassos de vianants (#1crossing1tag)",
+				defaultExtPoint("https://d30y9cdsu7xlg0.cloudfront.net/png/35167-200.png"),
+				false
+						),
+					//highway=cycleway
+			make_layer(
+				QURL + "?data=(way[highway=residential][!name][!noname][!junction](bbox);node(w);way[highway=pedestrian][!name][!noname][!junction](bbox);node(w);way[highway=living_street][!name][!noname][!junction](bbox);node(w);way[highway=unclassified][!name][!noname][!junction](bbox);node(w););out+skel;",
+				name="#l#Vies sense nom (#1carrer1nom)",
+				defaultSolidLine("red"),
+				false,
+									),
+					//highway=cycleway
+			make_layer(
+				QURL + "?data=(node[man_made=monitoring_station](bbox);node(w);way[man_made=monitoring_station](bbox);node(w);relation[man_made=monitoring_station](bbox);node(w););out+skel;",
+				name="#c#&nbspEstacions monitoratge",
+				defaultPoint4("green"),
+				false,
+									),
+
+						make_layer(
+				QURL + "?data=(node[amenity=drinking_water](bbox););out+skel;",
+				name="#c#&nbspFonts d'aigua potable",
+				defaultPoint4("blue"),
+				false,
+									),
+
+			make_layer(
+			
+QURL + "?data=(relation['network'='exprés.cat (Barcelona)'](bbox);way(r)(bbox);node(w););out+skel;",
+				name="#l#Exprés.cat Barcelona",
+				defaultSolidLine("turquoise"),
+				false,
+			),
+			
+//make_layer(
+//QURL + "?data=(relation['network'='exprés.cat (Barcelona)']['public_transport'='stop_position'](bbox);way(r)(bbox);node(r);node._['public_transport'='stop_position'](bbox););out+skel;",
+//				name="#c#Parades Exprés.cat Barcelona",
+//				defaultPoint2("turquoise"),
+//				false,
+//			),
+make_layer(			
+			QURL + "?data=(relation['network'='exprés.cat (Girona)'](bbox);way(r)(bbox);node(w););out+skel;",
+				name="#l#Exprés.cat Girona",
+				defaultSolidLine("turquoise"),
+				false,
+			),
+make_layer(			
+			QURL + "?data=(relation['network'='exprés.cat (Tarragona)'](bbox);way(r)(bbox);node(w););out+skel;",
+				name="#l#Exprés.cat Tarragona",
+				defaultSolidLine("turquoise"),
+				false,
+			),
+make_layer(			
+			QURL + "?data=(relation['network'='exprés.cat (Lleida)'](bbox);way(r)(bbox);node(w););out+skel;",
+				name="#l#Exprés.cat Lleida",
+				defaultSolidLine("turquoise"),
+				false,
+						),
+
+			 
+			]);
+	}			
+	
 }
 	
 
