@@ -667,7 +667,7 @@ false
 		map.addLayers([
 		
 						make_layer(
-				QURL + "?data=nwr[~'^abandoned$'~'.']({{bbox}})->.solo_name;out+skel;",
+				QURL + "?data=nwr[~'^abandoned$'~'.']({{bbox}})->.solo_name;nwr[~'^abandoned(:.*)?$'~'.']({{bbox}})->.name_con_algo_mas;(.name_con_algo_mas; - .solo_name;);out+skel;",
 				name="#c#&nbspAbandoned",
 				defaultPoint2("black"),
 				false
