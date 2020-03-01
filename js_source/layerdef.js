@@ -448,12 +448,61 @@ make_layer(
 				name="#c#&nbspRadars<hr>",
 				defaultPoint("blue"),
 				false
+												),
+
+			make_layer(
+				QURL + "?data=(way[maxspeed=120](bbox);node(w););out+skel;",
+				name="#l#Velocitat 120",
+				defaultSolidLine("turquoise"),
+				false,
+						),
+
+			make_layer(
+				QURL + "?data=(way[maxspeed=100](bbox);node(w););out+skel;",
+				name="#l#Velocitat 100",
+				defaultSolidLine("maroon"),
+				false,
+			),
+
+			make_layer(
+				QURL + "?data=(way[maxspeed=90](bbox);node(w););out+skel;",
+				name="#l#Velocitat 90",
+				defaultSolidLine("olive"),
+				false,
+						),
+
+			make_layer(
+				QURL + "?data=(way[maxspeed=80](bbox);node(w););out+skel;",
+				name="#l#Velocitat 80",
+				defaultSolidLine("purple"),
+				false,
+			),
+
+			make_layer(
+				QURL + "?data=(way[maxspeed=70](bbox);node(w););out+skel;",
+				name="#l#Velocitat 70",
+				defaultSolidLine("orchid"),
+				false,
+						),
+
+			make_layer(
+				QURL + "?data=(way[maxspeed=60](bbox);node(w););out+skel;",
+				name="#l#Velocitat 60",
+				defaultSolidLine("yellowgreen"),
+				false,
 			),
 
 			make_layer(
 				QURL + "?data=(way[maxspeed=50](bbox);node(w););out+skel;",
 				name="#l#Velocitat 50",
 				defaultSolidLine("red"),
+				false,
+						),
+
+			make_layer(
+				QURL + "?data=(way[maxspeed=40](bbox);node(w););out+skel;",
+				name="#l#Velocitat 40",
+				defaultSolidLine("orangered"),
 				false,
 			),
 
@@ -469,7 +518,7 @@ make_layer(
 				name="#l#Velocitat Menor 30<hr>",
 				defaultSolidLine("green"),
 				false,
-			),
+						),
 
 			make_layer(
 				QURL + "?data=node[crossing=traffic_signals](bbox);out+skel;",
