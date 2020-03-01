@@ -465,7 +465,7 @@ make_layer(
 						),
 
 			make_layer(
-				QURL + "?data=(way[maxspeed<30](bbox);node(w););out+skel;",
+				QURL + "?data=(way[highway=living_street](bbox);node(w)way[highway=pedestrian](bbox);node(w););out+skel;",
 				name="#l#Velocitat Menor 30<hr>",
 				defaultSolidLine("green"),
 				false,
