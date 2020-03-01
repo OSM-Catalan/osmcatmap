@@ -451,6 +451,27 @@ make_layer(
 			),
 
 			make_layer(
+				QURL + "?data=(way[maxspeed=50](bbox);node(w););out+skel;",
+				name="#l#Velocitat 50",
+				defaultSolidLine("red"),
+				false,
+			),
+
+			make_layer(
+				QURL + "?data=(way[maxspeed=30](bbox);node(w););out+skel;",
+				name="#l#Velocitat 30",
+				defaultSolidLine("blue"),
+				false,
+						),
+
+			make_layer(
+				QURL + "?data=(way[maxspeed<30](bbox);node(w););out+skel;",
+				name="#l#Velocitat Menor 30<hr>",
+				defaultSolidLine("green"),
+				false,
+			),
+
+			make_layer(
 				QURL + "?data=node[crossing=traffic_signals](bbox);out+skel;",
 				name="#ex#&nbspcrossing=traffic_signals",
 				defaultExtPoint("http://icons.iconarchive.com/icons/google/noto-emoji-travel-places/1024/42571-vertical-traffic-light-icon.png"),
