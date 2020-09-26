@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.0" viewBox="0 0 2804.9 765.03" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(110.84 251.21)">
+  <path d="m282.6 513.23h2017.1l-700.57-485.66h-617.65l-698.88 485.66z" fill="#999" fill-rule="evenodd"/>
+  <path d="m898.44 342.09h-91.08l137.02-148.9h60.192l-106.13 148.9z" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-width="2"/>
+  <path d="m804.9 6.7989-914.24 440.39l393.51 0.58469-0.0408-0.58469-0.0136 65.134 696.09-483.36 0.18758-21.66z" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-width="3"/>
+  <path d="m281.75 449.77 698.03-441.66" fill="none" stroke="#000" stroke-width="3"/>
+  <path d="m1776.3 6.0362 914.3 440.38c-131.15-0.64072-262.33 1.9189-393.47 0l0.014 65.134-696.09-483.36-0.1875-21.66z" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-width="3"/>
+  <path d="m2299.5 449.01-698.1-441.66" fill="none" stroke="#000" stroke-width="3"/>
+  <path d="m1328.2 341.8h91.872l-40.392-149.69h-59.4l7.92 149.69z" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-width="2"/>
+  <path d="m1502.4 341.8h91.08l-87.12-148.9h-61.776l57.816 148.9z" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-width="2"/>
+  <path d="m1675.1 341.8h91.08l-137.02-148.9h-60.192l106.13 148.9z" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-width="2"/>
+  <path d="m1849.2 341.51h91.08l-183.74-148.1h-60.984l153.65 148.1z" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-width="2"/>
+  <path d="m1246.3 342.09h-91.872l40.392-149.69h59.4l-7.92 149.69z" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-width="2"/>
+  <path d="m1072.1 342.09h-91.08l87.12-148.9h61.776l-57.816 148.9z" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-width="2"/>
+  <path d="m724.35 342.09h-91.08l183.74-148.1h60.984l-153.65 148.1z" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-width="2"/>
+ </g>
+ <g transform="matrix(.51334 0 0 .51334 649.62 455.45)">
+  <path d="m342.91-752.03c0 25.537-20.702 46.238-46.238 46.238-25.537 0-46.238-20.702-46.238-46.238 0-25.537 20.702-46.238 46.238-46.238 25.537 0 46.238 20.702 46.238 46.238z" color="#000000" fill="#fff" stroke="#000" stroke-width="3"/>
+  <path d="m275.62-712.22v9.5312h1.5312c7e-3 0.80358 0.0197 0.95957 0.0625 2 0.082 1.9951 1.4134 2.4446 3.5313 4.5625 1.4438 1.4438 3.6393 1.7346 4.9062 1.7812v336.16l-6.2188 44.438v225.78h37.125v-225.78l-6.2188-44.438v-336.41c1.0112-0.24582 2.0849-0.70988 2.9063-1.5312 2.1179-2.1179 3.3374-2.5752 3.5313-4.5625 0.10146-1.0404 0.0869-1.079 0.0937-2h1.6875v-9.5312z" fill="#ab2524" fill-rule="evenodd" stroke="#000" stroke-dashoffset="13" stroke-width="3"/>
+  <path d="m287.1-446.52h21.673v89.146h-21.673z" fill="#fff" fill-rule="evenodd"/>
+  <path d="m280.89-266.52h34.081v89.146h-34.081z" fill="#fff" fill-rule="evenodd"/>
+  <path d="m287.1-626.52h21.673v89.146h-21.673z" fill="#fff" fill-rule="evenodd"/>
+ </g>
+ <path d="m329.77 698.83 752.03-440.17" fill="none" stroke="#000" stroke-dashoffset="13" stroke-width="2.97"/>
+ <path d="m2474.7 698.77-751.9-440.17" fill="none" stroke="#000" stroke-dashoffset="13" stroke-width="2.97"/>
+ <g transform="matrix(.78415 0 0 .78415 2029.6 629.15)">
+  <path d="m342.91-752.03c0 25.537-20.702 46.238-46.238 46.238-25.537 0-46.238-20.702-46.238-46.238 0-25.537 20.702-46.238 46.238-46.238 25.537 0 46.238 20.702 46.238 46.238z" color="#000000" fill="#fff" stroke="#000" stroke-width="3"/>
+  <path d="m275.62-712.22v9.5312h1.5312c7e-3 0.80358 0.0197 0.95957 0.0625 2 0.082 1.9951 1.4134 2.4446 3.5313 4.5625 1.4438 1.4438 3.6393 1.7346 4.9062 1.7812v336.16l-6.2188 44.438v225.78h37.125v-225.78l-6.2188-44.438v-336.41c1.0112-0.24582 2.0849-0.70988 2.9063-1.5312 2.1179-2.1179 3.3374-2.5752 3.5313-4.5625 0.10146-1.0404 0.0869-1.079 0.0937-2h1.6875v-9.5312z" fill="#ab2524" fill-rule="evenodd" stroke="#000" stroke-dashoffset="13" stroke-width="3"/>
+  <path d="m287.1-446.52h21.673v89.146h-21.673z" fill="#fff" fill-rule="evenodd"/>
+  <path d="m280.89-266.52h34.081v89.146h-34.081z" fill="#fff" fill-rule="evenodd"/>
+  <path d="m287.1-626.52h21.673v89.146h-21.673z" fill="#fff" fill-rule="evenodd"/>
+ </g>
+</svg>
