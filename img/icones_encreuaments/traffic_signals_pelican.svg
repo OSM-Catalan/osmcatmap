@@ -13,7 +13,7 @@
    viewBox="0 0 210 210"
    version="1.1"
    id="svg8"
-   sodipodi:docname="traffic_signals_zebra.svg"
+   sodipodi:docname="traffic_signals_pelican.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
   <defs
      id="defs2">
@@ -33,9 +33,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="303.44155"
-     inkscape:cy="560"
+     inkscape:zoom="2.8"
+     inkscape:cx="684.99095"
+     inkscape:cy="53.267764"
      inkscape:document-units="px"
      inkscape:current-layer="layer8"
      inkscape:document-rotation="0"
@@ -159,7 +159,7 @@
      id="layer8"
      inkscape:label="Capa 7">
     <g
-       transform="matrix(0.09151281,0,0,0.09151281,300.14344,-127.0644)"
+       transform="matrix(0.21667988,0,0,0.21667988,441.83096,-396.75798)"
        id="g2615">
       <path
          d="m -1212.9,2012.8 27.117,0.9435 0.681,-31.158 -24.423,-1.1187 -3.3752,31.333 z"
