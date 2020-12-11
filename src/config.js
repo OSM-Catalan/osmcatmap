@@ -748,13 +748,29 @@ var config = {
 			group: 'Emergències',
 			title: 'Desfibril·ladors',
 			query: '(node["emergency"="defibrillator"]({{bbox}});node(w););out;',
-			iconSrc: imgSrc + 'aed.png',
+			iconSrc: imgSrc + 'icones/aed.png',
 			iconStyle: 'background-color:#714601',
 			scale: 0.0004,
 			style: function () {
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-						src: imgSrc + 'aed.png'
+						src: imgSrc + 'icones/aed.png'
+					})
+				});
+				return style;
+			}
+		},
+		{
+			group: 'Emergències',
+			title: 'Cobertura 112',
+			query: '(node["emergency"="access_point"]({{bbox}});node(w););out;',
+			iconSrc: imgSrc + 'icones/pal_cobertura.png',
+			iconStyle: 'background-color:#714601',
+			scale: 0.0004,
+			style: function () {
+				var style = new ol.style.Style({
+					image: new ol.style.Icon({
+						src: imgSrc + 'icones/pal_cobertura.png'
 					})
 				});
 				return style;
@@ -787,7 +803,7 @@ var config = {
 			}
 		},
 		{
-			group: 'Per date',
+			group: 'Test',
 			title: 'Interval of years',
 			query: '(nwr[~"^name:....-....$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -819,7 +835,7 @@ var config = {
 			}
 		},
 		{
-			group: 'Per date',
+			group: 'Test',
 			title: 'Exact Interval of years',
 			query: '(nwr[~"^name:....-..-..-....-..-..$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -859,7 +875,7 @@ var config = {
 		},
 	{
       group: 'Test',
-      title: 'Prum',
+      title: 'geojson with icon',
 	  iconSrc: imgSrc + 'base/circle.svg',
 	  iconStyle: 'background-color:#0000ff',
       geojson: 'https://raw.githubusercontent.com/yopaseopor/osmhistoricmap/master/src/img/base/test.geojson',
@@ -1092,7 +1108,7 @@ var config = {
 		},
 		{
 			group: 'Test',
-			title: '1961',
+			title: '1970s',
 			query: '(nwr[~"^name:197[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:#0000ff',
@@ -1125,7 +1141,7 @@ var config = {
 },
   {
    group: 'Test',
-   title: '1962',
+   title: '1970s with geojson',
    query: '(nwr[~"^name:197[0-9]$"~"."]({{bbox}});node(w););out meta;',
    iconSrc: imgSrc + 'base/circle.svg',
    iconStyle: 'background-color:#0000ff',
@@ -1167,7 +1183,7 @@ var vectorLayer = new ol.layer.Vector({
    }
   },
 		{
-			group: 'Centuries',
+			group: 'Test',
 			title: '1000-1099',
 			query: '(nwr[~"^name:10[0-9][0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1200,7 +1216,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Centuries',
+			group: 'Test',
 			title: '1100-1199',
 			query: '(nwr[~"^name:11[0-9][0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1233,7 +1249,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Centuries',
+			group: 'Test',
 			title: '1200-1299',
 			query: '(nwr[~"^name:12[0-9][0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1266,7 +1282,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Centuries',
+			group: 'Test',
 			title: '1300-1399',
 			query: '(nwr[~"^name:13[0-9][0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1299,7 +1315,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Centuries',
+			group: 'Test',
 			title: '1400-1499',
 			query: '(nwr[~"^name:14[0-9][0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1332,7 +1348,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Centuries',
+			group: 'Test',
 			title: '1500-1599',
 			query: '(nwr[~"^name:15[0-9][0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1365,7 +1381,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Centuries',
+			group: 'Test',
 			title: '1600-1699',
 			query: '(nwr[~"^name:16[0-9][0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1398,7 +1414,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Centuries',
+			group: 'Test',
 			title: '1700-1799',
 			query: '(nwr[~"^name:17[0-9][0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1431,7 +1447,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Centuries',
+			group: 'Test',
 			title: '1800-1899',
 			query: '(nwr[~"^name:18[0-9][0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1464,7 +1480,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Centuries',
+			group: 'Test',
 			title: '1900-1999',
 			query: '(nwr[~"^name:19[0-9][0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1497,7 +1513,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Centuries',
+			group: 'Test',
 			title: '2000-2020',
 			query: '(nwr[~"^name:20[0-9][0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1530,7 +1546,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Decades',
+			group: 'Test',
 			title: '1900-1909',
 			query: '(nwr[~"^name:190[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1594,7 +1610,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Decades',
+			group: 'Test',
 			title: '1910-1919',
 			query: '(nwr[~"^name:191[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1626,7 +1642,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Decades',
+			group: 'Test',
 			title: '1920-1929',
 			query: '(nwr[~"^name:192[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1658,7 +1674,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Decades',
+			group: 'Test',
 			title: '1930-1939',
 			query: '(nwr[~"^name:193[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1690,7 +1706,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Decades',
+			group: 'Test',
 			title: '1940-1949',
 			query: '(nwr[~"^name:194[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1722,7 +1738,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Decades',
+			group: 'Test',
 			title: '1950-1959',
 			query: '(nwr[~"^name:195[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1754,7 +1770,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Decades',
+			group: 'Test',
 			title: '1960-1969',
 			query: '(nwr[~"^name:196[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1786,7 +1802,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Decades',
+			group: 'Test',
 			title: '1970-1979',
 			query: '(nwr[~"^name:197[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1818,7 +1834,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Decades',
+			group: 'Test',
 			title: '1980-1989',
 			query: '(nwr[~"^name:198[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1850,7 +1866,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Decades',
+			group: 'Test',
 			title: '1990-1999',
 			query: '(nwr[~"^name:199[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1882,7 +1898,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Decades',
+			group: 'Test',
 			title: '2000-2009',
 			query: '(nwr[~"^name:200[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1914,7 +1930,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Decades',
+			group: 'Test',
 			title: '2010-2019',
 			query: '(nwr[~"^name:201[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1946,7 +1962,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Decades',
+			group: 'Test',
 			title: '2010-2019',
 			query: '(nwr[~"^name:201[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -1978,7 +1994,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Decades',
+			group: 'Test',
 			title: '2020-2029',
 			query: '(nwr[~"^name:202[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -2012,7 +2028,7 @@ var vectorLayer = new ol.layer.Vector({
 		
 		// Overlay: Generic
 		{
-			group: 'Generic',
+			group: 'Test',
 			title: 'Proposed',
 			query: '(nwr[~"^proposed(:.*)?$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -2041,7 +2057,7 @@ var vectorLayer = new ol.layer.Vector({
 		
 		// Overlay: Generic
 		{
-			group: 'Generic',
+			group: 'Test',
 			title: 'Construction',
 			query: '(nwr[~"^construction(:.*)?$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -2070,7 +2086,7 @@ var vectorLayer = new ol.layer.Vector({
 		
 		// Overlay: Generic
 		{
-			group: 'Generic',
+			group: 'Test',
 			title: 'Abandoned',
 			query: '(nwr[~"^abandoned(:.*)?$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -2099,7 +2115,7 @@ var vectorLayer = new ol.layer.Vector({
 		
 		// Overlay: Històric
 		{
-			group: 'Generic',
+			group: 'Test',
 			title: 'Disused',
 			query: '(nwr[~"^disused(:.*)?$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -2128,7 +2144,7 @@ var vectorLayer = new ol.layer.Vector({
 		
 		// Overlay: Històric
 		{
-			group: 'Generic',
+			group: 'Test',
 			title: 'Was',
 			query: '(nwr[~"^was(:.*)?$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -2157,7 +2173,7 @@ var vectorLayer = new ol.layer.Vector({
 		
 		// Overlay: Històric
 		{
-			group: 'Generic',
+			group: 'Test',
 			title: 'Old',
 			query: '(nwr[~"old"~".*"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -2186,7 +2202,7 @@ var vectorLayer = new ol.layer.Vector({
 		
 		// Overlay: Generic
 		{
-			group: 'Generic',
+			group: 'Test',
 			title: 'Demolished',
 			query: '(nwr[~"^demolished(:.*)?$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -2215,7 +2231,7 @@ var vectorLayer = new ol.layer.Vector({
 		
 		// Overlay: Generic
 		{
-			group: 'Generic',
+			group: 'Test',
 			title: 'Removed',
 			query: '(nwr[~"^removed(:.*)?$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -2244,7 +2260,7 @@ var vectorLayer = new ol.layer.Vector({
 		
 		// Overlay: Generic
 		{
-			group: 'Generic',
+			group: 'Test',
 			title: 'Razed',
 			query: '(nwr[~"^razed(:.*)?$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -2308,7 +2324,7 @@ var vectorLayer = new ol.layer.Vector({
 		
 		// Overlay: Històric
 		{
-			group: 'Topics',
+			group: 'Test',
 			title: 'Old Ref',
 			query: '(nwr[~"old_ref"~".*"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed.svg',
@@ -2403,7 +2419,7 @@ var vectorLayer = new ol.layer.Vector({
 		
 		// Overlay: Històric
 		{
-			group: 'Generic',
+			group: 'Test',
 			title: 'Ruins',
 			query: '(nwr[historic=ruins]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -2429,7 +2445,7 @@ var vectorLayer = new ol.layer.Vector({
 			}
 		},
 		{
-			group: 'Topics',
+			group: 'Test',
 			title: 'ES_1932-1939 II Spanish Republic',
 			query: '(nwr[~"^name:193"~".*"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
@@ -2569,7 +2585,7 @@ var vectorLayer = new ol.layer.Vector({
 		 
 		},
 		{
-			group: 'Topics',
+			group: 'Test',
 			title: 'ES_1939-1975 Spanish Dictatorship names',
 			query: '(nwr[~"^name:197[0-9]$"~"."]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
