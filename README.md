@@ -1,15 +1,12 @@
-# accessibilitat
-help to accessibility maps
+# OSMCATMap
+Prova de concepte de mapes de la comunitat catalana d'Openstreetmap
 
-Accessibilitat és una prova de concepte sobre el mapa personalitzable a OpenStreetMap. Consta de vàries parts:
+Based on ideas of `https://osm-catalan.github.io/osmcatmap/` and `https://github.com/Ripollx/osmcatmap2` .
+Developed with [OpenLayers](https://openlayers.org/) library  and with API from [Overpass Turbo](https://wiki.openstreetmap.org/wiki/Overpass_turbo) available on [Overpass Turbo website](https://overpass-turbo.eu/).
 
-# Introducció de dades
-## Preset, predefinició pel programa Josm
-## Deriviste
+# [Mapa](http://osm-catalan.github.io/osmcatmap)
 
-# Renderització de dades
-## Estil
-## [Mapa](http://yopaseopor.github.io/accessibilitat/map)
+## [Mapa anterior](http://osm-catalan.github.io/osmcatmap/anterior)
 
 Mapa basat en [Bicycle tags map](https://wiki.openstreetmap.org/wiki/Bicycle_tags_map)
 
@@ -43,6 +40,4 @@ Per poder-ho fer hem de seguir les instruccions que trobarem en aquests arxius (
 * crear noves opcions
 * Enllaços en l'emergent que surt en fer clic sobre un punt
 
-# Informació i estadística
-## Taginfo (estadístiques)
-## Wiki a OSM sobre com fer-ho
+# [Wiki a OSM](https://wiki.openstreetmap.org/wiki/WikiProject_Catalan)
