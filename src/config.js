@@ -745,6 +745,22 @@ var config = {
 			}
 		},
 		{
+			group: 'Emergències',
+			title: 'Desfibril·ladors',
+			query: '(node["emergency"="defibrillator"]({{bbox}});node(w););out;',
+			iconSrc: imgSrc + 'aed.png',
+			iconStyle: 'background-color:#714601',
+			scale: 0.0004,
+			style: function () {
+				var style = new ol.style.Style({
+					image: new ol.style.Icon({
+						src: imgSrc + 'aed.png'
+					})
+				});
+				return style;
+			}
+		},
+		{
 			group: 'Test',
 			title: 'Interval of years - simple',
 			query: '(nwr[~"^name:....-....$"~"."]({{bbox}});node(w););out meta;',

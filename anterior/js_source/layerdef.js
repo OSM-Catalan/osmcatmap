@@ -609,6 +609,7 @@ false
 make_layer(
 QURL + "?data=node['traffic_sign:forward'='ES:R305'](bbox);out+skel;",
 name="#ex#&nbspES:R305 forward ",
+tsforward("https://github.com/yopaseopor/beta_style_josm/raw/master/traffic_signs_EUR/ES/ES_R305.png"),
 false
 ),
 make_layer(
