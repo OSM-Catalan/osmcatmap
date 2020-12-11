@@ -744,38 +744,7 @@ var config = {
 				return style;
 			}
 		},
-		{
-			group: 'Emergències',
-			title: 'Desfibril·ladors',
-			query: '(node["emergency"="defibrillator"]({{bbox}});node(w););out;',
-			iconSrc: imgSrc + 'icones/aed.png',
-			iconStyle: 'background-color:#714601',
-			scale: 0.0004,
-			style: function () {
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-						src: imgSrc + 'icones/aed.png'
-					})
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Emergències',
-			title: 'Cobertura 112',
-			query: '(node["emergency"="access_point"]({{bbox}});node(w););out;',
-			iconSrc: imgSrc + 'icones/pal_cobertura.png',
-			iconStyle: 'background-color:#714601',
-			scale: 0.0004,
-			style: function () {
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-						src: imgSrc + 'icones/pal_cobertura.png'
-					})
-				});
-				return style;
-			}
-		},
+
 		{
 			group: 'Test',
 			title: 'Interval of years - simple',
@@ -3030,7 +2999,7 @@ var vectorLayer = new ol.layer.Vector({
 			} 
 		},
 		
-/*
+
 		
 				// Right Ticket
 		{
@@ -3067,7 +3036,7 @@ var vectorLayer = new ol.layer.Vector({
 				}
 				var styles = [];
 
-				/* draw the segment line */ /*
+				/* draw the segment line */ 
 				var width = (parseFloat(maxspeed) / 30) + 0.5;
 				var color = linearColorInterpolation([0, 255, 0], [255, 0, 0], Math.min(maxspeed, 120) / 120);
 
@@ -3081,7 +3050,7 @@ var vectorLayer = new ol.layer.Vector({
 
 				// doesn't show speed sign in roundabout and similars
 				if (!feature.get('junction')) {
-					/* show the speed sign */ /*
+					/* show the speed sign */ 
 					var coords = feature.getGeometry().getCoordinates();
 
 					styles.push(new ol.style.Style({
