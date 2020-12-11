@@ -4481,7 +4481,7 @@ var vectorLayer = new ol.layer.Vector({
 				});
 				return style;
 			}
-		}, */
+		}, 
 
 		// Overlay: Test
 		{
