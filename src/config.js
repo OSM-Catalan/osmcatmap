@@ -2338,7 +2338,7 @@ var vectorLayer = new ol.layer.Vector({
 		},
 		
 		// Overlay: Històric
-		/*{
+{
 			group: 'Històric',
 			title: '1975',
 			query: '(node["name:1975"]({{bbox}});node(w);way["name:1975"]({{bbox}});node(w);relation["name:1975"]({{bbox}});node(w););out meta;',
@@ -2350,7 +2350,7 @@ var vectorLayer = new ol.layer.Vector({
 				}
 				var styles = [];
 
-				/* draw the segment line */ /*
+				/* draw the segment line */ 
 				var width = (parseFloat(name1975) / 30) + 0.5;
 				var color = linearColorInterpolation([0, 255, 0], [255, 0, 0], Math.min(name1975, 120) / 120);
 
@@ -2364,7 +2364,7 @@ var vectorLayer = new ol.layer.Vector({
 
 				// doesn't show speed sign in roundabout and similars
 				if (!feature.get('junction')) {
-					/* show the speed sign */ /*
+					/* show the speed sign */ 
 					var coords = feature.getGeometry().getCoordinates();
 
 					styles.push(new ol.style.Style({
@@ -2382,7 +2382,7 @@ var vectorLayer = new ol.layer.Vector({
 				return styles;
 			}
 		},
-	*/	
+
 		
 		
 		
