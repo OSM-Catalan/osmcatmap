@@ -1,0 +1,311 @@
+{
+  "id": "1roadAlllanes",
+  "title": {
+    "es": "1roadAlllanes",
+    "ca": "1roadAlllanes",
+    "en": "1roadAlllanes"
+  },
+  "shortDescription": {
+    "es": "Info sobre carriles",
+    "ca": "Info sobre carrils",
+    "en": "Info about lanes"
+  },
+  "description": {
+    "es": "1roadAlllanes es una quest que pregunta sobre carriles",
+    "ca": "1roadAlllanes és una quest que pregunta sobre carrils",
+    "en": "1roadAlllanes is a quest which ask for lanes info"
+  },
+  "language": [
+    "es",
+    "ca",
+    "en"
+  ],
+  "maintainer": "",
+  "icon": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/logo_mapes/lanes_quest_logo.svg",
+  "version": "0",
+  "startLat": 0,
+  "startLon": 0,
+  "startZoom": 1,
+  "widenFactor": 0.05,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "1roadAlllanes",
+      "name": {
+        "es": "Info sobre carriles",
+        "ca": "Info sobre carrils",
+        "en": "Info about lanes"
+      },
+      "minzoom": 15,
+      "overpassTags": {
+        "and": [
+          "highway~residential|living_street|tertiary|service|unclassified|secondary|primary|trunk|motorway|tertiary_link|secondary_link|primary_link|trunk_link|motorway_link"
+        ]
+      },
+      "title": {
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "name~*"
+              ]
+            },
+            "then": {
+              "es": "{name}",
+              "ca": "{name}",
+              "en": "{name}"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "name!~",
+                "ref~*"
+              ]
+            },
+            "then": {
+              "es": "{ref}",
+              "ca": "{ref}",
+              "en": "{ref}"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "name!~"
+              ]
+            },
+            "then": {
+              "es": "Sin nombre",
+              "ca": "Sense nom",
+              "en": "No name"
+            }
+          }
+        ],
+        "render": {
+          "es": "{name}",
+          "ca": "{name}",
+          "en": "{name}"
+        }
+      },
+      "description": {
+        "es": "1roadAlllanes es una quest que pregunta sobre carriles\n<br><br>\nRojo: falta info",
+        "ca": "1roadAlllanes és una quest que pregunta sobre carrils\n<br><br>\nVermell: falta info",
+        "en": "1roadAlllanes is a quest which ask for lanes info\n<br><br>\nRed: missing info"
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "es": "Falta info sobre carriles",
+            "ca": "Falta info sobre carrils",
+            "en": "Lanes info missing"
+          },
+          "question": {
+            "es": "¿Cuantos carriles tiene esta vía?",
+            "ca": "Quants carrils té aquesta via?",
+            "en": "How many lanes has this way?"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "lanes=1"
+                ]
+              },
+              "then": {
+                "es": "1 carril",
+                "ca": "1 carril",
+                "en": "1 lane"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "lanes=2"
+                ]
+              },
+              "then": {
+                "es": "2 carriles",
+                "ca": "2 carrils",
+                "en": "2 lanes"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "lanes=3"
+                ]
+              },
+              "then": {
+                "es": "3 carriles",
+                "ca": "3 carrils",
+                "en": "3 lanes"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "lanes=4"
+                ]
+              },
+              "then": {
+                "es": "4 carriles",
+                "ca": "4 carrils",
+                "en": "4 lanes"
+              }
+            }
+          ],
+          "condition": {
+            "and": []
+          },
+          "freeform": {
+            "key": "lanes"
+          }
+        },
+        {
+          "render": {
+            "es": "Info carriles en el sentido de la vía",
+            "ca": "Info carrils en el sentit de la via   ",
+            "en": "Lanes forward info"
+          },
+          "question": {
+            "es": "¿Cuantos carriles hay en el sentido de la vía?",
+            "ca": "Quants carrils en el sentit de la via hi ha?",
+            "en": "How many lanes forward has this way?"
+          },
+          "freeform": {
+            "addExtraTags": [],
+            "key": "lanes:forward"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "lanes:forward=1",
+                  "oneway=yes"
+                ]
+              },
+              "then": {
+                "es": "1 carril en el sentido de la vía",
+                "ca": "1 carril en el sentit de la via",
+                "en": "1 lane forward"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "lanes:forward=2",
+                  "oneway=yes"
+                ]
+              },
+              "then": {
+                "es": "2 carriles en el sentido de la vía",
+                "ca": "2 carrils en el sentit de la via",
+                "en": "2 lanes forward"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "lanes:forward=3",
+                  "oneway=yes"
+                ]
+              },
+              "then": {
+                "es": "3 carriles en el sentido de la vía",
+                "ca": "3 carrils en el sentit de la via",
+                "en": "3 lanes forward"
+              }
+            }
+          ]
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/logo_mapes/lanes_quest_logo.svg",
+        "mappings": []
+      },
+      "width": {
+        "render": "3"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "",
+        "mappings": [
+          {
+            "if": {
+              "or": [
+                "lanes=1",
+                "lanes:forward=1"
+              ]
+            },
+            "then": {
+              "es": "#000000",
+              "ca": "#000000",
+              "en": "#000000"
+            }
+          },
+          {
+            "if": {
+              "or": [
+                "lanes=2",
+                "lanes:forward=2"
+              ]
+            },
+            "then": {
+              "es": "#0000FF",
+              "ca": "#0000FF",
+              "en": "#0000FF"
+            }
+          },
+          {
+            "if": {
+              "or": [
+                "lanes=3",
+                "lanes:forward=3"
+              ]
+            },
+            "then": {
+              "es": "#00FF00",
+              "ca": "#00FF00",
+              "en": "#00FF00"
+            }
+          },
+          {
+            "if": {
+              "or": [
+                "lanes=4",
+                "lanes:forward=4"
+              ]
+            },
+            "then": {
+              "es": "#BD00FF",
+              "ca": "#BD00FF",
+              "en": "#BD00FF"
+            }
+          },
+          {
+            "if": {
+              "or": [
+                "lanes!~",
+                "lanes:forward!~",
+                {
+                  "and": []
+                }
+              ]
+            },
+            "then": {
+              "es": "#FF0000",
+              "ca": "#FF0000",
+              "en": "#FF0000"
+            }
+          }
+        ]
+      },
+      "presets": []
+    }
+  ],
+  "roamingRenderings": []
+}

@@ -1,0 +1,343 @@
+{
+  "id": "dalemasvelocidad",
+  "title": {
+    "es": "Dale más velocidad",
+    "ca": "Dale más velocidad"
+  },
+  "description": {
+    "es": "Lo cantaba El Canto del Loco en una estupenda versión de Crash. Completaremos las propiedades de velocidad de una vía.",
+    "ca": "Ho cantava el Canto del Loco en una magnífica de la cançó Crush. Completarem les propietats de la velocitat de la via que faltin."
+  },
+  "language": [
+    "es",
+    "ca"
+  ],
+  "maintainer": "",
+  "icon": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301.png",
+  "version": "0",
+  "startLat": 0,
+  "startLon": 0,
+  "startZoom": 1,
+  "widenFactor": 0.01,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "dalemasvelocidad",
+      "name": {
+        "es": "Dale más velocidad",
+        "ca": "Dale más velocidad"
+      },
+      "minzoom": 16,
+      "overpassTags": {
+        "and": [
+          "highway~residential|living_street|tertiary|service|unclassified|secondary|primary|trunk|motorway|tertiary_link|secondary_link|primary_link|trunk_link|motorway_link",
+          "highway!~motorway_junction"
+        ]
+      },
+      "title": {
+        "question": {},
+        "freeform": {
+          "addExtraTags": []
+        },
+        "render": {
+          "es": "Nombre: {name}",
+          "ca": "Nom: {name}"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "name~*"
+              ]
+            },
+            "then": {
+              "es": "Nombre {name}",
+              "ca": "Nom {name}"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "name="
+              ]
+            },
+            "then": {
+              "es": "No tiene nombre",
+              "ca": "No té nom"
+            }
+          }
+        ]
+      },
+      "description": {
+        "es": "Completar las propiedades que faltan sobre velocidad",
+        "ca": "Completarem les propietats que falten de velocitat"
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "es": "Velocidad: {maxspeed}",
+            "ca": "Velocitat: {maxspeed}"
+          },
+          "question": {
+            "es": "Qué velocidad tiene",
+            "ca": "Quina velocitat té"
+          },
+          "freeform": {
+            "key": "maxspeed"
+          }
+        },
+        {
+          "render": {
+            "es": "Sentido único: {oneway}",
+            "ca": "Sentit únic: {oneway}"
+          },
+          "question": {
+            "es": "¿La vía es de sentido único?",
+            "ca": "La via és de sentit únic?"
+          },
+          "freeform": {
+            "key": "oneway"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "oneway=yes"
+                ]
+              },
+              "then": {
+                "es": "Sentido único",
+                "ca": "Sentit únic"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "oneway=no"
+                ]
+              },
+              "then": {
+                "es": "Doble sentido",
+                "ca": "Doble sentit"
+              }
+            }
+          ]
+        }
+      ],
+      "icon": {
+        "question": {},
+        "freeform": {
+          "addExtraTags": []
+        },
+        "render": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301.png",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "maxspeed="
+              ]
+            },
+            "then": {
+              "es": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R501.png",
+              "ca": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R501.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "maxspeed=10"
+              ]
+            },
+            "then": {
+              "es": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_10.png",
+              "ca": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_10.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "maxspeed=20"
+              ]
+            },
+            "then": {
+              "es": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_20.png",
+              "ca": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_20.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "maxspeed=30"
+              ]
+            },
+            "then": {
+              "es": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_30.png",
+              "ca": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_30.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "maxspeed=40"
+              ]
+            },
+            "then": {
+              "es": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_40.png",
+              "ca": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_40.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "maxspeed=50"
+              ]
+            },
+            "then": {
+              "es": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_50.png",
+              "ca": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_50.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "maxspeed=60"
+              ]
+            },
+            "then": {
+              "es": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_60.png",
+              "ca": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_60.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "maxspeed=70"
+              ]
+            },
+            "then": {
+              "es": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_70.png",
+              "ca": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_70.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "maxspeed=80"
+              ]
+            },
+            "then": {
+              "es": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_80.png",
+              "ca": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_80.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "maxspeed=90"
+              ]
+            },
+            "then": {
+              "es": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_90.png",
+              "ca": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_90.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "maxspeed=100"
+              ]
+            },
+            "then": {
+              "es": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_100.png",
+              "ca": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_100.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "maxspeed=110"
+              ]
+            },
+            "then": {
+              "es": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_110.png",
+              "ca": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_110.png"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "maxspeed=120"
+              ]
+            },
+            "then": {
+              "es": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_120.png",
+              "ca": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_R301_120.png"
+            }
+          }
+        ]
+      },
+      "size": {
+        "question": {},
+        "freeform": {
+          "addExtraTags": []
+        },
+        "render": {
+          "es": "8"
+        },
+        "mappings": []
+      },
+      "color": {
+        "question": {},
+        "freeform": {
+          "addExtraTags": []
+        },
+        "render": "#000000",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "maxspeed="
+              ]
+            },
+            "then": {
+              "es": "#ff0000",
+              "ca": "#ff0000"
+            }
+          }
+        ]
+      },
+      "stroke": {
+        "question": {},
+        "freeform": {
+          "addExtraTags": []
+        },
+        "render": {
+          "es": "3"
+        },
+        "mappings": []
+      },
+      "presets": [],
+      "wayHandling": 2,
+      "iconSize": {
+        "freeform": {
+          "addExtraTags": []
+        },
+        "mappings": [],
+        "render": "20,20,center"
+      },
+      "width": {
+        "freeform": {
+          "addExtraTags": []
+        },
+        "mappings": [],
+        "render": "3"
+      },
+      "hideUnderlayingFeaturesMinPercentage": 0
+    }
+  ],
+  "shortDescription": {
+    "es": "Completar propiedades de velocidad",
+    "ca": "Completar propietats de velocitat"
+  },
+  "roamingRenderings": []
+}

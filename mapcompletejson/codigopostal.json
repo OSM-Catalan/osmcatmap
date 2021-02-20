@@ -1,0 +1,140 @@
+{
+  "id": "postalcode",
+  "title": {
+    "es": "Código Postal"
+  },
+  "shortDescription": {
+    "es": "Completar los códigos postales españoles que falten"
+  },
+  "description": {
+    "es": "Mediante la consulta de fuentes abiertas y permitidas completar los códigos postales de los diversos municipios"
+  },
+  "language": [
+    "es"
+  ],
+  "maintainer": "",
+  "icon": "https://cdn.pixabay.com/photo/2016/01/10/22/52/letters-1132703_960_720.png",
+  "version": "2020_09_27",
+  "startLat": 0,
+  "startLon": 0,
+  "startZoom": 1,
+  "widenFactor": 0.01,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "postalcode",
+      "name": {
+        "es": "Código Postal"
+      },
+      "minzoom": 10,
+      "overpassTags": {
+        "or": [
+          "boundary=postal_code",
+          {
+            "and": [
+              "admin_level=8",
+              "capital!~8"
+            ]
+          }
+        ]
+      },
+      "title": {
+        "render": {
+          "es": "{name}"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "admin_level=8"
+              ]
+            },
+            "then": {
+              "es": "{name}"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "boundary=postal_code"
+              ]
+            },
+            "then": {
+              "es": "{postal_code}"
+            }
+          }
+        ]
+      },
+      "description": {
+        "es": "Ayúdanos a completar los códigos postales de los municipios que aún no tienen"
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "es": "Código postal: {postal_code}"
+          },
+          "question": {
+            "es": "¿Qué código postal tiene?"
+          },
+          "freeform": {
+            "key": "postal_code"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "postal_code~*"
+                ]
+              },
+              "then": {
+                "es": "Ya tiene: {postal_code}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://cdn.pixabay.com/photo/2016/01/10/22/52/letters-1132703_960_720.png"
+      },
+      "width": {
+        "render": "3"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#000000",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "postal_code~"
+              ]
+            },
+            "then": {
+              "es": "#00f"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "postal_code="
+              ]
+            },
+            "then": {
+              "es": "#ff0000"
+            }
+          }
+        ]
+      },
+      "presets": [],
+      "wayHandling": 0
+    }
+  ],
+  "roamingRenderings": []
+}

@@ -1,0 +1,223 @@
+{
+  "id": "wheelchairsidewalks",
+  "title": {
+    "en": "Accessible sidewalks and crossings",
+    "ca": "Voreres i passos accessibles",
+    "es": "Aceras y pasos accesibles"
+  },
+  "shortDescription": {
+    "en": "Info about Accessible sidewalks and crossings",
+    "ca": "Info sobre voreres i passos accessibles",
+    "es": "Info sobre aceras y pasos accesibles"
+  },
+  "description": {
+    "en": "Complete the information about accessible sidewalks and crossings",
+    "ca": "Completa la informació sobre voreres i passos accessibles",
+    "es": "Completa la información sobre aceras y pasos accesibles"
+  },
+  "language": [
+    "en",
+    "ca",
+    "es"
+  ],
+  "maintainer": "",
+  "icon": "https://yopaseopor.github.io/accessibilitat/map/src/img/accessibilitat/obstacle_wheelchair_yes.svg",
+  "version": "0",
+  "startLat": 0,
+  "startLon": 0,
+  "startZoom": 1,
+  "widenFactor": 0.01,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "wheelchairsidewalks",
+      "name": {
+        "en": "Accessible sidewalks and crossings",
+        "ca": "Voreres i passos accessibles",
+        "es": "Aceras y pasos accesibles"
+      },
+      "minzoom": 16,
+      "overpassTags": {
+        "or": [
+          "footway~*",
+          {
+            "and": [
+              "highway=pedestrian"
+            ]
+          },
+          {
+            "and": [
+              "obstacle:wheelchair~*"
+            ]
+          }
+        ]
+      },
+      "title": {
+        "render": {
+          "en": "Sidewalks, crossings and pedestrian",
+          "ca": "Voreres, passos i carrers de vianants",
+          "es": "Aceras, pasos y calles peatonales"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "footway=sidewalk"
+              ]
+            },
+            "then": {
+              "en": "Sidewalk of {name}",
+              "ca": "Vorera - {name}",
+              "es": "Acera - {name}"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "footway=crossing"
+              ]
+            },
+            "then": {
+              "en": "Crossing of {name}",
+              "ca": "Pas de vianants - {name}",
+              "es": "Paso de peatones - {name}"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "highway=pedestrian"
+              ]
+            },
+            "then": {
+              "en": "Pedestrian street {name}",
+              "ca": "Via per a vianants {name}",
+              "es": "Vía para peatones {name}"
+            }
+          }
+        ]
+      },
+      "description": {
+        "en": "Complete the information about accessible sidewalks and crossings",
+        "ca": "Completa la informació sobre voreres i passos accessibles",
+        "es": "Completa la información sobre aceras y pasos accesibles"
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "en": "Way but no data",
+            "ca": "Via però sense dades",
+            "es": "Vía pero sin datos"
+          },
+          "question": {
+            "en": "Is wheelchair friendly?",
+            "ca": "És accessible?",
+            "es": "¿Es accesible?"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "wheelchair=yes"
+                ]
+              },
+              "then": {
+                "en": "It is wheelchair friendly",
+                "ca": "És accessible",
+                "es": "Es accesible"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "wheelchair=limited"
+                ]
+              },
+              "then": {
+                "en": "It is limited for wheelchairs",
+                "ca": "Té l'accessibilitat limitada",
+                "es": "Tiene accesibilidad limitada"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "wheelchair=no"
+                ]
+              },
+              "then": {
+                "en": "No wheelchairs allowed",
+                "ca": "No és accesible",
+                "es": "No es accesible"
+              }
+            }
+          ]
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://yopaseopor.github.io/accessibilitat/map/src/img/accessibilitat/obstacle_wheelchair_yes.svg"
+      },
+      "width": {
+        "render": "4"
+      },
+      "iconSize": {
+        "render": "30,30,center"
+      },
+      "color": {
+        "render": "#000000",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "wheelchair=yes"
+              ]
+            },
+            "then": {
+              "en": "#00ffa6"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "wheelchair=limited"
+              ]
+            },
+            "then": {
+              "en": " #ffaa00 "
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "wheelchair=no"
+              ]
+            },
+            "then": {
+              "en": " #ff0000 "
+            }
+          }
+        ]
+      },
+      "presets": [
+        {
+          "tags": [
+            "obstacle:wheelchair=yes"
+          ],
+          "title": {
+            "en": "Obstacle",
+            "ca": "Obstacle",
+            "es": "Obstáculo"
+          },
+          "description": {
+            "en": "Describe it",
+            "ca": "Descriu-lo",
+            "es": "Descríbelo"
+          }
+        }
+      ],
+      "wayHandling": 0
+    }
+  ],
+  "roamingRenderings": []
+}

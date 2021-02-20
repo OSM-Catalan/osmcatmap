@@ -1,0 +1,355 @@
+{
+  "id": "wherethesidewalkshavenoname",
+  "title": {
+    "ca": "Noms a voreres i encreuaments  (where the sidewalks have no name)",
+    "es": "Nombres en aceras y cruces (where the sidewalks have no name)",
+    "en": "Put name in sidewalks and crossings...where the sidewalks have no name ;)"
+  },
+  "shortDescription": {
+    "ca": "Nom a voreres i encreuaments",
+    "es": "Nombres en aceras y cruces",
+    "en": "Put name in sidewalks and crossings"
+  },
+  "description": {
+    "ca": "Posarem nom a les voreres i encreuaments que no el tinguin per facilitar la navegació.<br><br>\nLlegenda:<br>\nBuit= No existeix<br>\nVermell=Sense nom<br>\nBlau=Pas de vianants amb nom<br>\nNegre=Vorera amb nom<br>\nVerd= Via per a vianants<br>",
+    "es": "Pondremos nombre a las aceras y cruces que no lo tengan para facilitar la navegación<br><br>\n\nLeyenda:<br>\nVacío=No existe<br>\nRojo= Sin nombre<br>\nAzul=Paso de peatones con nombre<br>\nNegro=Acera con nombre<br>\nVerde= Vía para peatones<br>",
+    "en": "We will put name to sidewalks and crossings to make navigation easier.<br><br>\nMap legend:<br>\n\nEmpty =No exists<br>\nRed= No name<br>\nBlue=Named crossing<br>\nBlack=Named sidewalk<br>\nGreen= Pedestrian way<br>"
+  },
+  "language": [
+    "ca",
+    "es",
+    "en"
+  ],
+  "maintainer": "",
+  "icon": "https://cdn.pixabay.com/photo/2013/04/01/21/30/walkway-99162_960_720.png",
+  "version": "2020_09_27",
+  "startLat": 0,
+  "startLon": 0,
+  "startZoom": 1,
+  "widenFactor": 0.05,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "wherethesidewalkshavenoname",
+      "name": {
+        "ca": "Nom a voreres i encreuaments",
+        "es": "Nombre en aceras y cruces",
+        "en": "Put name in sidewalks and crossings"
+      },
+      "minzoom": 12,
+      "overpassTags": {
+        "or": [
+          "footway~sidewalk|crossing",
+          "highway=pedestrian"
+        ]
+      },
+      "title": {
+        "render": {
+          "ca": "Via",
+          "es": "Vía",
+          "en": "Way"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "name=",
+                "footway=crossing"
+              ]
+            },
+            "then": {
+              "ca": "Encreuament sense nom",
+              "es": "Cruce sin nombre",
+              "en": "No name crossing"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "footway=crossing",
+                "name~*"
+              ]
+            },
+            "then": {
+              "ca": "Encreuament de {name}",
+              "es": "Cruce de {name}",
+              "en": "{name}'s crossing"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "footway=sidewalk",
+                "name~*"
+              ]
+            },
+            "then": {
+              "ca": "Vorera de {name}",
+              "es": "Acera de {name}",
+              "en": "{name}'s sidewalk"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "name=",
+                "footway=sidewalk"
+              ]
+            },
+            "then": {
+              "ca": "Vorera sense nom",
+              "es": "Acera sin nombre",
+              "en": "No name sidewalk"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "highway=pedestrian",
+                "name~*"
+              ]
+            },
+            "then": {
+              "ca": "Via per a vianants {name}",
+              "es": "Vía para peatones {name}",
+              "en": "{name} pedestrian way"
+            }
+          }
+        ]
+      },
+      "description": {
+        "ca": "Posarem noms a voreres i encreuaments",
+        "es": "Pondremos nombre a aceras y cruces",
+        "en": "We will put name to sidewalks and crossings"
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "ca": "Nom",
+            "es": "Nombre",
+            "en": "Name"
+          },
+          "question": {
+            "ca": "A quina via pertany aquesta vorera?",
+            "es": "¿A qué vía pertenece esta acera?",
+            "en": "What is the name of the street you can find this sidewalk?"
+          },
+          "freeform": {
+            "key": "name",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name~*",
+                  "footway=sidewalk"
+                ]
+              },
+              "then": {
+                "ca": "La vorera ja té nom",
+                "es": "La acera ya tiene nombre",
+                "en": "Sidewalk already has name"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": [
+              "footway=sidewalk"
+            ]
+          }
+        },
+        {
+          "render": {
+            "ca": "Nom",
+            "es": "Nombre",
+            "en": "Name"
+          },
+          "question": {
+            "ca": "Quina via es creua per aquí?",
+            "es": "¿Qué vía se cruza por aquí?",
+            "en": "What is the name of the way you want to cross?"
+          },
+          "freeform": {
+            "key": "name",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name~*",
+                  "footway=crossing"
+                ]
+              },
+              "then": {
+                "ca": "L'encreuament ja té nom",
+                "es": "El cruce ya tiene nombre",
+                "en": "Crossing already has name"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": [
+              "footway=crossing"
+            ]
+          }
+        },
+        {
+          "render": {
+            "ca": "Amplada",
+            "es": "Anchura",
+            "en": "Width"
+          },
+          "question": {
+            "ca": "Quina amplada té aquesta vorera?",
+            "es": "¿Qué anchura tiene esta acera?",
+            "en": "What is the width of this sidewalk?"
+          },
+          "freeform": {
+            "key": "width",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "width~*",
+                  "footway=sidewalk"
+                ]
+              },
+              "then": {
+                "ca": "La vorera té d'amplada {width}",
+                "es": "La acera tiene {width} de anchura",
+                "en": "Sidewalk is {width} "
+              },
+              "hideInAnswer": true
+            }
+          ]
+        },
+        {
+          "render": {
+            "ca": "Accessibilitat",
+            "es": "Accesibilidad",
+            "en": "Accessibility"
+          },
+          "question": {
+            "ca": "Aquesta via és adaptada per a cadira de rodes?",
+            "es": "¿Esta vía está adaptada para silla de ruedas?",
+            "en": "Is this way accessible to wheelchair?"
+          },
+          "freeform": {
+            "key": "wheelchair"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "wheelchair=yes"
+                ]
+              },
+              "then": {
+                "ca": "Sí",
+                "es": "Sí",
+                "en": "Yes"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "wheelchair=limited"
+                ]
+              },
+              "then": {
+                "ca": "Limitat/da",
+                "es": "Limitad@",
+                "en": "Limited"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "wheelchair=no"
+                ]
+              },
+              "then": {
+                "ca": "No",
+                "es": "No",
+                "en": "No"
+              }
+            }
+          ]
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://cdn.pixabay.com/photo/2013/04/01/21/30/walkway-99162_960_720.png"
+      },
+      "width": {
+        "render": "3"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#ffffff",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "name="
+              ]
+            },
+            "then": {
+              "ca": "#ff0000 ",
+              "es": "#ff0000 ",
+              "en": "#ff0000 "
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "name~*",
+                "footway=crossing"
+              ]
+            },
+            "then": {
+              "ca": "#0000ff",
+              "es": "#0000ff",
+              "en": "#0000ff"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "name~*",
+                "footway=sidewalk"
+              ]
+            },
+            "then": {
+              "ca": "#000000",
+              "es": "#000000",
+              "en": "#000000"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "highway=pedestrian"
+              ]
+            },
+            "then": {
+              "ca": "#00ff00",
+              "es": "#00ff00",
+              "en": "#00ff00"
+            }
+          }
+        ]
+      },
+      "presets": []
+    }
+  ],
+  "roamingRenderings": []
+}

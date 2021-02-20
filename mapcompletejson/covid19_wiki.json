@@ -1,0 +1,267 @@
+
+{
+  "id": "openinghourscovid19",
+  "title": {
+    "es": "Horarios Covid19",
+    "en": "Opening hours during Covid19",
+    "ca": "Horaris Covid19"
+  },
+  "description": {
+    "es": "Ayúdanos a etiquetar los nuevos horarios de tu zona.  Se puede completar en la pregunta descripción. Si no lo sabes déjalo en blanco o ignora la pregunta.",
+    "en": "Easily add opening hours, both the normal hours and the hours during the global pandemic.",
+    "ca": "Ajuda'ns a etiquetar els nous horaris de la teva zona. Es pot completar en la pregunta descripció . Si no ho saps deixa-ho en blanc o ignora la pregunta."
+  },
+  "language": [
+    "es",
+    "ca",
+    "en"
+  ],
+  "maintainer": "",
+  "icon": "https://cdn.pixabay.com/photo/2020/04/08/20/43/coronavirus-5018825_960_720.png",
+  "version": "0",
+  "startLat": 41.21898,
+  "startLon": 1.71333,
+  "startZoom": 1,
+  "widenFactor": 0.01,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "establecimientoscovid19",
+      "name": {
+        "es": "Establecimientos Covid19",
+        "ca": "Establiments Covid19",
+        "en": "Shops"
+      },
+      "minzoom": 12,
+      "overpassTags": {
+        "or": [
+          "shop~*"
+        ]
+      },
+      "title": {
+        "render": {
+          "es": "Establecimientos",
+          "ca": "Establecimientos",
+          "en": "Business"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "shop~*"
+              ]
+            },
+            "then": {
+              "es": "Tienda ({shop})",
+              "ca": "Botiga ({shop})",
+              "en": "Shop ({shop})"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "amenity~*"
+              ]
+            },
+            "then": {
+              "es": "Servicio ({amenity})",
+              "ca": "Servei ({amenity})",
+              "en": "Amenity  ({amenity})"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "office~*"
+              ]
+            },
+            "then": {
+              "es": "Oficina ({office})",
+              "ca": "Oficina ({office})",
+              "en": "Office  ({office})"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "tourism~*"
+              ]
+            },
+            "then": {
+              "es": "Servicio de turismo ({tourism})",
+              "ca": "Servei de turisme ({tourism})",
+              "en": "Service for tourism  ({tourism})"
+            }
+          }
+        ]
+      },
+      "description": {
+        "es": "Ayúdanos a etiquetar establecimientos de tu zona con el nuevo horario que hagan. Se puede completar en la pregunta descripción. Si no lo sabes déjalo en blanco o ignora la pregunta.",
+        "ca": "Ajuda'ns a establir establiments de la teva zona amb el nou horari que facin. Es pot completar en la pregunta descripció. Si no ho saps deixa-ho en blanc o ignora la pregunta.",
+        "en": "Easily add opening hours, both the normal hours and the hours during the global pandemic."
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "es": "Nombre: {name}",
+            "ca": "Nom: {name}",
+            "en": "Name: {name}"
+          },
+          "question": {
+            "es": "¿Qué nombre tiene actualmente?",
+            "ca": "Quin nom té actualment?",
+            "en": "Which name has now?"
+          },
+          "freeform": {
+            "key": "name",
+            "addExtraTags": []
+          }
+        },
+        {
+          "render": {
+            "es": "Horario Covid19: {opening_hours_table(opening_hours:covid19)}",
+            "ca": "Horari Covid19:  {opening_hours_table(opening_hours:covid19)}",
+            "en": "Opening hours Covid19:  {opening_hours_table(opening_hours:covid19)}"
+          },
+          "question": {
+            "es": "¿Qué horario COVID19 tiene?",
+            "ca": "Quin horari COVID19 fa?",
+            "en": "What opening hours for Covid19 has?"
+          },
+          "freeform": {
+            "key": "opening_hours:covid19",
+            "addExtraTags": [],
+            "type": "opening_hours"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "opening_hours:covid19=same"
+                ]
+              },
+              "then": {
+                "es": "Horario COVID19: El mismo que el habitual",
+                "ca": "Horari COVID19: El mateix que l'habitual",
+                "en": "Opening hours covid19: the same"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "opening_hours:covid19=restricted"
+                ]
+              },
+              "then": {
+                "es": "Horario restringido por COVID19 sin especificar",
+                "ca": "Horari restringit per COVID19 sense especificar",
+                "en": "Restricted Opening hours due to Covid19"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "opening_hours:covid19=open"
+                ]
+              },
+              "then": {
+                "es": "Horario COVID19: Abierto sin concretar",
+                "ca": "Horari COVID19: Obert sense concretar"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "opening_hours:covid19=off"
+                ]
+              },
+              "then": {
+                "es": "Cerrado por COVID19",
+                "ca": "Tancat per COVID19",
+                "en": "Closed due to COVID19"
+              }
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Descripción COVID19: {description:covid19}",
+            "ca": "Descripció COVID19: {description:covid19}",
+            "en": "COVID19 Description: {description:covid19}"
+          },
+          "question": {
+            "es": "Más datos sobre COVID19",
+            "ca": "Més dades sobre COVID19",
+            "en": "More data about COVID19"
+          },
+          "freeform": {
+            "key": "description:covid19",
+            "addExtraTags": []
+          },
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Horario habitual: {opening_hours_table(opening_hours)}",
+            "ca": "Horari habitual: {opening_hours_table(opening_hours)}",
+            "en": "Normal Opening Hours l: {opening_hours_table(opening_hours)}"
+          },
+          "question": {
+            "es": "¿Qué horario habitual (no COVID19) tiene?",
+            "ca": "Quin horari habitual (no COVID19) té?",
+            "en": "Which opening hours has? (no COVID19)"
+          },
+          "freeform": {
+            "key": "opening_hours",
+            "addExtraTags": [],
+            "type": "opening_hours"
+          },
+          "condition": {
+            "and": []
+          }
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/45px-SARS-CoV-2_without_background.png",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "opening_hours:covid19~*"
+              ]
+            },
+            "then": {
+              "es": "https://cdn.pixabay.com/photo/2020/04/08/20/43/coronavirus-5018825_960_720.png",
+              "ca": "https://cdn.pixabay.com/photo/2020/04/08/20/43/coronavirus-5018825_960_720.png",
+              "en": "https://cdn.pixabay.com/photo/2020/04/08/20/43/coronavirus-5018825_960_720.png"
+            }
+          }
+        ]
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": [],
+      "wayHandling": 1
+    }
+  ],
+  "roamingRenderings": [],
+  "shortDescription": {
+    "es": "Ayúdanos a definir los nuevos horarios de los establecimientos",
+    "ca": "Ajuda'ns a definir els nous horaris dels establiments",
+    "en": "Help us to set the new opening_hours during pandemic times."
+  }
+}
+

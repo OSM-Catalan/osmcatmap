@@ -1,0 +1,290 @@
+{
+  "id": "crossingtime",
+  "title": {
+    "ca": "Temps d'encreuaments",
+    "es": "Tiempo de cruzar"
+  },
+  "shortDescription": {
+    "ca": "Afegir informació sobre encreuaments",
+    "es": "Añadir información sobre los pasos de peatones"
+  },
+  "description": {
+    "ca": "D'acord, sabem que aquí es pot creuar, però ens pots descriure com és aquest encreuament?",
+    "es": "De acuerdo , sabemos que aquí podemos cruzar, pero ¿nos puedes describir como es este paso de peatones?"
+  },
+  "language": [
+    "ca",
+    "es"
+  ],
+  "maintainer": "",
+  "icon": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_S13.png",
+  "version": "2020_09_26",
+  "startLat": 0,
+  "startLon": 0,
+  "startZoom": 1,
+  "widenFactor": 0.01,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "crossingtime",
+      "name": {
+        "ca": "Encreuament",
+        "es": "Cruce"
+      },
+      "minzoom": 12,
+      "overpassTags": {
+        "and": [
+          "highway=crossing"
+        ]
+      },
+      "title": {
+        "render": {
+          "ca": "Encreuament",
+          "es": "Cruce"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "highway=crossing"
+              ]
+            },
+            "then": {
+              "ca": "Encreuament",
+              "es": "Cruce"
+            }
+          }
+        ]
+      },
+      "description": {
+        "ca": "Sabem que hi ha un encreuament, ens en pots donar més informació?",
+        "es": "Sabemos que aquí hay un cruce, ¿nos puedes dar más datos sobre el paso de peatones?"
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "ca": "Regulació de l'encreuament",
+            "es": "Regulación del cruce"
+          },
+          "question": {
+            "ca": "Com està regulat l'encreuament?",
+            "es": "¿Como está regulado el cruce?"
+          },
+          "freeform": {
+            "addExtraTags": [],
+            "key": "crossing"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "crossing=unmarked"
+                ]
+              },
+              "then": {
+                "ca": "Hi creuen vianants però no té marques vials",
+                "es": "Cruzan peatones pero sin marcas viales"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing=uncontrolled"
+                ]
+              },
+              "then": {
+                "ca": "Hi creuen vianants, té marques, no està regulat per semàfor",
+                "es": "Cruzan peatones ,tiene marcas viales, no está regulado por semáforo"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing=traffic_signals"
+                ]
+              },
+              "then": {
+                "ca": "Hi creuen vianants, té marques vials i està regulat per semàfor",
+                "es": "Cruzan peatones ,tiene marcas viales, y está regulado por semáforo"
+              }
+            }
+          ]
+        },
+        {
+          "render": {
+            "ca": "Tipus d'encreuament",
+            "es": "Tipo de cruce"
+          },
+          "question": {
+            "ca": "Quin tipus d'encreuament és?",
+            "es": "¿Qué tipo de cruce es?"
+          },
+          "freeform": {
+            "key": "crossing_ref"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "crossing_ref=zebra"
+                ]
+              },
+              "then": {
+                "ca": "Pas de vianants",
+                "es": "Paso de peatones"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing_ref=puffin",
+                  "button_operated=yes"
+                ]
+              },
+              "then": {
+                "ca": "Pas de vianants amb semàfor controlat per botó",
+                "es": "Paso de peatones con semáforo controlado por botón"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing_ref=pelican"
+                ]
+              },
+              "then": {
+                "ca": "Pas de vianants, amb semàfor i illeta al mig",
+                "es": "Paso de peatones , con semáforo e isleta enmedio"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing_ref=toucan",
+                  "bicycle=yes"
+                ]
+              },
+              "then": {
+                "ca": "Pas de vianants i bicicletes, amb semàfor",
+                "es": "Paso de peatones y bicicletas, con semáforo"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "crossing_ref=tiger",
+                  "bicycle=yes"
+                ]
+              },
+              "then": {
+                "ca": "Pas de vianants i bicicletes, sense semàfor",
+                "es": "Paso de peatones y bicicletas sin semáforo"
+              }
+            }
+          ]
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_S13.png",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "crossing=",
+                "crossing_ref=pelican"
+              ]
+            },
+            "then": {
+              "ca": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_encreuaments/traffic_signals_pelican.svg",
+              "es": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_encreuaments/traffic_signals_pelican.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "crossing=traffic_signals",
+                "crossing_ref=toucan"
+              ]
+            },
+            "then": {
+              "ca": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_encreuaments/traffic_signals_toucan.svg",
+              "es": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_encreuaments/traffic_signals_toucan.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "crossing_ref=puffin",
+                "button_operated=yes"
+              ]
+            },
+            "then": {
+              "ca": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_encreuaments/traffic_signals_puffin.svg",
+              "es": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_encreuaments/traffic_signals_puffin.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "crossing=traffic_signals"
+              ]
+            },
+            "then": {
+              "ca": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_encreuaments/traffic_signals.svg",
+              "es": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_encreuaments/traffic_signals.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "crossing=uncontrolled",
+                "crossing_ref=zebra"
+              ]
+            },
+            "then": {
+              "ca": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_encreuaments/uncontrolled_zebra.svg",
+              "es": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_encreuaments/uncontrolled_zebra.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "crossing=uncontrolled",
+                "crossing_ref=tiger"
+              ]
+            },
+            "then": {
+              "ca": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_encreuaments/uncontrolled_tiger.svg",
+              "es": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_encreuaments/uncontrolled_tiger.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "crossing=unmarked"
+              ]
+            },
+            "then": {
+              "ca": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_encreuaments/unmarked.svg",
+              "es": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_encreuaments/unmarked.svg"
+            }
+          }
+        ]
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "25,25,center",
+        "mappings": []
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": [],
+      "wayHandling": 1
+    }
+  ],
+  "roamingRenderings": []
+}

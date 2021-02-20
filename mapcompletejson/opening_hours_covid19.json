@@ -1,0 +1,247 @@
+{
+  "id": "openinghourscovid19",
+  "title": {
+    "es": "Horarios Covid19"
+  },
+  "description": {
+    "es": "Ayúdanos a etiquetar los nuevos horarios de tu zona. Se le debe poner nombre y tipo. Se puede complementar en la pregunta descripción. Si no lo sabes déjalo en blanco o ignora la pregunta."
+  },
+  "language": [
+    "es"
+  ],
+  "maintainer": "",
+  "icon": "https://cdn.pixabay.com/photo/2020/04/08/20/43/coronavirus-5018825_960_720.png",
+  "version": "0",
+  "startLat": 41.21898,
+  "startLon": 1.71333,
+  "startZoom": 1,
+  "widenFactor": 0.05,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "comercioscovid19",
+      "name": {
+        "es": "Comercios Covid19"
+      },
+      "minzoom": 12,
+      "overpassTags": {
+        "or": [
+          "shop~*",
+          {
+            "or": [
+              {
+                "and": [
+                  "amenity~*",
+                  "amenity!~bench|atm"
+                ]
+              }
+            ]
+          },
+          {
+            "or": [
+              "office~*"
+            ]
+          },
+          {
+            "or": [
+              "tourism~*"
+            ]
+          }
+        ]
+      },
+      "title": {
+        "render": {
+          "es": "Comercios"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "shop~*"
+              ]
+            },
+            "then": {
+              "es": "Tienda {name}"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "amenity~*"
+              ]
+            },
+            "then": {
+              "es": "Servicio {name}"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "office~*"
+              ]
+            },
+            "then": {
+              "es": "Oficina {name}"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "tourism~*"
+              ]
+            },
+            "then": {
+              "es": "Servicio de turismo {name}"
+            }
+          }
+        ]
+      },
+      "description": {
+        "es": "Ayúdanos a etiquetar comercios de tu zona con el nuevo horario que hagan. Se le debe poner nombre y tipo. Se puede complementar en la pregunta descripción. Si no lo sabes déjalo en blanco o ignora la pregunta."
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "es": "Nombre: {name}"
+          },
+          "question": {
+            "es": "Qué nombre tiene actualmente?"
+          },
+          "freeform": {
+            "key": "name",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name="
+                ]
+              },
+              "then": {
+                "es": "{name}"
+              }
+            }
+          ]
+        },
+        {
+          "render": {
+            "es": "Horario Covid19: {opening_hours:covid19}"
+          },
+          "question": {
+            "es": "¿Qué horario COVID19 tiene?"
+          },
+          "freeform": {
+            "key": "opening_hours:covid19",
+            "addExtraTags": [],
+            "type": "opening_hours"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "opening_hours:covid19~"
+                ]
+              },
+              "then": {
+                "es": "Horario Covid19: {name:2010}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Descripción COVID19: {description:covid19}"
+          },
+          "question": {
+            "es": "Más datos sobre COVID19"
+          },
+          "freeform": {
+            "key": "description:covid19",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "description:covid19~"
+                ]
+              },
+              "then": {
+                "es": "Descripción COVID19: {description:covid19}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Horario: {opening_hours}"
+          },
+          "question": {
+            "es": "¿Qué horario tiene?"
+          },
+          "freeform": {
+            "key": "opening_hours",
+            "addExtraTags": [],
+            "type": "opening_hours"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1980~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1980: {name:1980}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_960_720.png",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "opening_hours:covid19~*"
+              ]
+            },
+            "then": {
+              "es": "https://cdn.pixabay.com/photo/2020/04/08/20/43/coronavirus-5018825_960_720.png"
+            }
+          }
+        ]
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": [],
+      "wayHandling": 1
+    }
+  ],
+  "roamingRenderings": [],
+  "shortDescription": {
+    "es": "Ayúdanos a definir los nuevos horarios de los establecimientos"
+  }
+}

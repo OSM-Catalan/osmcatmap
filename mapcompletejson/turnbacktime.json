@@ -1,0 +1,1710 @@
+{
+  "id": "comerciosantiguos",
+  "title": {
+    "es": "Comercios antiguos"
+  },
+  "description": {
+    "es": "Ayúdanos a etiquetar antiguos comercios de tu zona. Se marca la década en la que se sabe que el comercio aún estaba abierto. Se le debe poner nombre y tipo. Se puede complementar en la pregunta descripción. Si no lo sabes déjalo en blanco o ignora la pregunta."
+  },
+  "language": [
+    "es"
+  ],
+  "maintainer": "",
+  "icon": "https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_960_720.png",
+  "version": "0",
+  "startLat": 41.21898,
+  "startLon": 1.71333,
+  "startZoom": 1,
+  "widenFactor": 0.05,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "comerciosantiguos",
+      "name": {
+        "es": "Comercios Antiguos"
+      },
+      "minzoom": 12,
+      "overpassTags": {
+        "and": [
+          "shop~*"
+        ]
+      },
+      "title": {
+        "render": {
+          "es": "Comercios"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "shop~*"
+              ]
+            },
+            "then": {
+              "es": "Tienda {name}"
+            }
+          }
+        ]
+      },
+      "description": {
+        "es": "Ayúdanos a etiquetar antiguos comercios de tu zona. Se marca la década en la que se sabe que el comercio aún estaba abierto. Se le debe poner nombre y tipo. Se puede complementar en la pregunta descripción. Si no lo sabes déjalo en blanco o ignora la pregunta."
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "es": "Nombre: {name}"
+          },
+          "question": {
+            "es": "Qué nombre tiene actualmente?"
+          },
+          "freeform": {
+            "key": "name",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name="
+                ]
+              },
+              "then": {
+                "es": "Ya tiene nombre: {name}"
+              }
+            }
+          ]
+        },
+        {
+          "render": {
+            "es": "Nombre en 2010: {name:2010}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 2010?"
+          },
+          "freeform": {
+            "key": "name:2010",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:2010~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 2010: {name:2010}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 2000: {name:2000}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 2000?"
+          },
+          "freeform": {
+            "key": "name:2000",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:2000~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 2000: {name:2000}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1990: {name:1990}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1990?"
+          },
+          "freeform": {
+            "key": "name:1990",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1990~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1990: {name:1990}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1980: {name:1980}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1980?"
+          },
+          "freeform": {
+            "key": "name:1980",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1980~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1980: {name:1980}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1970: {name:1970}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1970?"
+          },
+          "freeform": {
+            "key": "name:1970",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1970~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1970: {name:1970}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1960: {name:1960}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1960?"
+          },
+          "freeform": {
+            "key": "name:1960",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1960~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1960: {name:1960}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1950: {name:1950}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1950?"
+          },
+          "freeform": {
+            "key": "name:1950",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1950~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1950: {name:1950}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1940: {name:1940}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1940?"
+          },
+          "freeform": {
+            "key": "name:1940",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1940~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1940: {name:1940}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1930: {name:1930}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1930?"
+          },
+          "freeform": {
+            "key": "name:1930",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1930~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1930: {name:1930}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1920: {name:1920}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1920?"
+          },
+          "freeform": {
+            "key": "name:1920",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1920~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1920: {name:1920}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1910: {name:1910}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1910?"
+          },
+          "freeform": {
+            "key": "name:1910",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1910~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1910: {name:1910}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1900: {name:1900}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1900?"
+          },
+          "freeform": {
+            "key": "name:1900",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1900~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1900: {name:1900}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_960_720.png",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "shop~*"
+              ]
+            },
+            "then": {
+              "es": "https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_960_720.png"
+            }
+          }
+        ]
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": [],
+      "wayHandling": 1
+    },
+    {
+      "id": "serviciosantiguos",
+      "name": {
+        "es": "Servicios Antiguos"
+      },
+      "minzoom": 12,
+      "overpassTags": {
+        "and": [
+          "amenity~*"
+        ]
+      },
+      "title": {
+        "render": {
+          "es": "Servicios"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "amenity~*"
+              ]
+            },
+            "then": {
+              "es": "Servicio {name}"
+            }
+          }
+        ]
+      },
+      "description": {
+        "es": "Ayúdanos a etiquetar antiguos servicios de tu zona. Se marca la década en la que se sabe que el servicio aún estaba abierto. Se le debe poner nombre y tipo. Se puede complementar en la pregunta descripción. Si no lo sabes déjalo en blanco o ignora la pregunta."
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "es": "Nombre: {name}"
+          },
+          "question": {
+            "es": "Qué nombre tiene actualmente?"
+          },
+          "freeform": {
+            "key": "name",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name="
+                ]
+              },
+              "then": {
+                "es": "Ya tiene nombre: {name}"
+              }
+            }
+          ]
+        },
+        {
+          "render": {
+            "es": "Nombre en 2010: {name:2010}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 2010?"
+          },
+          "freeform": {
+            "key": "name:2010",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:2010~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 2010: {name:2010}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 2000: {name:2000}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 2000?"
+          },
+          "freeform": {
+            "key": "name:2000",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:2000~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 2000: {name:2000}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1990: {name:1990}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1990?"
+          },
+          "freeform": {
+            "key": "name:1990",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1990~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1990: {name:1990}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1980: {name:1980}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1980?"
+          },
+          "freeform": {
+            "key": "name:1980",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1980~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1980: {name:1980}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1970: {name:1970}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1970?"
+          },
+          "freeform": {
+            "key": "name:1970",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1970~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1970: {name:1970}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1960: {name:1960}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1960?"
+          },
+          "freeform": {
+            "key": "name:1960",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1960~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1960: {name:1960}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1950: {name:1950}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1950?"
+          },
+          "freeform": {
+            "key": "name:1950",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1950~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1950: {name:1950}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1940: {name:1940}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1940?"
+          },
+          "freeform": {
+            "key": "name:1940",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1940~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1940: {name:1940}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1930: {name:1930}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1930?"
+          },
+          "freeform": {
+            "key": "name:1930",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1930~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1930: {name:1930}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1920: {name:1920}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1920?"
+          },
+          "freeform": {
+            "key": "name:1920",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1920~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1920: {name:1920}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1910: {name:1910}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1910?"
+          },
+          "freeform": {
+            "key": "name:1910",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1910~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1910: {name:1910}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1900: {name:1900}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1900?"
+          },
+          "freeform": {
+            "key": "name:1900",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1900~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1900: {name:1900}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://cdn.pixabay.com/photo/2012/05/04/10/57/gear-47203_960_720.png",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "amenity~*"
+              ]
+            },
+            "then": {
+              "es": "https://cdn.pixabay.com/photo/2012/05/04/10/57/gear-47203_960_720.png"
+            }
+          }
+        ]
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": [],
+      "wayHandling": 1
+    },
+    {
+      "id": "serviciosdeturismoantiguos",
+      "name": {
+        "es": "Servicios de Turismo Antiguos"
+      },
+      "minzoom": 12,
+      "overpassTags": {
+        "and": [
+          "tourism~*"
+        ]
+      },
+      "title": {
+        "render": {
+          "es": "Servicios de turismo"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "tourism~*"
+              ]
+            },
+            "then": {
+              "es": "Servicio de turismo {name}"
+            }
+          }
+        ]
+      },
+      "description": {
+        "es": "Ayúdanos a etiquetar antiguos servicios de turismo de tu zona. Se marca la década en la que se sabe que el servicio de turismo aún estaba abierto. Se le debe poner nombre y tipo. Se puede complementar en la pregunta descripción. Si no lo sabes déjalo en blanco o ignora la pregunta."
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "es": "Nombre: {name}"
+          },
+          "question": {
+            "es": "Qué nombre tiene actualmente?"
+          },
+          "freeform": {
+            "key": "name",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name="
+                ]
+              },
+              "then": {
+                "es": "Ya tiene nombre: {name}"
+              }
+            }
+          ]
+        },
+        {
+          "render": {
+            "es": "Nombre en 2010: {name:2010}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 2010?"
+          },
+          "freeform": {
+            "key": "name:2010",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:2010~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 2010: {name:2010}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 2000: {name:2000}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 2000?"
+          },
+          "freeform": {
+            "key": "name:2000",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:2000~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 2000: {name:2000}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1990: {name:1990}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1990?"
+          },
+          "freeform": {
+            "key": "name:1990",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1990~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1990: {name:1990}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1980: {name:1980}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1980?"
+          },
+          "freeform": {
+            "key": "name:1980",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1980~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1980: {name:1980}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1970: {name:1970}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1970?"
+          },
+          "freeform": {
+            "key": "name:1970",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1970~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1970: {name:1970}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1960: {name:1960}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1960?"
+          },
+          "freeform": {
+            "key": "name:1960",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1960~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1960: {name:1960}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1950: {name:1950}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1950?"
+          },
+          "freeform": {
+            "key": "name:1950",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1950~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1950: {name:1950}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1940: {name:1940}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1940?"
+          },
+          "freeform": {
+            "key": "name:1940",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1940~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1940: {name:1940}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1930: {name:1930}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1930?"
+          },
+          "freeform": {
+            "key": "name:1930",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1930~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1930: {name:1930}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1920: {name:1920}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1920?"
+          },
+          "freeform": {
+            "key": "name:1920",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1920~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1920: {name:1920}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1910: {name:1910}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1910?"
+          },
+          "freeform": {
+            "key": "name:1910",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1910~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1910: {name:1910}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1900: {name:1900}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1900?"
+          },
+          "freeform": {
+            "key": "name:1900",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1900~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1900: {name:1900}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://cdn.pixabay.com/photo/2016/11/22/12/24/camp-1849133_960_720.png",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "amenity~*"
+              ]
+            },
+            "then": {
+              "es": "https://cdn.pixabay.com/photo/2016/11/22/12/24/camp-1849133_960_720.png"
+            }
+          }
+        ]
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": [],
+      "wayHandling": 1
+    },
+    {
+      "id": "oficinasantiguas",
+      "name": {
+        "es": "Oficinas antiguas"
+      },
+      "minzoom": 12,
+      "overpassTags": {
+        "and": [
+          "office~*"
+        ]
+      },
+      "title": {
+        "render": {
+          "es": "Oficinas"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "office~*"
+              ]
+            },
+            "then": {
+              "es": "Oficina {name}"
+            }
+          }
+        ]
+      },
+      "description": {
+        "es": "Ayúdanos a etiquetar antiguas oficinas de tu zona. Se marca la década en la que se sabe que la oficina aún estaba abierta. Se le debe poner nombre y tipo. Se puede complementar en la pregunta descripción. Si no lo sabes déjalo en blanco o ignora la pregunta."
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "es": "Nombre: {name}"
+          },
+          "question": {
+            "es": "Qué nombre tiene actualmente?"
+          },
+          "freeform": {
+            "key": "name",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name="
+                ]
+              },
+              "then": {
+                "es": "Ya tiene nombre: {name}"
+              }
+            }
+          ]
+        },
+        {
+          "render": {
+            "es": "Nombre en 2010: {name:2010}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 2010?"
+          },
+          "freeform": {
+            "key": "name:2010",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:2010~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 2010: {name:2010}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 2000: {name:2000}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 2000?"
+          },
+          "freeform": {
+            "key": "name:2000",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:2000~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 2000: {name:2000}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1990: {name:1990}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1990?"
+          },
+          "freeform": {
+            "key": "name:1990",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1990~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1990: {name:1990}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1980: {name:1980}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1980?"
+          },
+          "freeform": {
+            "key": "name:1980",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1980~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1980: {name:1980}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1970: {name:1970}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1970?"
+          },
+          "freeform": {
+            "key": "name:1970",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1970~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1970: {name:1970}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1960: {name:1960}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1960?"
+          },
+          "freeform": {
+            "key": "name:1960",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1960~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1960: {name:1960}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1950: {name:1950}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1950?"
+          },
+          "freeform": {
+            "key": "name:1950",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1950~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1950: {name:1950}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1940: {name:1940}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1940?"
+          },
+          "freeform": {
+            "key": "name:1940",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1940~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1940: {name:1940}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1930: {name:1930}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1930?"
+          },
+          "freeform": {
+            "key": "name:1930",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1930~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1930: {name:1930}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1920: {name:1920}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1920?"
+          },
+          "freeform": {
+            "key": "name:1920",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1920~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1920: {name:1920}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1910: {name:1910}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1910?"
+          },
+          "freeform": {
+            "key": "name:1910",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1910~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1910: {name:1910}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        },
+        {
+          "render": {
+            "es": "Nombre en 1900: {name:1900}"
+          },
+          "question": {
+            "es": "Qué nombre tenía en 1900?"
+          },
+          "freeform": {
+            "key": "name:1900",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "name:1900~"
+                ]
+              },
+              "then": {
+                "es": "Nombre de 1900: {name:1900}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://cdn.pixabay.com/photo/2017/03/08/14/20/flat-2126884_960_720.png",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "office~*"
+              ]
+            },
+            "then": {
+              "es": "https://cdn.pixabay.com/photo/2017/03/08/14/20/flat-2126884_960_720.png"
+            }
+          }
+        ]
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": [],
+      "wayHandling": 1
+    }
+  ],
+  "roamingRenderings": [],
+  "shortDescription": {
+    "es": "Ayúdanos a definir los comercios antiguos"
+  }
+}

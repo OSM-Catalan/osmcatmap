@@ -1,0 +1,205 @@
+{
+  "id": "kerbs",
+  "title": {
+    "en": "Kerbs",
+    "ca": "Vorades",
+    "es": "Bordillos"
+  },
+  "shortDescription": {
+    "en": "Fill the options for kerb",
+    "ca": "Omple les opcions per a les vorades",
+    "es": "Completa las opciones de bordillos"
+  },
+  "description": {
+    "en": "Complete the information about kerbs from wiki",
+    "ca": "Completa la informació sobre els tipus de vorades que pots trobar a la wiki",
+    "es": "Completa la información sobre los tipos de bordillos que puedes encontrar en la wiki"
+  },
+  "language": [
+    "en",
+    "ca",
+    "es"
+  ],
+  "maintainer": "",
+  "icon": "https://raw.githubusercontent.com/yopaseopor/accessibilitat/master/icons/ramp_wheelchair.svg",
+  "version": "0",
+  "startLat": 0,
+  "startLon": 0,
+  "startZoom": 1,
+  "widenFactor": 0.05,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "kerbs",
+      "name": {
+        "en": "Kerbs",
+        "ca": "Vorades",
+        "es": "Bordillos"
+      },
+      "minzoom": 12,
+      "overpassTags": {
+        "and": [
+          "kerb~*"
+        ]
+      },
+      "title": {
+        "render": {
+          "en": "Kerbs",
+          "ca": "Vorades",
+          "es": "Bordillos"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "kerb~"
+              ]
+            },
+            "then": {
+              "en": "There is kerb",
+              "ca": "Hi ha vorada",
+              "es": "Hay bordillo"
+            }
+          }
+        ]
+      },
+      "description": {
+        "en": "Fill the information about kerbs",
+        "ca": "Completa la informació sobre els tipus de vorades que pots trobar a la wiki",
+        "es": "Completa la información sobre los tipos de bordillos que puedes encontrar en la wiki"
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "en": "{key}"
+          },
+          "question": {
+            "en": "What kind of kerb do you have at the street?",
+            "ca": "Quin tipus de vorada veus al pas de vianants?",
+            "es": "¿Qué tipo de bordillo ves en el paso de peatones?"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "kerb=yes"
+                ]
+              },
+              "then": {
+                "en": "Kerb but not defined",
+                "ca": "Vorada sense definir",
+                "es": "Bordillo sin definir"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "kerb=raised"
+                ]
+              },
+              "then": {
+                "en": "Raised",
+                "ca": "Vorada elevada",
+                "es": "Bordillo elevado"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "kerb=lowered"
+                ]
+              },
+              "then": {
+                "en": "Lowered",
+                "ca": "Reduïda",
+                "es": "Reducido"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "kerb=flush"
+                ]
+              },
+              "then": {
+                "en": "Flush",
+                "ca": "Anivellada",
+                "es": "Nivelado"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "kerb=rolled"
+                ]
+              },
+              "then": {
+                "en": "Rolled",
+                "ca": "Rodona",
+                "es": "Redonda"
+              }
+            }
+          ]
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://raw.githubusercontent.com/yopaseopor/accessibilitat/master/icons/ramp_wheelchair.svg",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "kerb=yes"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/yopaseopor/accessibilitat/master/icons/kerb_yes.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "kerb=raised"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/yopaseopor/accessibilitat/master/icons/kerb_raised.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "kerb=lowered"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/yopaseopor/accessibilitat/master/icons/kerb_lowered.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "kerb=flush"
+              ]
+            },
+            "then": {
+              "en": "https://raw.githubusercontent.com/yopaseopor/accessibilitat/master/icons/kerb_flush.svg"
+            }
+          }
+        ]
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": [],
+      "wayHandling": 1
+    }
+  ],
+  "roamingRenderings": []
+}

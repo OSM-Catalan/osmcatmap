@@ -1,0 +1,200 @@
+{
+  "id": "wherethestreetshavenohousenumbers",
+  "title": {
+    "ca": "Adreces (Where the streets have no house numbers)",
+    "es": "Direcciones  (Where the streets have no house numbers)"
+  },
+  "shortDescription": {
+    "ca": "Completar un edifici amb els seus portals",
+    "es": "Completar un edificio con sus portales"
+  },
+  "description": {
+    "ca": "Ja tenim l'edifici dibuixat però i el seu portal? A quin carrer està? Quin és el seu codi postal?",
+    "es": "Ya tenemos el edificio dibujado pero ¿y sus portales? ¿En qué calle está? ¿Qué codigo postal tiene?"
+  },
+  "language": [
+    "ca",
+    "es"
+  ],
+  "maintainer": "",
+  "icon": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_adreces/casa_plena.svg",
+  "version": "2020_09_27",
+  "startLat": 0,
+  "startLon": 0,
+  "startZoom": 1,
+  "widenFactor": 0.01,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "Adreces",
+      "name": {
+        "ca": "Completem dades de portals",
+        "es": "Completamos datos de portales"
+      },
+      "minzoom": 15,
+      "overpassTags": {
+        "and": [
+          "entrance~*"
+        ]
+      },
+      "title": {
+        "render": {
+          "ca": "Portal",
+          "es": "Portal"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "entrance~*"
+              ]
+            },
+            "then": {
+              "ca": "Portal",
+              "es": "Portal"
+            }
+          }
+        ]
+      },
+      "description": {
+        "ca": "Completarem les dades dels portals amb número, carrer i codi postal",
+        "es": "Completaremos los datos de portales con número, calle y código postal"
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "ca": "Número {addr:housenumber}",
+            "es": "Número {addr:housenumber}"
+          },
+          "question": {
+            "ca": "Quin número de portal és?",
+            "es": "¿Qué número de portal tiene?"
+          },
+          "freeform": {
+            "key": "addr:housenumber"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "nohousenumber=yes"
+                ]
+              },
+              "then": {
+                "ca": "Sense número (S/N)",
+                "es": "Sin número (S/N)"
+              }
+            }
+          ]
+        },
+        {
+          "render": {
+            "ca": "Nom de la via: {addr:street}",
+            "es": "Nombre de la vía: {addr:street}"
+          },
+          "question": {
+            "ca": "Quin és el nom de la via?",
+            "es": "¿Cual es el nombre de la vía?"
+          },
+          "freeform": {
+            "key": "addr:street"
+          },
+          "mappings": []
+        },
+        {
+          "render": {
+            "ca": "Codi postal: {addr:postcode}",
+            "es": "Código postal : {addr:postcode}"
+          },
+          "question": {
+            "ca": "Quin és el codi postal?",
+            "es": "¿Cual es el código postal?"
+          },
+          "freeform": {
+            "addExtraTags": [],
+            "key": "addr:postcode"
+          },
+          "mappings": []
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_adreces/casa_plena.svg",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "addr:housenumber="
+              ]
+            },
+            "then": {
+              "ca": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_adreces/casa_buida.svg",
+              "es": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_adreces/casa_buida.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "addr:street="
+              ]
+            },
+            "then": {
+              "ca": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_adreces/casa_buida.svg",
+              "es": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_adreces/casa_buida.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "addr:postcode="
+              ]
+            },
+            "then": {
+              "ca": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_adreces/casa_buida.svg",
+              "es": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_adreces/casa_buida.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "addr:housenumber~",
+                "addr:postcode~",
+                "addr:street~"
+              ]
+            },
+            "then": {
+              "ca": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_adreces/casa_plena.svg",
+              "es": "https://raw.githubusercontent.com/OSM-Catalan/osmcatmap/master/img/icones_adreces/casa_plena.svg"
+            }
+          }
+        ]
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": [
+        {
+          "tags": [
+            "entrance=yes"
+          ],
+          "title": {
+            "ca": "Nou portal",
+            "es": "Nuevo portal"
+          },
+          "description": {
+            "ca": "Dibuixar un nou portal, sempre a la vora de l'edifici",
+            "es": "Dibujar un nuevo portal siempre en los bordes de un edificio"
+          }
+        }
+      ],
+      "wayHandling": 1
+    }
+  ],
+  "roamingRenderings": []
+}

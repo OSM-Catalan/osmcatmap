@@ -1,0 +1,330 @@
+{
+  "id": "arbres",
+  "title": {
+    "ca": "Arbres"
+  },
+  "description": {
+    "ca": "Revisió d'arbres"
+  },
+  "language": [
+    "ca"
+  ],
+  "maintainer": "",
+  "icon": "https://www.svgrepo.com/show/51272/tree.svg",
+  "version": "0",
+  "startLat": 0,
+  "startLon": 0,
+  "startZoom": 1,
+  "widenFactor": 0.05,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "arbres",
+      "name": {},
+      "minzoom": 16,
+      "overpassTags": {
+        "and": [
+          "natural~tree|tree_stump"
+        ]
+      },
+      "title": {
+        "render": {
+          "ca": "Arbres"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "natural=tree"
+              ]
+            },
+            "then": {
+              "ca": "Arbre"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "natural=tree_stump"
+              ]
+            },
+            "then": {
+              "ca": "Arbre tallat"
+            }
+          }
+        ]
+      },
+      "description": {
+        "ca": "Arbres"
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "ca": "Arbre"
+          },
+          "question": {
+            "ca": "Aquí hi ha un arbre?"
+          },
+          "condition": {
+            "and": [
+              "natural=tree"
+            ]
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "natural=tree"
+                ]
+              },
+              "then": {
+                "ca": "Arbre o tallat: Aquí hi ha un arbre"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "natural=tree_stump"
+                ]
+              },
+              "then": {
+                "ca": "Arbre o tallat: Aquí hi ha un arbre tallat"
+              }
+            }
+          ],
+          "freeform": {
+            "key": "natural",
+            "addExtraTags": []
+          }
+        },
+        {
+          "render": {
+            "ca": "Arbre tallat"
+          },
+          "question": {
+            "ca": "Aquí hi ha un arbre tallat?"
+          },
+          "condition": {
+            "and": [
+              "natural=tree_stump"
+            ]
+          },
+          "freeform": {
+            "key": "natural"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "natural=tree"
+                ]
+              },
+              "then": {
+                "ca": "Arbre o tallat: Aquí hi ha un arbre"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "natural=tree_stump"
+                ]
+              },
+              "then": {
+                "ca": "Arbre o tallat: Aquí hi ha un arbre tallat"
+              }
+            }
+          ]
+        },
+        {
+          "render": {
+            "ca": "Font: {source}"
+          },
+          "question": {
+            "ca": "Com ho saps?"
+          },
+          "condition": {
+            "and": [
+              "source="
+            ]
+          },
+          "freeform": {
+            "key": "source",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "source=survey"
+                ]
+              },
+              "then": {
+                "ca": "Com ho sabem: Enquesta a peu de carrer"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "source=local_knowledge"
+                ]
+              },
+              "then": {
+                "ca": "Com ho sabem: Ho sé però no he anat a comprovar-ho insitu"
+              }
+            }
+          ]
+        },
+        {
+          "render": {
+            "ca": "Ens vols deixar una nota?"
+          },
+          "question": {
+            "ca": "Vols deixar-nos una nota?"
+          },
+          "freeform": {
+            "key": "note"
+          },
+          "condition": {
+            "and": [
+              "note="
+            ]
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "note="
+                ]
+              },
+              "then": {
+                "ca": "Nota:"
+              },
+              "hideInAnswer": true
+            },
+            {
+              "if": {
+                "and": [
+                  "note=No sé posar la data"
+                ]
+              },
+              "then": {
+                "ca": "No sé posar la data"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "note=L'arbre ja no hi és"
+                ]
+              },
+              "then": {
+                "ca": "L'arbre ja no hi és"
+              }
+            }
+          ]
+        },
+        {
+          "render": {
+            "ca": "Data de la font {source:date}"
+          },
+          "question": {
+            "ca": "Quina data ho estem revisant?"
+          },
+          "freeform": {
+            "key": "source:date"
+          },
+          "condition": {
+            "and": [
+              "source:date="
+            ]
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "source:date="
+                ]
+              },
+              "then": {
+                "ca": "Data de la revisió: {source:date}"
+              },
+              "hideInAnswer": true
+            },
+            {
+              "if": {
+                "and": [
+                  "source:date!~"
+                ]
+              },
+              "then": {
+                "ca": "Data de la revisió : AAAA-MM-DD"
+              },
+              "hideInAnswer": true
+            }
+          ]
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 1,
+      "icon": {
+        "render": "https://www.svgrepo.com/show/51272/tree.svg",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "natural=tree"
+              ]
+            },
+            "then": {
+              "ca": "https://www.svgrepo.com/show/51272/tree.svg"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "natural=tree_stump"
+              ]
+            },
+            "then": {
+              "ca": "https://www.svgrepo.com/show/64865/stump.svg"
+            }
+          }
+        ]
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "presets": [
+        {
+          "tags": [
+            "natural=tree"
+          ],
+          "title": {
+            "ca": "Afegir arbre"
+          },
+          "description": {
+            "ca": "Per afegir arbres"
+          }
+        },
+        {
+          "tags": [
+            "natural=tree_stump"
+          ],
+          "title": {
+            "ca": "Afegir arbre tallat"
+          },
+          "description": {
+            "ca": "Per afegir arbres tallats"
+          }
+        }
+      ]
+    }
+  ],
+  "roamingRenderings": [],
+  "shortDescription": {}
+}
