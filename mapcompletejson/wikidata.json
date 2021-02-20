@@ -1,0 +1,115 @@
+{
+  "id": "wikidata",
+  "title": {
+    "es": "Wikidata"
+  },
+  "shortDescription": {
+    "es": "Completar los códigos de wikidata que falten"
+  },
+  "description": {
+    "es": "Mediante la consulta de fuentes abiertas y permitidas completar los artículos de wikidata de los diversos municipios"
+  },
+  "language": [
+    "es"
+  ],
+  "maintainer": "",
+  "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Animated_Wikidata_logo.gif",
+  "version": "2020_09_27",
+  "startLat": 0,
+  "startLon": 0,
+  "startZoom": 1,
+  "widenFactor": 0.01,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "wikidata",
+      "name": {
+        "es": "Wikidata"
+      },
+      "minzoom": 10,
+      "overpassTags": {
+        "and": [
+          "admin_level=8",
+          "type=boundary"
+        ]
+      },
+      "title": {
+        "render": {
+          "es": "{name}"
+        },
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "admin_level=8"
+              ]
+            },
+            "then": {
+              "es": "{name}"
+            }
+          }
+        ]
+      },
+      "description": {
+        "es": "Ayúdanos a completar los artículos de Wikidata de los municipios que aún no tienen"
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "es": "Wikidata: {wikidata}"
+          },
+          "question": {
+            "es": "¿Qué artículo de wikidata tiene?"
+          },
+          "freeform": {
+            "key": "wikidata"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "wikidata~*"
+                ]
+              },
+              "then": {
+                "es": "Ya tiene: {wikidata}"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "condition": {
+            "and": []
+          }
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Animated_Wikidata_logo.gif"
+      },
+      "width": {
+        "render": "3"
+      },
+      "iconSize": {
+        "render": "60,32,center"
+      },
+      "color": {
+        "render": "#ff0000",
+        "mappings": [
+          {
+            "if": {
+              "and": [
+                "wikidata~*"
+              ]
+            },
+            "then": {
+              "es": "#000000"
+            }
+          }
+        ]
+      },
+      "presets": [],
+      "wayHandling": 2
+    }
+  ],
+  "roamingRenderings": []
+}
