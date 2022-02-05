@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="769.69px" height="769.66px" version="1.1" viewBox="-360.79 -360.78 769.69 769.66" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<path d="m-360.79 24.031c0-212.52 172.3-384.81 384.85-384.81 212.51 0 384.84 172.29 384.84 384.81 0 212.53-172.33 384.84-384.84 384.84-212.55 0-384.85-172.31-384.85-384.84" fill="#E41408"/>
+<path d="m-258.15 24.031c0-155.85 126.34-282.2 282.21-282.2 155.85 0 282.18 126.35 282.18 282.2 0 155.88-126.33 282.19-282.18 282.19-155.88 0-282.21-126.31-282.21-282.19" fill="#fff"/>
+
+
+<text id="maxspeed" x="-189.27553" y="131.32918" fill="#000000" font-family="Ccrige" font-size="294.72px" letter-spacing="0px" stroke-width="1px" word-spacing="0px" style="line-height:172.686px" xml:space="preserve">param(maxspeed)</text></svg>
