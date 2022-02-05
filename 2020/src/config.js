@@ -3072,10 +3072,10 @@ var vectorLayer = new ol.layer.Vector({
 			group: 'Proves2',
 			title: 'Vies amb "maxspeed SVG"',
 			query: '(way[highway=motorway][maxspeed]({{bbox}});node(w);way[highway=trunk][maxspeed]({{bbox}});node(w);way[highway=primary][maxspeed]({{bbox}});node(w);way[highway=secondary][maxspeed]({{bbox}});node(w);way[highway=tertiary][maxspeed]({{bbox}});node(w);way[highway=unclassified][maxspeed]({{bbox}});node(w);way[highway=track][maxspeed]({{bbox}});node(w);way[highway=residential][maxspeed]({{bbox}});node(w);way[highway=service][maxspeed]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed.svg',
+			iconSrc: imgSrc + 'ES_R301-10.svg',
 			style: function (feature) {
-				var maxspeed = feature.get('maxspeed') || '';
 				var param(maxspeed) = feature.get('maxspeed') || '';
+				var maxspeed = feature.get('maxspeed') || '';
 				if (maxspeed === ''){
 					return undefined;
 				}
