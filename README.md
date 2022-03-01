@@ -22,20 +22,20 @@ OSM (Openstreetmap) no és un mapa, és una base de dades de punts i línies geo
 El mapa ens mostra tot de campanyes que la comunitat catalana ha anat complint al llarg dels darrers anys amb l'objectiu de millorar el mapa.
 
 
-*Accessibilitat (Wheelchair)
-*Voreres (adaptació)
-*Encreuaments
-*Vies
-*Àrees
-*Altres
-*Vorades
-*Zones d'aparcament
-*Mobilitat
-*COVID19
-*Iniciatives
-*Reciclatge
-*Accessibilitat (Altres)
-*Dades possibles
+*	Accessibilitat (Wheelchair)
+*	Voreres (adaptació)
+*	Encreuaments
+*	Vies
+*	Àrees
+*	Altres
+*	Vorades
+*	Zones d'aparcament
+*	Mobilitat
+*	COVID19
+*	Iniciatives
+*	Reciclatge
+*	Accessibilitat (Altres)
+*	Dades possibles
 
 Directament es pot modificar la pàgina editant els arxius corresponents:
 
