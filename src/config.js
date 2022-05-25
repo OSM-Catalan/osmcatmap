@@ -734,7 +734,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Right Ticket',
-			query: '(way["parking:lane:right"="parallel"]["parking:condition:right"="ticket"]({{bbox}});node(w);way["parking:lane:right"="diagonal"]["parking:condition:right"="ticket"]({{bbox}});node(w);way["parking:lane:right"="perpendicular"]["parking:condition:right"="ticket"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:right"="parallel"]["parking:condition:right"="ticket"]({{bbox}});node(w);way["parking:lane:right"="diagonal"]["parking:condition:right"="ticket"]({{bbox}});node(w);way["parking:lane:right"="perpendicular"]["parking:condition:right"="ticket"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/lineline.png',
 			iconStyle: 'background-color:#0000FF',
 			style: function () {
@@ -802,7 +802,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Left Ticket',
-			query: '(way["parking:lane:left"="parallel"]["parking:condition:left"="ticket"]({{bbox}});node(w);way["parking:lane:left"="diagonal"]["parking:condition:left"="ticket"]({{bbox}});node(w);way["parking:lane:left"="perpendicular"]["parking:condition:left"="ticket"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:left"="parallel"]["parking:condition:left"="ticket"]({{bbox}});node(w);way["parking:lane:left"="diagonal"]["parking:condition:left"="ticket"]({{bbox}});node(w);way["parking:lane:left"="perpendicular"]["parking:condition:left"="ticket"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/dots.png',
 			iconStyle: 'background-color:#0000FF',
 			style: function () {
@@ -826,7 +826,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Both Ticket',
-			query: '(way["parking:lane:both"="parallel"]["parking:condition:both"="ticket"]({{bbox}});node(w);way["parking:lane:both"="diagonal"]["parking:condition:both"="ticket"]({{bbox}});node(w);way["parking:lane:both"="perpendicular"]["parking:condition:both"="ticket"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:both"="parallel"]["parking:condition:both"="ticket"]({{bbox}});node(w);way["parking:lane:both"="diagonal"]["parking:condition:both"="ticket"]({{bbox}});node(w);way["parking:lane:both"="perpendicular"]["parking:condition:both"="ticket"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#0000FF',
 			style: function () {
@@ -849,7 +849,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Right No parking',
-			query: '(way["parking:lane:right"="no_parking"]({{bbox}});node(w);way["parking:lane:right"="no_stopping"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:right"="no_parking"]({{bbox}});node(w);way["parking:lane:right"="no_stopping"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/lineline.png',
 			iconStyle: 'background-color:#ff0000',
 			style: function () {
@@ -873,7 +873,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Left No parking',
-			query: '(way["parking:lane:left"="no_parking"]({{bbox}});node(w);way["parking:lane:left"="no_stopping"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:left"="no_parking"]({{bbox}});node(w);way["parking:lane:left"="no_stopping"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/dots.png',
 			iconStyle: 'background-color:#ff0000',
 			style: function () {
@@ -897,7 +897,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Both No parking',
-			query: '(way["parking:lane:both"="no_parking"]({{bbox}});node(w);way["parking:lane:both"="no_stopping"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:both"="no_parking"]({{bbox}});node(w);way["parking:lane:both"="no_stopping"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#ff0000',
 			style: function () {
@@ -921,7 +921,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Right Free',
-			query: '(way["parking:lane:right"="parallel"]["parking:condition:right"="free"]({{bbox}});node(w);way["parking:lane:right"="diagonal"]["parking:condition:right"="free"]({{bbox}});node(w);way["parking:lane:right"="perpendicular"]["parking:condition:right"="free"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:right"="parallel"]["parking:condition:right"="free"]({{bbox}});node(w);way["parking:lane:right"="diagonal"]["parking:condition:right"="free"]({{bbox}});node(w);way["parking:lane:right"="perpendicular"]["parking:condition:right"="free"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#c9c9c9',
 			style: function () {
@@ -947,7 +947,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Right Residents Green Zone',
-			query: '(way["parking:lane:right"="parallel"]["parking:condition:right:residents"="free"]({{bbox}});node(w);way["parking:lane:right"="diagonal"]["parking:condition:right:residents"="free"]({{bbox}});node(w);way["parking:lane:right"="perpendicular"]["parking:condition:right:residents"="free"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:right"="parallel"]["parking:condition:right:residents"="free"]({{bbox}});node(w);way["parking:lane:right"="diagonal"]["parking:condition:right:residents"="free"]({{bbox}});node(w);way["parking:lane:right"="perpendicular"]["parking:condition:right:residents"="free"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/lineline.png',
 			iconStyle: 'background-color:#00FF00',
 			style: function () {
@@ -971,7 +971,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Right Residents Green Exclusive Zone',
-			query: '(way["parking:lane:right"="parallel"]["parking:condition:right"="residents"]({{bbox}});node(w);way["parking:lane:right"="diagonal"]["parking:condition:right"="residents"]({{bbox}});node(w);way["parking:lane:right"="perpendicular"]["parking:condition:right"="residents"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:right"="parallel"]["parking:condition:right"="residents"]({{bbox}});node(w);way["parking:lane:right"="diagonal"]["parking:condition:right"="residents"]({{bbox}});node(w);way["parking:lane:right"="perpendicular"]["parking:condition:right"="residents"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/lineline.png',
 			iconStyle: 'background-color:#145a32',
 			style: function () {
@@ -997,7 +997,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Left Free',
-			query: '(way["parking:lane:left"="parallel"]["parking:condition:left"="free"]({{bbox}});node(w);way["parking:lane:left"="diagonal"]["parking:condition:left"="free"]({{bbox}});node(w);way["parking:lane:left"="perpendicular"]["parking:condition:left"="free"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:left"="parallel"]["parking:condition:left"="free"]({{bbox}});node(w);way["parking:lane:left"="diagonal"]["parking:condition:left"="free"]({{bbox}});node(w);way["parking:lane:left"="perpendicular"]["parking:condition:left"="free"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/dots.png',
 			iconStyle: 'background-color:#c9c9c9',
 			style: function () {
@@ -1023,7 +1023,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Left Residents Green Zone',
-			query: '(way["parking:lane:left"="parallel"]["parking:condition:left:residents"="free"]({{bbox}});node(w);way["parking:lane:left"="diagonal"]["parking:condition:left:residents"="free"]({{bbox}});node(w);way["parking:lane:left"="perpendicular"]["parking:condition:left:residents"="free"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:left"="parallel"]["parking:condition:left:residents"="free"]({{bbox}});node(w);way["parking:lane:left"="diagonal"]["parking:condition:left:residents"="free"]({{bbox}});node(w);way["parking:lane:left"="perpendicular"]["parking:condition:left:residents"="free"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/dots.png',
 			iconStyle: 'background-color:#00FF00',
 			style: function () {
@@ -1047,7 +1047,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Left Residents Green Exclusive Zone',
-			query: '(way["parking:lane:left"="parallel"]["parking:condition:left"="residents"]({{bbox}});node(w);way["parking:lane:left"="diagonal"]["parking:condition:left"="residents"]({{bbox}});node(w);way["parking:lane:left"="perpendicular"]["parking:condition:left"="residents"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:left"="parallel"]["parking:condition:left"="residents"]({{bbox}});node(w);way["parking:lane:left"="diagonal"]["parking:condition:left"="residents"]({{bbox}});node(w);way["parking:lane:left"="perpendicular"]["parking:condition:left"="residents"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/dots.png',
 			iconStyle: 'background-color:#145a32',
 			style: function () {
@@ -1073,7 +1073,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Both Free',
-			query: '(way["parking:lane:both"="parallel"]["parking:condition:both"="free"]({{bbox}});node(w);way["parking:lane:both"="diagonal"]["parking:condition:both"="free"]({{bbox}});node(w);way["parking:lane:both"="perpendicular"]["parking:condition:both"="free"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:both"="parallel"]["parking:condition:both"="free"]({{bbox}});node(w);way["parking:lane:both"="diagonal"]["parking:condition:both"="free"]({{bbox}});node(w);way["parking:lane:both"="perpendicular"]["parking:condition:both"="free"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#c9c9c9',
 			style: function () {
@@ -1098,7 +1098,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Both Residents Green Zone',
-			query: '(way["parking:lane:both"="parallel"]["parking:condition:both:residents"="free"]({{bbox}});node(w);way["parking:lane:both"="diagonal"]["parking:condition:both:residents"="free"]({{bbox}});node(w);way["parking:lane:both"="perpendicular"]["parking:condition:both:residents"="free"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:both"="parallel"]["parking:condition:both:residents"="free"]({{bbox}});node(w);way["parking:lane:both"="diagonal"]["parking:condition:both:residents"="free"]({{bbox}});node(w);way["parking:lane:both"="perpendicular"]["parking:condition:both:residents"="free"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#00FF00',
 			style: function () {
@@ -1121,7 +1121,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Both Residents Green Exclusive Zone',
-			query: '(way["parking:lane:both"="parallel"]["parking:condition:both"="residents"]({{bbox}});node(w);way["parking:lane:both"="diagonal"]["parking:condition:both"="residents"]({{bbox}});node(w);way["parking:lane:both"="perpendicular"]["parking:condition:both"="residents"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:both"="parallel"]["parking:condition:both"="residents"]({{bbox}});node(w);way["parking:lane:both"="diagonal"]["parking:condition:both"="residents"]({{bbox}});node(w);way["parking:lane:both"="perpendicular"]["parking:condition:both"="residents"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#145a32',
 			style: function () {
@@ -1144,7 +1144,7 @@ var config = {
 		{
 			group: 'Parking_Lanes',
 			title: 'Customers',
-			query: '(way["parking:condition:left"="customers"]({{bbox}});node(w);way["parking:condition:right"="customers"]({{bbox}});node(w);way["parking:condition:both"="customers"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:condition:left"="customers"]({{bbox}});node(w);way["parking:condition:right"="customers"]({{bbox}});node(w);way["parking:condition:both"="customers"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#01F6F2',
 			style: function () {
@@ -1314,7 +1314,7 @@ var config = {
 		{
 			group: 'Mobilitat',
 			title: 'Left Parallel',
-			query: '(way["parking:lane:left"="parallel"]({{bbox}});node(w);way["parking:lane:left"="diagonal"]({{bbox}});node(w);way["parking:lane:left"="perpendicular"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:left"="parallel"]({{bbox}});node(w);way["parking:lane:left"="diagonal"]({{bbox}});node(w);way["parking:lane:left"="perpendicular"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#3cff33',
 			style: function () {
@@ -1355,7 +1355,7 @@ var config = {
 		{
 			group: 'Mobilitat',
 			title: 'Right No Stopping',
-			query: '(way["parking:lane:right"="no_stopping"]({{bbox}});node(w););out skel;',
+			query: '(way["parking:lane:right"="no_stopping"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#ff0000',
 			style: function () {
@@ -1493,26 +1493,47 @@ var config = {
 				});
 				return style;
 			}
-		},
-		// Overlay: Iniciatives
+ },
 		{
 			group: 'Iniciatives',
 			title: 'Cobertura 112',
-			query: 'node[emergency=access_point]({{bbox}});out skel;',
+			query: 'node[emergency=access_point]({{bbox}});out meta;',
 			iconSrc: imgSrc + 'icones/pal_cobertura.png',
-			style: function () {
+			iconStyle: 'background-color:rgba(255,255,255,1)',
+			style: function (feature) {
+				var key_regex = /^ref$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(255,255,255,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgba(255,209,124,1)',
+					width: 1
+				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
 						src: imgSrc + 'icones/pal_cobertura.png'
-					})
+					}),
+							text: new ol.style.Text({
+								text: name,
+								offsetX : 0,
+								offsetY : 20,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        }),
+						}),
+					fill: fill,
+					stroke: stroke
 				});
 				return style;
 			}
+			
 		},
 		{
 			group: 'Iniciatives',
 			title: 'Desfibril·lador',
-			query: 'node[emergency=defibrillator]({{bbox}});out skel;',
+			query: 'node[emergency=defibrillator]({{bbox}});out meta;',
 			iconSrc: imgSrc + 'icones/aed.png',
 			style: function () {
 				var style = new ol.style.Style({
@@ -1784,7 +1805,7 @@ var config = {
 		{
 			group: 'Mobilitat',
 			title: 'Exprés.cat (Barcelona)',
-			query: '(relation["network"="exprés.cat (Barcelona)"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
+			query: '(relation["network"="exprés.cat (Barcelona)"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#40E0D0',
 			style: function () {
@@ -1805,7 +1826,7 @@ var config = {
 		{
 			group: 'Mobilitat',
 			title: 'Exprés.cat (Girona)',
-			query: '(relation["network"="exprés.cat (Girona)"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
+			query: '(relation["network"="exprés.cat (Girona)"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#40E0D0',
 			style: function () {
@@ -1826,7 +1847,7 @@ var config = {
 		{
 			group: 'Mobilitat',
 			title: 'Exprés.cat (Tarragona)',
-			query: '(relation["network"="exprés.cat (Tarragona)"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
+			query: '(relation["network"="exprés.cat (Tarragona)"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#40E0D0',
 			style: function () {
@@ -1847,7 +1868,7 @@ var config = {
 		{
 			group: 'Mobilitat',
 			title: 'Exprés.cat (Lleida)',
-			query: '(relation["network"="exprés.cat (Lleida)"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
+			query: '(relation["network"="exprés.cat (Lleida)"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#40E0D0',
 			style: function () {

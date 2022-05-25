@@ -3,7 +3,7 @@ OSM CAT MAP  neix de l'adaptació del mapa de la comunitat catalana a mostrar qu
 Aprofitant la base de dades d'Openstreetmap es mostren les campanyes d'etiquetatge de la comunitat catalana en els darrers temps.
 
 # 0-La Base de dades: Openstreetmap
-OSM (Openstreetmap) no és un mapa, és una base de dades de punts i línies geolocalitzats, que entre d'altres coses es pot aprofitar per fer mapes (renderitzacions). Però també es poden aprofitar les dades (en aquest cas, contenidors) .Tot plegat es fa amb claus, valors i relacions en aquests punts i línies.
+OSM (Openstreetmap) no és un mapa, és una base de dades de punts i línies geolocalitzats, que entre d'altres coses es pot aprofitar per fer mapes (renderitzacions). Però també es poden aprofitar les dades. Tot plegat es fa amb claus, valors i relacions en aquests punts i línies.
 
 # 1-Mapa
 
