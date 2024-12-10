@@ -62,6 +62,20 @@ var config = {
 		}),
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector Tile4',
+			iconSrc: imgSrc + 'osmfr_logo-layer.png',
+			source: new ol.source.VectorTile({
+        tilePixelRatio: 1, // oversampling when > 1
+        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
+        format: new ol.format.MVT(),
+		crossOrigin: 'anonymous',
+		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
+        url: 'https://{a-c}.tile.custom-osm-tiles.org/{z}/{x}/{y}.mvt'
+      }),
+			visible: false
+		}),
+		
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector Tile3',
 			iconSrc: imgSrc + 'osmfr_logo-layer.png',
 			source: new ol.source.VectorTile({
