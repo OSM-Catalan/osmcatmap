@@ -88,7 +88,18 @@ var config = {
 		}),
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-			title: 'TileJSON2',
+			title: 'Vector Tilekiln',
+			iconSrc: imgSrc + 'osmfr_logo-layer.png',
+			source: new ol.source.TileJSON({
+        tileSize: 512,
+        crossOrigin: 'anonymous',
+        url: 'https://demo.tilekiln.xyz/shortbread_v1/tilejson.json'
+      }),
+			visible: false
+		}),
+		
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector OSM',
 			iconSrc: imgSrc + 'osmfr_logo-layer.png',
 			source: new ol.source.TileJSON({
         tileSize: 512,
