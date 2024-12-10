@@ -93,7 +93,7 @@ var config = {
 			source: new ol.source.TileJSON({
         tileSize: 512,
         crossOrigin: 'anonymous',
-        url: 'https://demo.tilekiln.xyz/shortbread_v1/tilejson.json'
+        url: 'https://pnorman.github.io/tilekiln-shortbread-demo/colorful.json'
       }),
 			visible: false
 		}),
