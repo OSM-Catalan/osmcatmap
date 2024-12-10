@@ -96,7 +96,7 @@ var config = {
         tilePixelRatio: 1, // oversampling when > 1
         tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
         format: new ol.format.TopoJSON(),
-        url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg'
+        url: 'https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/tile/{z}/{y}/{x}.pbf'
       }),
 			visible: false
 		}),
