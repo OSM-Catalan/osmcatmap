@@ -68,9 +68,9 @@ var config = {
         tilePixelRatio: 1, // oversampling when > 1
         tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
         format: new ol.format.MVT(),
-		crossOrigin: 'anonymous',
 		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
-        url: 'https://{a-c}.tile.custom-osm-tiles.org/{z}/{x}/{y}.mvt'
+        url: 'https://{a-c}.tile.custom-osm-tiles.org/{z}/{x}/{y}.mvt',
+				crossOrigin: 'anonymous'
       }),
 			visible: false
 		}),
