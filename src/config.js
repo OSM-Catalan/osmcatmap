@@ -88,7 +88,7 @@ var config = {
 		}),
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-			title: 'Vector Tilekiln',
+			title: 'Vector Tilekiln2',
 			iconSrc: imgSrc + 'osmfr_logo-layer.png',
 			source: new ol.source.TileJSON({
         tileSize: 512,
